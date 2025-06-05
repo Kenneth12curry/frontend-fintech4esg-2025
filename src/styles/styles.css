@@ -1,0 +1,20 @@
+.keen-slider__slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.keen-slider__slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.keen-slider__slide img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
