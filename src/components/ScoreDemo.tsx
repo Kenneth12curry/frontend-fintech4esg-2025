@@ -68,12 +68,12 @@ const loanHistoryData = [
 
 // Sample risk distribution data
 const riskDistributionData = [
-  { name: 'High Risk', value: 15, color: '#EF4444' },
-  { name: 'Medium Risk', value: 25, color: '#F59E0B' },
-  { name: 'Low Risk', value: 35, color: '#3B82F6' },
-  { name: 'Very Low Risk', value: 25, color: '#10B981' },
+  { name: 'Very Low', value: 10, color: '#ef4444' },   // bg-red-500
+  { name: 'Low', value: 20, color: '#fb923c' },        // bg-orange-400
+  { name: 'Medium', value: 40, color: '#facc15' },     // bg-yellow-400
+  { name: 'High', value: 60, color: '#86efac' },       // bg-green-300
+  { name: 'Very High', value: 80, color: '#22c55e' },  // bg-green-500
 ];
-
 
 
 export default function ScoreDemo() {
@@ -281,7 +281,7 @@ export default function ScoreDemo() {
         <div className="flex grid-cols-1 lg:grid-cols-2 gap-4 mb-4 flex-row justify-center">
           {Object.entries(clientTypes).map(([key, client], index) => (
             <AnimatedComponent
-            className="bg-primary rounded-xl"
+              className="bg-primary rounded-xl"
               key={key}
               animation="slideUp"
               delay={0.1 + index * 0.1}
@@ -289,7 +289,7 @@ export default function ScoreDemo() {
             >
               <HoverAnimationCard
                 hoverEffect="glow"
-                className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+                className={`p-4 sm:p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                   selectedClientType === key
                     ? "bg-white bg-opacity-10 border-green-400 border-2"
                     : "bg-purple-800 bg-opacity-50 hover:bg-opacity-70"
@@ -298,17 +298,17 @@ export default function ScoreDemo() {
               >
                 <div className="flex items-center">
                   <div
-                    className={`rounded-full p-3 mr-4 ${
+                    className={`rounded-full p-2 sm:p-3 mr-3 sm:mr-4 ${
                       selectedClientType === key
                         ? "bg-green-500 text-white"
                         : "bg-purple-700 text-purple-200"
                     }`}
                   >
-                    <client.icon className="h-5 w-5" />
+                    <client.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{client.title}</h3>
-                    <p className="text-sm text-purple-200">
+                    <h3 className="text-base sm:text-lg font-semibold text-white">{client.title}</h3>
+                    <p className="text-xs sm:text-sm text-purple-200">
                       {key === "individual"
                         ? "Personal financial profile"
                         : key === "smallBusiness"
@@ -321,6 +321,7 @@ export default function ScoreDemo() {
             </AnimatedComponent>
           ))}
         </div>
+
 
         <Tabs defaultValue="metrics" className="mb-4">
           <TabsList className="bg-purple-800 bg-opacity-40 mb-4 w-full justify-start">

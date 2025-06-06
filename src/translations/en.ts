@@ -48,7 +48,7 @@ const translations = {
   "platform.description": "A comprehensive financial technology solution designed for unbanked population",
   "platform.framework": "Platform Framework",
   "platform.partnership.title": "Partnership Opportunities",
-  "platform.partnership.description": "Join our ecosystem of financial inclusion partners",
+  "platform.partnership.description": "Join our ecosystem of Financial Inclusion partners",
   "platform.partnership.benefit1": "Access to millions of customers via telco operators",
   "platform.partnership.benefit2": "Proven technology infrastructure",
   "platform.partnership.benefit3": "Regulatory compliance support",
@@ -85,7 +85,7 @@ const translations = {
   "score.risk.medium": "Medium",
   "score.risk.low": "Low",
   "score.risk.verylow": "Very Low",
-  "score.title": "AI Scoring System",
+  "score.title": "ReadyScore AI System",
   "score.reset": "Reset Score",
   "score.profile": "Customer Profile",
   "score.result": "Scoring Result",
@@ -184,11 +184,11 @@ const translations = {
   "platform.score.expenditure": "Expenditure",
   "platform.score.profit": "Profit",
   
-  "platform.segment.verygood": "Very Low Propensity to Recover Loan Low",
-  "platform.segment.good": "Low Propensity to Recover Loan",
-  "platform.segment.medium": "Medium Propensity to Recover Loan",
-  "platform.segment.low": "High Propensity to Recover Loan",
-  "platform.segment.verylow": "Very high Propensity to Recover Loan",
+  "platform.segment.verygood": "Very low propensity to recover loan",
+  "platform.segment.good": "Low propensity to recover loan",
+  "platform.segment.medium": "Medium propensity to recover loan",
+  "platform.segment.low": "High propensity to recover loan",
+  "platform.segment.verylow": "Very high propensity to recover loan",
   
   "platform.lending.nano.title": "Nano Loans",
   "platform.lending.nano.description": "Small, short-term loans for immediate needs",
@@ -568,6 +568,7 @@ const translations = {
   "about.value.integrity.description": "Operating with transparency, honesty, and the highest ethical standards",
   "about.value.impact.title": "Impact",
   "about.value.impact.description": "Focusing on measurable positive change in communities we serve",
+  "how.description":"With 75+ years’ global expertise, we drive Digital Transformation in Financial Services—boosting efficiency, scaling institutions, and promoting inclusive growth through innovative FinTech solutions.",
   
   "about.team": "Leadership Team",
   "about.role.ceo": "JJ BWANGA",
@@ -820,7 +821,7 @@ const translations = {
   "title.message":"Message *",
 
   "title.robot":"I'm not a robot",
-  "title.submit":"SUBMIT",
+  "title.submit":"Submit",
   
   //navbar
   "title.home":"Home",
@@ -860,7 +861,7 @@ const translations = {
   "readyCash":"ReadyCash",
 
   "readyScore":"ReadyScore",
-  "readyScore.description":"A pioneering unbanked and informal scoring system uses household income, mobile money flows, and macroeconomic data. Through stochastic models, it predicts trends, assesses risks, and guides financial decisions. Data calibration ensures accurate creditworthiness evaluation, enabling reliable, data-driven Financial Inclusion for underserved populations.",
+  "readyScore.description":"A pioneering scoring system for the unbanked population and informal economy analyzes household income, mobile money flows, and macroeconomic data. Leveraging stochastic equations, it forecasts trends, assesses risks, and guides financial decisions. By calibrating and validating data, the model measures reliable creditworthiness and fosters data-driven, robust, sustainable strategies for inclusive finance.",
 
   "platform.lending.macro.title":"Macro Loan",
 
@@ -869,7 +870,14 @@ const translations = {
   "AI":"AI Machine Learning",
   "Linear":"Linear Function",
 
-  "score":"ReadyScore Product"
+  "score":"ReadyScore Product",
+
+  // ewallets
+  "productewallets.heading":"Interactive Financial Tools",
+  "productewallets.title":"ReadyCash eWallet Payment System",
+  "productewallets.description":"Interactive Financial Tools",
+
 };
+
 
 export default translations;

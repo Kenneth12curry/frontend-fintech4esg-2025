@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FileText, AlertTriangle, Shield, GavelIcon, Lock, Mail } from "lucide-react";
 import { AnimatedComponent } from "@/components/ui/animated-component";
+import { Link } from "react-router-dom";
 
 export default function TermsOfServicePage() {
   return (
@@ -389,14 +390,17 @@ export default function TermsOfServicePage() {
             For additional information about our services, please see:
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/privacy"}>
+            <Link
+              to="/privacy"
+              className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white"
+            >
               <Shield className="h-4 w-4" />
               Privacy Policy
-            </Button>
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/security"}>
+            </Link>
+            <Link  to="/security"  className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white" >
               <Lock className="h-4 w-4" />
               Security Policy
-            </Button>
+            </Link>
           </div>
         </div>
 

@@ -76,6 +76,7 @@ import AboutUSPage from "./pages/About-us";
 import ReadyCashSuite from "./pages/ReadyCashSuite";
 import ReadyScore from "./pages/ReadyScore";
 import SecurityLayer from "./components/SecuirtyLayer";
+import Readypay from "./pages/ReadyPay";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -110,6 +111,7 @@ function App() {
             <Route path="/about-us" element={<AboutUSPage />} />
             <Route path="/ready-cash" element={<ReadyCashSuite />} />
             <Route path="/ready-score" element={<ReadyScore />} />
+            <Route path="/ready-pay" element={<Readypay />} />
           </Routes>
         </main>
       </div>

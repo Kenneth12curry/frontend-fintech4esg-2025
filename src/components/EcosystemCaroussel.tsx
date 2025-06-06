@@ -7,7 +7,7 @@ import bankAtlantique from "@/assets/images/ecosystem/Bank-Atlantique_Africa_log
 import Bgfi from "@/assets/images/ecosystem/Bank-BGFI_logo.png";
 import Bill from "@/assets/images/ecosystem/Bill-Melinda Gates Foundation_logo.png";
 import Blue from "@/assets/images/ecosystem/BlueOrchard_logo.png";
-import BNP from "@/assets/images/ecosystem/BNPFoundation_logo.png";
+import Bnp from "@/assets/images/ecosystem/BNPFoundation_logo.png";
 import Calvert from "@/assets/images/ecosystem/Calvert Impact Capital_logo.png";
 import Cdc from "@/assets/images/ecosystem/CDC Group_logo.png";
 import cerise from "@/assets/images/ecosystem/Cerise SPTF_logo.png";
@@ -15,7 +15,7 @@ import Cgap from "@/assets/images/ecosystem/Cgap_logo.png";
 import Finca from "@/assets/images/ecosystem/FINCA Impact Finance_logo.png";
 import Grammeen from "@/assets/images/ecosystem/Grameen_logo.png";
 import HDBank from "@/assets/images/ecosystem/HDBank_logo.png";
-import IFC from "@/assets/images/ecosystem/IFC_logo.png";
+import Ifc from "@/assets/images/ecosystem/IFC_logo.png";
 import Kinara from "@/assets/images/ecosystem/Kinara Capital_logo.png";
 import LeapFrog from "@/assets/images/ecosystem/LeapFrog Investments_logo.png";
 import Moov_africa from "@/assets/images/ecosystem/Moov_Africa_logo.png";
@@ -30,52 +30,51 @@ import VPBank from "@/assets/images/ecosystem/VPBank_logo.png";
 import xl from "@/assets/images/ecosystem/xl axiata_logo.png";
 import { useTranslation } from "react-i18next";
 
-export default function EcosystemCarousel() {
-    const logos = [fricell,ecobank,afriland,airtel,axis,bankAtlantique,Bgfi,Bill,Blue,Calvert,Cdc,cerise,
-        Cgap,Grammeen,HDBank,Finca,Kinara,LeapFrog,Moov_africa,Mtn,Oik,orange,Quona,Tri,Uba,Viettel,VPBank,xl
-    ];
-    const { t } = useTranslation();
-    return (
-        <section className="py-16 bg-gray-50">
-        <h2 className="text-4xl font-bold text-center mb-20">
-            {t("title.ecosystem")}
-        </h2>
-        <div
-            className="mx-auto bg-white rounded-[32px] shadow-xl border-t-4 border-[#a259e6] flex items-center justify-center overflow-hidden"
-            style={{
-            maxWidth: 1200,
-            minHeight: 150,
-            padding: "0 16px",
-            }}>
 
-            <div
-            className="flex items-center gap-10"
-            style={{
-                whiteSpace: "nowrap",
-                animation: "defilement 20s linear infinite",
-            }}
-            >
-            {[...logos, ...logos].map((logo, idx) => (
-                <img
-                key={idx}
-                src={logo}
-                alt={`ecosystem-logo-${idx}`}
-                style={{ height: 160, width: 160, objectFit: "contain", padding: "0 8px" }}
-                className="grayscale opacity-70 inline-block"
-                loading="lazy"
-                />
-            ))}
-            </div>
-            {/* Animation CSS */}
-            <style>
-            {`
-                @keyframes defilement {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-                }
-            `}
-            </style>
+export default function EcosystemCarousel() {
+  const logos = [
+    orange, fricell, ecobank, afriland, airtel, axis, bankAtlantique, Bgfi, Bill, Blue, Calvert, Cdc, cerise,
+    Cgap, Grammeen, HDBank, Finca, Kinara, LeapFrog, Moov_africa, Mtn, Oik, Quona, Tri, Uba, Viettel, VPBank, xl, Bnp
+  ];
+  const { t } = useTranslation();
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <h2 className="text-4xl font-bold text-center mb-20">
+        {t("title.ecosystem")}
+      </h2>
+      <div
+        className="mx-auto bg-white rounded-[32px] shadow-xl border-t-2 border-[#a259e6] flex items-center justify-center overflow-hidden"
+        style={{
+          maxWidth: 1500,
+          minHeight: 150,
+          padding: "0 16px",
+        }}
+      >
+        <div
+          className="flex items-center gap-10 whitespace-nowrap"
+          style={{
+            animation: "defilement 40s linear infinite",
+          }}
+        >
+          {[...logos, ...logos].map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo}
+              alt={`ecosystem-logo-${idx}`}
+              style={{ height: 170, width: 170, objectFit: "contain", padding: "0 8px" }}
+              className="grayscale opacity-70 inline-block"
+              loading="lazy"
+            />
+          ))}
         </div>
-        </section>
-    );
+      </div>
+      <style>{`
+        @keyframes defilement {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+      `}</style>
+    </section>
+  );
 }

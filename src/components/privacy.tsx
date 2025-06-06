@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { Shield, ShieldAlert, ShieldCheck, FileText, Mail, Users, Building, Lock, Eye } from "lucide-react";
 import { AnimatedComponent } from "@/components/ui/animated-component";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function PrivacyPolicyPage() {
   const [activeTab, setActiveTab] = useState<string>("overview");
@@ -461,14 +462,14 @@ export default function PrivacyPolicyPage() {
             For additional information about how we protect your information, please see our:
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/terms"}>
+            <Link to="/terms"  className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white">
               <FileText className="h-4 w-4" />
               Terms of Service
-            </Button>
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/security"}>
+            </Link>
+            <Link to="/security"  className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white" >
               <ShieldCheck className="h-4 w-4" />
               Security Policy
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

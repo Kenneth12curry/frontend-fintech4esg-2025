@@ -114,7 +114,7 @@ function ValueCard({ name, description, icon: Icon, backgroundImage }: ValueCard
         </motion.div>
       </div>
       <motion.h3 
-        className="text-lg font-semibold text-neutral-900 font-heading relative z-10"
+        className="text-lg font-semibold text-red-500 font-heading relative z-10"
         animate={{ 
           color: isExpanded ? "rgba(109, 40, 217, 1)" : "rgba(23, 23, 23, 1)" 
         }}
@@ -264,30 +264,30 @@ export default function AboutUs() {
                   </p>
                 </AnimatedComponent>
 
-                <AnimatedComponent animation="slideUp" delay={0.15} duration={0.3}>
+               {/*  <AnimatedComponent animation="slideUp" delay={0.15} duration={0.3}>
                   <p className="mt-4 max-w-3xl text-xl text-neutral-500 lg:mx-auto mb-6">
                     {t("about.mission.description")}
                   </p>
-                </AnimatedComponent>
+                </AnimatedComponent> */}
             </div>
         </AnimatedComponent>
 
         <AnimatedComponent animation="fadeIn" delay={0.2} duration={0.4} className="mt-12">
           <AnimatedComponent animation="slideUp" delay={0.6} duration={0.5}>
                 {/** sections Our Goals */}
-                <h3 className="text-2xl font-semibold mb-6 text-center text-neutral-900 font-heading">
+               {/*  <h3 className="text-2xl font-semibold mb-6 text-center text-neutral-900 font-heading">
                     {t("about.goals")}
-                </h3>
+                </h3> */}
                 {/* <p className="text-xl text-justify font-semibold leading-relaxed mb-2 md:text-left">
                     Powering Financial Institutions with Cutting-Edge Digital Solutions : 
                 </p> */}
-                <div className="">
+                
               
-                    <p className="mt-4 max-w-3xl text-xl text-neutral-500 text-center lg:mx-auto mb-6">
-                        FinTech4ESG delivers innovative digital solutions for financial institutions, including microfinance, digital wallets, and power management. 
-                        Its Finance Inclusive Suite offers savings and lending. Backed by award-winning data scientists, it enhances scoring decision-making, 
-                        risk management, and growth through advanced analytics. Partner with FinTech4ESG to stay ahead.
-                    </p>
+                <p className="max-w-3xl text-xl text-neutral-500 text-center lg:mx-auto mb-6 transform -translate-y-8">
+                    FinTech4ESG delivers innovative digital solutions for financial institutions, including microfinance, digital wallets, and power management. 
+                    Its Finance Inclusive Suite offers savings and lending. Backed by award-winning data scientists, it enhances scoring decision-making, 
+                    risk management, and growth through advanced analytics. Partner with FinTech4ESG to stay ahead.
+                </p>
               
                   {/* <p className="max-w-16xl text-xl text-neutral-500 text-justify mb-2">
                         Our in-house Finance Inclusive Suite is a game-changer, offering Saving & Lending for both individual and corporate clients, integrated business intelligence, and mobile money solutions. 
@@ -298,22 +298,18 @@ export default function AboutUs() {
                   {/*   <p className="max-w-16xl text-xl text-neutral-500 text-justify mb-2">
                         Partner with FinTech4ESG to redefine financial services and stay ahead in a rapidly evolving digital landscape. 
                     </p> */}
-                </div>
+                
 
                 {/** sections How Are We ? */}
-                <h3 className="text-neutral-900 text-2xl font-semibold mt-12 mb-6 text-center font-heading">
+                <h3 className="text-neutral-900 text-2xl font-semibold mb-6 text-center font-heading transform -translate-y-3">
                   {t("about.HowWeAre")}
                 </h3>
                 {/* <p className="text-xl text-justify font-semibold leading-relaxed mb-2 md:text-left">
                         FinTech4ESG: Driving Global Innovation & Sustainability in Financial Services :
                     </p> */}
               
-                <p className="mt-4 max-w-3xl text-xl text-neutral-500 text-center lg:mx-auto mb-6">
-                    FinTech4ESG leverages 75+ years of global expertise to drive Digital Transformation 
-                    in Financial Services. With proven success in FinTech and Financial Inclusion, 
-                    it empowers institutions to scale, improve efficiency, and promote inclusive growth—unlocking 
-                    new opportunities through innovative platforms and deep industry 
-                    knowledge. Join us in transforming finance sustainably.
+                <p className="max-w-3xl text-xl text-neutral-500 text-center lg:mx-auto mb-6 transform -translate-y-5">
+                 {t("how.description")}
                 </p>
                 {/*      
                 <p className="text-xl text-justify leading-relaxed mb-2">
@@ -326,7 +322,7 @@ export default function AboutUs() {
                     Join us in shaping the future of finance through innovation and sustainability.
                 </p> */}
                 
-              <h3 className="text-neutral-900 text-2xl font-semibold mt-12 mb-6 text-center font-heading">
+              <h3 className="text-neutral-900 text-2xl font-semibold mb-6 text-center font-heading  transform -translate-y-3">
                   {t("about.background")}
               </h3>
           </AnimatedComponent>
@@ -356,7 +352,7 @@ export default function AboutUs() {
         </AnimatedComponent>
 
         <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.4} className="mt-16">
-            <h3 className="text-2xl font-semibold text-primary mb-8 font-heading">
+            <h3 className="text-2xl font-semibold text-neutral-900 text-center mb-8 font-heading">
               {t("about.values")}
             </h3>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">

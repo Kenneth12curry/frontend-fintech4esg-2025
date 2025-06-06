@@ -315,7 +315,7 @@ export default function ProductsCash(){
                                 <div className="flex justify-between">
                                     <span className="text-purple-200 text-sm">{t("platform.partnership.stats.default")}</span>
                                     <span className="text-green-400 font-bold">
-                                    <CountUp end={3.5} suffix="%" delay={1.3} duration={1.5} />
+                                    <CountUp end={-22} suffix="%" delay={1.3} duration={1.5} />
                                     </span>
                                 </div>
                                 <AnimatedProgressBar 
@@ -330,7 +330,7 @@ export default function ProductsCash(){
                                 <div className="flex justify-between">
                                     <span className="text-purple-200 text-sm">{t("platform.partnership.stats.customer")}</span>
                                     <span className="text-green-400 font-bold">
-                                    <CountUp end={70} suffix="%" delay={1.5} duration={1.5} />
+                                    <CountUp end={41} suffix="%" delay={1.5} duration={1.5} />
                                     </span>
                                 </div>
                                 <AnimatedProgressBar 

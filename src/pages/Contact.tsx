@@ -656,9 +656,9 @@ export default function Contact() {
                 <div>
                   <Button
                     type="submit"
-                    className="bg-primary text-white hover:bg-[#19af58] px-10 py-3 rounded-xl font-medium"
+                    className="bg-primary text-white bg-[#19af58] hover:bg-primary px-10 py-3 rounded-xl font-medium"
                     disabled={isSubmitting}>
-                    {isSubmitting ? 'SENDING...' : 'SUBMIT'}
+                    {isSubmitting ? 'Sending...' : 'Submit'}
                   </Button>
                 </div>
               </form>

@@ -617,7 +617,7 @@ const translations = {
   "title.message":"Message *",
 
   "title.robot":"Je ne suis pas un robot",
-  "title.submit":"SUBMIT",
+  "title.submit":"Soumettre",
 
   //navbar
   "title.home":"Accueil",
@@ -653,6 +653,28 @@ const translations = {
   "saving.classic":"University Graduation",
   "saving.planning":"Planning for Roof",
   "saving.terms":"Wedding",
+
+
+  "readyCash":"ReadyCash",
+
+  "readyScore":"ReadyScore",
+  "readyScore.description":"Un système de scoring innovant pour les populations non bancarisées analyse les revenus, les flux d’argent mobile et les données macroéconomiques. Utilisant des équations stochastiques, il anticipe les tendances, évalue les risques et oriente les décisions. Il mesure la solvabilité de manière fiable et soutient des stratégies inclusives, durables et fondées sur les données.",
+
+  "platform.lending.macro.title":"Macro Loan",
+
+
+  "monteCarlo":"Monte Carlo",
+  "AI":"AI Machine Learning",
+  "Linear":"Linear Function",
+
+  "score":"ReadyScore Product",
+
+  "productewallets.heading":"Interactive Financial Tools",
+  "productewallets.title":"ReadyCash eWallet Payment System",
+  "productewallets.description":"Interactive Financial Tools",
+
+  "how.description":"Avec plus de 75 ans d’expertise mondiale, nous accompagnons la transformation numérique des services financiers — en renforçant l’efficacité, en développant les institutions et en favorisant une croissance inclusive grâce à des solutions FinTech innovantes.",
+  
 
 };
 

@@ -560,155 +560,155 @@ export default function LendingSolutions(){
     return (
         <>
             <AnimatedComponent animation="fadeIn" delay={0.05} duration={0.3} className="mt-4">
-                    <div className="bg-gradient-to-r from-purple-800 to-purple-800 backdrop-blur-lg p-4">
-                        <h3 className="text-xl font-bold text-white mb-2 font-heading text-center">{t("platform.products.title")}</h3>
-                        
-                        <div className="w-full">
-                        {/* Lending Products Section - Always visible */}
-                        <div className="mb-4">
-                            <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl mb-7 max-w-xs mx-auto">
-                                <h4 className="text-xl font-medium">{t("platform.tab.lending")}</h4>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-                                {lendingProducts.map((product, index) => (
-                                    <ProductCard 
-                                    key={index}
-                                    title={product.title}
-                                    description={product.description}
-                                    subtext={product.subtext}
-                                    icon={product.icon}
-                                    features={product.features}
-                                    delay={0.1 * index}
-                                    />
-                                ))}
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("nano.business")} members={nanoLoan} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("macro.business")} members={macroLoan} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("readyToGO")}  members={readyToGo}  />
-                                    </motion.div>
-                                </AnimatedComponent>
-                            </div>
-
-                            <div className="grid grid-cols-1 gap-3 md:grid-cols-3 transform -translate-y-7">
-                                {lendingProducts1.map((product, index) => (
-                                    <ProductCard 
-                                    key={index}
-                                    title={product.title}
-                                    description={product.description}
-                                    subtext={product.subtext}
-                                    icon={product.icon}
-                                    features={product.features}
-                                    delay={0.1 * index}
-                                    />
-                                ))}
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("BNPL")} members={BNPL} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("about.team")} members={Mobile} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("merchant")}  members={Merchant}  />
-                                    </motion.div>
-                                </AnimatedComponent>
-
-                            </div>
-
+                <div className="bg-gradient-to-r from-purple-800 to-purple-800 backdrop-blur-lg p-4">
+                    <h3 className="text-xl font-bold text-white mb-2 font-heading text-center">{t("platform.products.title")}</h3>
+                    
+                    <div className="w-full">
+                    {/* Lending Products Section - Always visible */}
+                    <div className="mb-4">
+                        <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl mb-7 max-w-xs mx-auto">
+                            <h4 className="text-xl font-medium">{t("platform.tab.lending")}</h4>
                         </div>
                         
-                        {/* Saving Products Section - Always visible */}
-                        <div className="mb-4">
-                            <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl max-w-xs mx-auto transform -translate-y-8">
-                            <h4 className="text-xl font-medium">{t("platform.tab.saving")}</h4>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                                {savingProducts.map((product, index) => (
-                                    <ProductCard 
-                                    key={index}
-                                    title={product.title}
-                                    description={product.description}
-                                    subtext={product.subtext}
-                                    icon={product.icon}
-                                    features={product.features}
-                                    delay={0.1 * index}
-                                    />
-                                ))}
-                            </div>
-
-                            <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-                                 <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("saving.classic")} members={savingProductsUniversity} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                    <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                        <motion.div
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5 }}
-                                        viewport={{ once: true }} >
-                                            <TeamSection title={t("saving.planning")} members={macroLoan} />
-                                        </motion.div>
-                                    </AnimatedComponent>
-                                    <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("saving.terms")}  members={savingProductsWedding}  />
-                                    </motion.div>
-                                </AnimatedComponent>
-                            </div>
-                            
+                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                            {lendingProducts.map((product, index) => (
+                                <ProductCard 
+                                key={index}
+                                title={product.title}
+                                description={product.description}
+                                subtext={product.subtext}
+                                icon={product.icon}
+                                features={product.features}
+                                delay={0.1 * index}
+                                />
+                            ))}
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("nano.business")} members={nanoLoan} />
+                                </motion.div>
+                            </AnimatedComponent>
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("macro.business")} members={macroLoan} />
+                                </motion.div>
+                            </AnimatedComponent>
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("readyToGO")}  members={readyToGo}  />
+                                </motion.div>
+                            </AnimatedComponent>
                         </div>
 
+                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 transform -translate-y-7">
+                            {lendingProducts1.map((product, index) => (
+                                <ProductCard 
+                                key={index}
+                                title={product.title}
+                                description={product.description}
+                                subtext={product.subtext}
+                                icon={product.icon}
+                                features={product.features}
+                                delay={0.1 * index}
+                                />
+                            ))}
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("BNPL")} members={BNPL} />
+                                </motion.div>
+                            </AnimatedComponent>
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("about.team")} members={Mobile} />
+                                </motion.div>
+                            </AnimatedComponent>
+                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("merchant")}  members={Merchant}  />
+                                </motion.div>
+                            </AnimatedComponent>
+
                         </div>
+
                     </div>
+                    
+                    {/* Saving Products Section - Always visible */}
+                    <div className="mb-4">
+                        <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl max-w-xs mx-auto transform -translate-y-8">
+                        <h4 className="text-xl font-medium">{t("platform.tab.saving")}</h4>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                            {savingProducts.map((product, index) => (
+                                <ProductCard 
+                                key={index}
+                                title={product.title}
+                                description={product.description}
+                                subtext={product.subtext}
+                                icon={product.icon}
+                                features={product.features}
+                                delay={0.1 * index}
+                                />
+                            ))}
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("saving.classic")} members={savingProductsUniversity} />
+                                </motion.div>
+                            </AnimatedComponent>
+                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
+                                    <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }} >
+                                        <TeamSection title={t("saving.planning")} members={macroLoan} />
+                                    </motion.div>
+                                </AnimatedComponent>
+                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
+                                <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }} >
+                                    <TeamSection title={t("saving.terms")}  members={savingProductsWedding}  />
+                                </motion.div>
+                            </AnimatedComponent>
+                        </div>
+                        
+                    </div>
+
+                    </div>
+                </div>
             </AnimatedComponent>
         </>
     );

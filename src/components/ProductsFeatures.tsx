@@ -83,7 +83,7 @@ export default function ProductFeatures() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="hover:bg-[#19af58] rounded-xl">
+          <Button asChild size="lg" className="bg-[#19af58] hover:bg-primary rounded-xl">
             <a href="https://calendly.com/fintech4esg">
               {t("productfeatures.cta")}
               <svg className="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

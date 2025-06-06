@@ -27,7 +27,6 @@ const images = [
   home_banner1,
   home_banner3,
   home_banner5,
-  "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
 ];
 
 export default function Hero() {
@@ -76,7 +75,7 @@ export default function Hero() {
           <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left mt-10">
                   <AnimatedComponent animation="fadeIn" duration={0.7}>
                     <h1 className="text-4xl tracking-tight font-bold text-neutral-900 sm:text-5xl md:text-6xl font-heading">
                       <AnimatedComponent
@@ -121,7 +120,7 @@ export default function Hero() {
                           whileTap={{ scale: 0.95 }}
                           transition={{ type: "spring", stiffness: 400, damping: 15 }}
                         >
-                          <Button asChild size="lg" className="w-full  bg-primary rounded-xl hover:bg-[#19af58] hover:text-white">
+                          <Button asChild size="lg" className="w-full  bg-[#19af58] rounded-xl hover:bg-primary hover:text-white">
                             <a href="https://calendly.com/fintech4esg">{t("title.demo")}</a>
                           </Button>
                         </motion.div>

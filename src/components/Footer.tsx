@@ -12,14 +12,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-      <footer className="bg-gray-900 text-white py-10">
+      <footer className="bg-gray-900 text-white py-10 flex flex-col items-center justify-center text-center p-4">
         <div className="container mx-auto px-4 ">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 ">
-            <div>
+            <div className='flex flex-row items-center justify-center'>
               <img
                 src={fintech4esgLogo}// Replace with your logo path
                 alt="FinTech4ESG Logo"
-                className="image mb-4 transform -translate-y-8" 
+                className="image mb-4 transform -translate-y-10" 
               />
              {/* <h3 className="text-lg font-semibold mb-4">FinTech4ESG Consulting</h3> */}
              {/*  <img
@@ -75,7 +75,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/loan-application" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
                     {t("footer.loanApplication")}
                   </Link>
                 </li>
@@ -84,25 +84,21 @@ export default function Footer() {
             
             <div>
               <h3 className="text-lg font-semibold mb-4">{t("footer.solutions")}</h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-9 text-sm">
                 <li>
-                  <a href="#" style={{ color: '#fff', fontSize: 14 }} className='transform -translate-y-5'>
-                      <FontAwesomeIcon icon={faLinkedinIn} /><span className="text-gray-300 hover:font-bold text-sm ms-3">LinkedIn</span>
+                  <a href="/" style={{ color: '#fff', fontSize: 14 }}>
+                      <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
-                </li>
-                <li>
-                  <a href="#" style={{ color: '#fff', fontSize: 14 }}> 
-                    <FontAwesomeIcon icon={faXTwitter} /><span className="text-gray-300 hover:font-bold text-sm ms-3">Ex Twitter</span>
+                  <a href="/" className='ms-5' style={{ color: '#fff', fontSize: 14 }}> 
+                    <FontAwesomeIcon icon={faXTwitter} />
                   </a>
-                </li>
-                <li>
-                  <a href="#" style={{ color: '#fff', fontSize: 14 }}>
-                     <FontAwesomeIcon icon={faInstagram} /><span className="text-gray-300 hover:font-bold text-sm ms-3">Instagram</span>
+                   <a href="/" className="ms-5" style={{ color: '#fff', fontSize: 14 }}>
+                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>
                  <li>
                   <Link to="/" style={{ color: '#fff', fontSize: 14 }}>
-                     <span className="text-primary font-bold text-sm">FinTech4ESG Insights</span>
+                     <span className="text-primary font-bold text-sm mt-10">FinTech4ESG Insights</span>
                   </Link>
                 </li>
               </ul>
@@ -113,19 +109,19 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <div style={{ marginBottom: 0, fontSize: 14, display: 'flex', alignItems: 'center' }}>
+                  <div style={{ marginBottom: 0, fontSize: 14 }}>
                       <FontAwesomeIcon icon={faMapMarkerAlt} style={{ marginRight: 10, fontSize: 12 }} /> 
                       <span className="text-gray-300 hover:font-bold text-sm">Paris, France</span>
                   </div>
                 </li>
                 <li>
-                  <div style={{ marginBottom: 0, fontSize: 14, display: 'flex', alignItems: 'center' }}>
+                  <div style={{ marginBottom: 0, fontSize: 14 }}>
                     <FontAwesomeIcon icon={faPhone} style={{ marginRight: 10, fontSize: 12 }} /> 
                      <span className="text-gray-300 hover:font-bold text-sm">+33 1 23 45 67 89</span>
                   </div>
                 </li>
                 <li>
-                  <div style={{ fontSize: 14, display: 'flex', alignItems: 'center' }}>
+                  <div style={{ fontSize: 14 }}>
                     <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: 10, fontSize: 12 }} /> 
                      <span className="text-gray-300 hover:font-bold text-sm">contact@fintech4esg.com</span>
                   </div>

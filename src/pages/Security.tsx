@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { AnimatedComponent } from "@/components/ui/animated-component";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SecurityPolicyPage() {
   const [activeTab, setActiveTab] = useState<string>("overview");
@@ -705,14 +706,20 @@ export default function SecurityPolicyPage() {
             For additional information about our policies, please see:
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/privacy"}>
+           <Link
+              to="/privacy"
+              className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white"
+            >
               <Shield className="h-4 w-4" />
               Privacy Policy
-            </Button>
-            <Button variant="outline" className="gap-2 hover:bg-primary rounded-xl" onClick={() => window.location.href = "/terms"}>
+            </Link>
+            <Link
+             to="/terms"
+              className="flex items-center gap-2 hover:bg-primary rounded-xl bg-white p-2 text-neutre-500 hover:text-white"
+            >
               <FileText className="h-4 w-4" />
               Terms of Service
-            </Button>
+            </Link>
           </div>
         </div>
 

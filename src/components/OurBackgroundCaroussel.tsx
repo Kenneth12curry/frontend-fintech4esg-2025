@@ -20,7 +20,7 @@ export default function OurBackgroundCaroussel () {
     return (
         <section className="py-8 bg-gray-50">
         <div
-            className="mx-auto bg-white rounded-[32px] shadow-xl border-t-4 border-[#19af58] flex items-center justify-center overflow-hidden"
+            className="mx-auto bg-white rounded-[32px] shadow-xl border-t-2 border-[#19af58] flex items-center justify-center overflow-hidden"
             style={{
             maxWidth: 1200,
             minHeight: 150,
@@ -28,37 +28,29 @@ export default function OurBackgroundCaroussel () {
             }}>
 
             <div
-            className="flex items-center gap-10"
-            style={{
-                whiteSpace: "nowrap",
-                animation: "defilement 20s linear infinite",
-            }}
-            >
-            {[...logos, ...logos].map((logo, idx) => (
-            <img
-            key={idx}
-            src={logo}
-            alt={`ecosystem-logo-${idx}`}
-            style={{
-                width: 160,
-                height: 160,
-                objectFit: "contain",
-                padding: "0 8px",
-            }}
-            className="grayscale opacity-70 inline-block"
-            loading="lazy"
-            />
-        ))}
+                className="flex items-center gap-10 whitespace-nowrap"
+                style={{
+                    animation: "defilement 40s linear infinite",
+                }}
+                >
+                {[...logos, ...logos].map((logo, idx) => (
+                    <img
+                    key={idx}
+                    src={logo}
+                    alt={`ecosystem-logo-${idx}`}
+                    style={{ height: 170, width: 170, objectFit: "contain", padding: "0 8px" }}
+                    className="grayscale opacity-70 inline-block"
+                    loading="lazy"
+                    />
+                ))}
             </div>
             {/* Animation CSS */}
-            <style>
-            {`
-                @keyframes defilement {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-                }
-            `}
-            </style>
+           <style>{`
+            @keyframes defilement {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+            }
+        `}</style>
         </div>
         </section>
     );
