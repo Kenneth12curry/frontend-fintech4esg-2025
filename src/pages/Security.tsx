@@ -688,12 +688,12 @@ export default function SecurityPolicyPage() {
                         </p>
                       </div>
                     </div>
-                    <div className="mt-4 text-center">
-                      <Button variant="outline" className="gap-2 bg-primary hover:bg-purple-200 rounded-xl hover:text-black" onClick={() => window.location.href = "/account/security"}>
+                 {/*    <div className="mt-4 text-center">
+                      <Button variant="outline" className="gap-2 bg-primary hover:bg-purple-200 rounded-xl hover:text-black">
                         <Lock className="h-4 w-4" />
                         Manage Security Settings
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </CardContent>
               </TabsContent>

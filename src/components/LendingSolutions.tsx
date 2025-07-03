@@ -8,7 +8,9 @@ import {
   Clock,
   Smartphone,
   PiggyBank,
-  Plus, Minus
+  Plus, Minus,
+  Tractor,
+  CableCar
 } from "lucide-react";
 import { AnimatedComponent } from "./ui/animated-component";
 import { useTranslation } from "react-i18next";
@@ -18,40 +20,58 @@ import { motion,AnimatePresence } from "framer-motion";
 import nanoLoan1 from "@/assets/images/products/NanoLoan/1-1_NanoLoan.jpg";
 import nanoLoan2 from "@/assets/images/products/NanoLoan/1-2_NanoLoan.jpg";
 import nanoLoan3 from "@/assets/images/products/NanoLoan/1-3_NanoLoan.jpg";
-import nanoLoan4 from "@/assets/images/products/NanoLoan/1-4_NanoLoan_Thailland.jpg";
+import nanoLoan4 from "@/assets/images/products/NanoLoan/1-4_NanoLoan.jpg";
 import nanoLoan5 from "@/assets/images/products/NanoLoan/1-5_NanoLoan.jpg";
-import nanoLoan6 from "@/assets/images/products/NanoLoan/1-6_NanoLoan.jpg";
-import nanoLoan7 from "@/assets/images/products/NanoLoan/1-7_NanoLoan.jpg";
-import nanoLoan8 from "@/assets/images/products/NanoLoan/1-8_NanoLoan.jpg";
-import nanoLoan9 from "@/assets/images/products/NanoLoan/1-9_NanoLoan.jpg";
-import nanoLoan10 from "@/assets/images/products/NanoLoan/1-10_NanoLoan.jpg";
-
-import macroLoan1 from "@/assets/images/products/MacroLoan/2-1_MacroLoan_SouthAmerica.jpg"
-//import macroLoan2 from "@/assets/images/products/MacroLoan/2-2_MacroLoan.jpg"
-//import macroLoan3 from "@/assets/images/products/MacroLoan/2-3_MacroLoan_Vietnam.jpg"
-import macroLoan4 from "@/assets/images/products/MacroLoan/2-4_MacroLoan.jpg"
-import macroLoan5 from "@/assets/images/products/MacroLoan/2-5_MacroLoan.jpg"
-import macroLoan6 from "@/assets/images/products/MacroLoan/2-6_MacroLoan.jpg"
-import macroLoan7 from "@/assets/images/products/MacroLoan/2-7_MacroLoan.jpg"
+import nanoLoan6 from "@/assets/images/products/NanoLoan/1-7_NanoLoan.jpg";
+import nanoLoan7 from "@/assets/images/products/NanoLoan/1-8_NanoLoan.jpg";
+import nanoLoan8 from "@/assets/images/products/NanoLoan/1-9_NanoLoan.jpg";
 
 
+
+
+
+import macroLoan1 from "@/assets/images/products/MacroLoan/2-6_MacroLoan.jpg"
+import macroLoan2 from "@/assets/images/products/MacroLoan/2-7_MacroLoan.jpg"
+import macroLoan3 from "@/assets/images/products/MacroLoan/1-4_MacroLoan.jpg"
+import macroLoan4 from "@/assets/images/products/MacroLoan/1-5_MacroLoan..jpg"
+
+import readyToGo1 from "@/assets/images/products/ReadyToGo/3-1_ReadyToGo.jpg"
 import readyToGo2 from "@/assets/images/products/ReadyToGo/3-2_ReadyToGo.jpg"
 import readyToGo3 from "@/assets/images/products/ReadyToGo/3-3_ReadyToGo.jpg"
 import readyToGo4 from "@/assets/images/products/ReadyToGo/3-4_ReadyToGo.jpg"
 
-import Bnpl1 from "@/assets/images/products/BNPL/4-1_BNPL.jpg";
 
-import mobile from "@/assets/images/products/Mobile/mobile.jpg";
-import tel from "@/assets/images/products/Mobile/tel.png";
+import Bnpl1 from "@/assets/images/products/BNPL/1-1_BNPL.jpg";
+import Bnpl2 from "@/assets/images/products/BNPL/1-2 BNPL.png";
+import Bnpl3 from "@/assets/images/products/BNPL/1-3 BNPL.jpg";
+import Bnpl4 from "@/assets/images/products/BNPL/1-4 BNPL.jpg";
 
-import merchant from  "@/assets/images/products/Merchant/merchant.jpg";
+
+import agrivalue1 from "@/assets/images/products/Agrivalue/vecteezy_african.jpg";
+import agrivalue2 from "@/assets/images/products/Agrivalue/vecteezy_handsome.jpg";
+
+import advance1 from "@/assets/images/products/HarvestAdvance/70435182-VIETNAM-Hanoi-countryside-rice-farmers-Nguyen-Huu-Uc-and-Nguyen-Thi-Ha-spread-seed-in-their-family-rice-field.jpg";
+import advance2 from "@/assets/images/products/HarvestAdvance/ADB_2013_GMS_ADJ_2137.jpg";
+import advance3 from "@/assets/images/products/HarvestAdvance/agriculture-cameroun-application.jpg";
+import advance4 from "@/assets/images/products/HarvestAdvance/illustration-article-retour-jnda.jpg";
 
 
 
 /** sections savingProducts */
-import university from "@/assets/images/savingProducts/University/5-2_Saving_Education_Term Loan.png";
-import wedding from "@/assets/images/savingProducts/wedding/5-1_Saving_Wedding_Term Loan.jpg";
-import wedding1 from "@/assets/images/savingProducts/wedding/5-3_Saving_Wedding_Classic Loan.jpg";
+import university from "@/assets/images/savingProducts/University/2-1_Saving_Education_TL.png";
+import university1 from "@/assets/images/savingProducts/University/2-2_Saving_Education_TL.png";
+import university2 from "@/assets/images/savingProducts/University/2-3_Saving_Education_TL.png";
+import universit3 from "@/assets/images/savingProducts/University/2-4_Saving_Education_TL.png";
+import university4 from "@/assets/images/savingProducts/University/5-2_Saving_Education_Term Loan.png";
+
+import planning from "@/assets/images/savingProducts/planning/3-1_Saving_Roof_CL.jpg";
+import planning1 from "@/assets/images/savingProducts/planning/3-2_Saving_Roof_CL.jpg";
+import plannin2 from "@/assets/images/savingProducts/planning/3-3_Saving_Roof_CL.jpg";
+
+
+import wedding from "@/assets/images/savingProducts/wedding/1-1_Saving_Wedding_TL.jpg";
+import wedding1 from "@/assets/images/savingProducts/wedding/1-2_Saving_Wedding_TL.jpg";
+
 
 
 import { useState, useEffect, useCallback, useRef } from "react";
@@ -201,6 +221,7 @@ import "@/styles/styles.css";
  */
 
 import { useMemo } from "react";
+import UssdSimulator from "./UssdSimulator";
 
 interface TeamSectionProps {
   title: string;
@@ -431,7 +452,7 @@ export default function LendingSolutions(){
         },
         {
         title: t("platform.lending.macro.title"),
-        description: t("platform.lending.nano.description"),
+        description: t("platform.lending.macro.description"),
         subtext: t("platform.lending.macro.subtext"),
         icon: Wallet,
         features: [
@@ -465,64 +486,34 @@ export default function LendingSolutions(){
                 t("platform.lending.bnpl.feature3")
             ]
         },
-        {
-            title: t("platform.lending.merchant.title"),
-            description: t("platform.lending.merchant.description"),
-            subtext: t("platform.lending.merchant.subtext"),
-            icon: Store,
+
+         {
+            title: t("AgriValue"),
+            description: t("platform.lending.agrivalue.description"),
+            subtext: "",
+            icon: CableCar,
             features: [
-                t("platform.lending.merchant.feature1"),
-                t("platform.lending.merchant.feature2"),
-                t("platform.lending.merchant.feature3")
+                t("platform.lending.agrivalue.feature1"),
+                t("platform.lending.agrivalue.feature2"),
+                t("platform.lending.agrivalue.feature3")
             ]
         },
 
         {
-            title: t("platform.lending.merchant.title"),
-            description: t("platform.lending.merchant.description"),
-            subtext: t("platform.lending.merchant.subtext"),
-            icon: Store,
+            title: t("advance"),
+            description: t("platform.lending.advance.description"),
+            subtext: "",
+            icon: Tractor,
             features: [
-                t("platform.lending.merchant.feature1"),
-                t("platform.lending.merchant.feature2"),
-                t("platform.lending.merchant.feature3")
+                t("platform.lending.advance.feature1"),
+                t("platform.lending.advance.feature2"),
+                t("platform.lending.advance.feature3")
             ]
-        }
-    ];
-
-    const eWalletProducts = [
-        {
-        title: t("platform.ewallet.agent.title"),
-        description: t("platform.ewallet.agent.description"),
-        subtext: t("platform.ewallet.agent.subtext"),
-        icon: Store,
-        features: [
-            t("platform.ewallet.agent.feature1"),
-            t("platform.ewallet.agent.feature2"),
-            t("platform.ewallet.agent.feature3"),
-            t("platform.ewallet.agent.feature4"),
-            t("platform.ewallet.agent.feature5"),
-            t("platform.ewallet.agent.feature6"),
-            t("platform.ewallet.agent.feature7"),
-            t("platform.ewallet.agent.feature8")
-        ]
         },
-        {
-        title: t("platform.ewallet.client.title"),
-        description: t("platform.ewallet.client.description"),
-        subtext: t("platform.ewallet.client.subtext"),
-        icon: Smartphone,
-        features: [
-            t("platform.ewallet.client.feature1"),
-            t("platform.ewallet.client.feature2"),
-            t("platform.ewallet.client.feature3"),
-            t("platform.ewallet.client.feature4"),
-            t("platform.ewallet.client.feature5"),
-            t("platform.ewallet.client.feature6")
-        ]
-        }
+ 
     ];
 
+  
     const savingProducts = [
         {
         title: t("platform.saving.classic.title"),
@@ -548,168 +539,293 @@ export default function LendingSolutions(){
         }
     ];
 
-    const nanoLoan=[nanoLoan1,nanoLoan2,nanoLoan3,nanoLoan4,nanoLoan5,nanoLoan6,nanoLoan7,nanoLoan7,nanoLoan8,nanoLoan9,nanoLoan10];
-    const macroLoan=[macroLoan1,macroLoan4,macroLoan5,macroLoan6,macroLoan7];
-    const readyToGo=[readyToGo2,readyToGo3,readyToGo4];
-    const BNPL=[Bnpl1];
-    const Mobile =[mobile,tel];
-    const Merchant=[merchant];
-    const savingProductsUniversity=[university];
+    const nanoLoan=[nanoLoan1,nanoLoan2,nanoLoan3,nanoLoan4,nanoLoan5,nanoLoan6,nanoLoan7,nanoLoan8];
+    const macroLoan=[macroLoan1,macroLoan2,macroLoan3,macroLoan4];
+    const readyToGo=[readyToGo1,readyToGo2,readyToGo3,readyToGo4];
+    const Bnpl=[Bnpl1,Bnpl2,Bnpl3,Bnpl4];
+    const agrivalue =[agrivalue1,agrivalue2];
+    const advance=[advance1,advance2,advance3,advance4];
+    const savingProductsUniversity=[university,university1,university2,universit3,university4];
+    const planningForRoof = [planning,planning1,plannin2];
     const savingProductsWedding=[wedding,wedding1];
 
     return (
-        <>
-            <AnimatedComponent animation="fadeIn" delay={0.05} duration={0.3} className="mt-4">
-                <div className="bg-gradient-to-r from-purple-800 to-purple-800 backdrop-blur-lg p-4">
-                    <h3 className="text-xl font-bold text-white mb-2 font-heading text-center">{t("platform.products.title")}</h3>
-                    
-                    <div className="w-full">
-                    {/* Lending Products Section - Always visible */}
-                    <div className="mb-4">
-                        <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl mb-7 max-w-xs mx-auto">
-                            <h4 className="text-xl font-medium">{t("platform.tab.lending")}</h4>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-                            {lendingProducts.map((product, index) => (
-                                <ProductCard 
-                                key={index}
-                                title={product.title}
-                                description={product.description}
-                                subtext={product.subtext}
-                                icon={product.icon}
-                                features={product.features}
-                                delay={0.1 * index}
-                                />
-                            ))}
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("nano.business")} members={nanoLoan} />
-                                </motion.div>
-                            </AnimatedComponent>
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("macro.business")} members={macroLoan} />
-                                </motion.div>
-                            </AnimatedComponent>
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("readyToGO")}  members={readyToGo}  />
-                                </motion.div>
-                            </AnimatedComponent>
-                        </div>
+      
+    <>
+      
+      {/* Version Mobile */}
+      <div className="block sm:hidden bg-purple-800 p-4">
+        <h3 className="text-lg font-bold text-white text-center mb-4">
+          {t("platform.products.title")}
+        </h3>
 
-                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 transform -translate-y-7">
-                            {lendingProducts1.map((product, index) => (
-                                <ProductCard 
-                                key={index}
-                                title={product.title}
-                                description={product.description}
-                                subtext={product.subtext}
-                                icon={product.icon}
-                                features={product.features}
-                                delay={0.1 * index}
-                                />
-                            ))}
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("BNPL")} members={BNPL} />
-                                </motion.div>
-                            </AnimatedComponent>
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("about.team")} members={Mobile} />
-                                </motion.div>
-                            </AnimatedComponent>
-                            <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-12">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("merchant")}  members={Merchant}  />
-                                </motion.div>
-                            </AnimatedComponent>
+        {/* Lending Title */}
+        <div className="mb-4">
+          <div className="mx-auto w-max text-sm sm:text-base text-white rounded-xl border-none bg-[#19af58] px-4 sm:px-8 py-1.5 sm:py-2.5 mt-2 sm:mt-4 transition">
+            <h4 className="text-base text-center sm:text-left sm:text-xl font-medium">
+              {t("platform.tab.lending")}
+            </h4>
+          </div>
 
-                        </div>
+          {/* Lending Cards 1 */}
+          <div className="mt-3 space-y-4">
+            {lendingProducts.map((product, index) => (
+              <ProductCard
+                key={`mobile-lending1-${index}`}
+                title={product.title}
+                description={product.description}
+                subtext={product.subtext}
+                icon={product.icon}
+                features={product.features}
+                delay={0.1 * index}
+              />
+            ))}
 
-                    </div>
-                    
-                    {/* Saving Products Section - Always visible */}
-                    <div className="mb-4">
-                        <div className="bg-[#19af58] text-white text-center py-2 px-4 rounded-xl max-w-xs mx-auto transform -translate-y-8">
-                        <h4 className="text-xl font-medium">{t("platform.tab.saving")}</h4>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                            {savingProducts.map((product, index) => (
-                                <ProductCard 
-                                key={index}
-                                title={product.title}
-                                description={product.description}
-                                subtext={product.subtext}
-                                icon={product.icon}
-                                features={product.features}
-                                delay={0.1 * index}
-                                />
-                            ))}
-                        </div>
+            {/* Team Sections 1 */}
+            {[nanoLoan, macroLoan, readyToGo].map((team, i) => (
+              <TeamSection
+                key={`mobile-team1-${i}`}
+                title={
+                  i === 0
+                    ? t("nano.business")
+                    : i === 1
+                    ? t("macro.business")
+                    : t("readyToGO")
+                }
+                members={team}
+              />
+            ))}
+          </div>
 
-                        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("saving.classic")} members={savingProductsUniversity} />
-                                </motion.div>
-                            </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                    <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    viewport={{ once: true }} >
-                                        <TeamSection title={t("saving.planning")} members={macroLoan} />
-                                    </motion.div>
-                                </AnimatedComponent>
-                                <AnimatedComponent animation="fadeIn" delay={0.5} duration={0.5} className="transform -translate-y-9">
-                                <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }} >
-                                    <TeamSection title={t("saving.terms")}  members={savingProductsWedding}  />
-                                </motion.div>
-                            </AnimatedComponent>
-                        </div>
-                        
-                    </div>
+          {/* Lending Cards 2 */}
+          <div className="mt-6 space-y-4">
+            {lendingProducts1.map((product, index) => (
+              <ProductCard
+                key={`mobile-lending2-${index}`}
+                title={product.title}
+                description={product.description}
+                subtext={product.subtext}
+                icon={product.icon}
+                features={product.features}
+                delay={0.1 * index}
+              />
+            ))}
 
-                    </div>
+            {/* Team Sections 2 */}
+            {[Bnpl, agrivalue,advance].map((team, i) => (
+              <TeamSection
+                key={`mobile-team2-${i}`}
+                title={
+                  i === 0
+                    ? t("BNPL")
+                    : i === 1
+                    ? t("frame.agrivalue")
+                    : t("frame.harvestAdvance")
+                }
+                members={team}
+              />
+            ))}
+          </div>
+
+          {/** Savings Products */}
+          <div className="mx-auto w-max text-sm sm:text-base text-white rounded-xl border-none bg-[#19af58] px-4 sm:px-8 py-1.5 sm:py-2.5 mt-2 sm:mt-4 transition">
+            <h4 className="text-base text-center sm:text-left sm:text-xl font-medium">
+              {t("platform.tab.saving")}
+            </h4>
+          </div>
+
+          <div className="mt-3 space-y-4">
+                {/* Saving Products Section - Always visible */}
+                {savingProducts.map((product, index) => (
+                      <ProductCard 
+                      key={index}
+                      title={product.title}
+                      description={product.description}
+                      subtext={product.subtext}
+                      icon={product.icon}
+                      features={product.features}
+                      delay={0.1 * index}
+                      />
+                  ))}
+
+                  {/* Team Sections 2 */}
+                  {[savingProductsUniversity, planningForRoof, savingProductsWedding].map((team, i) => (
+                    <TeamSection
+                      key={`mobile-team2-${i}`}
+                      title={
+                        i === 0
+                          ? t("saving.classic")
+                          : i === 1
+                          ? t("saving.planning")
+                          : t("saving.terms")
+                      }
+                      members={team}
+                    />
+                  ))}
+            </div>
+        </div>
+      </div>
+
+      {/* Version Desktop et Tablette */}
+      <div className="hidden sm:block">
+          <AnimatedComponent animation="fadeIn" delay={0.05} duration={0.3} className="">
+            <div className="bg-gradient-to-r from-purple-800 to-purple-800 backdrop-blur-lg p-6">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center font-heading">
+                {t("platform.products.title")}
+              </h3>
+
+              <div className="mb-6">
+                <div className="mx-auto w-max text-white rounded-xl bg-[#19af58] border-none px-6 sm:px-8 py-2 sm:py-2.5 sm:mt-4 transition">
+                  <h4 className="text-xl font-medium">{t("platform.tab.lending")}</h4>
                 </div>
-            </AnimatedComponent>
-        </>
-    );
+
+                {/* Lending Cards 1 */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
+                  {lendingProducts.map((product, index) => (
+                    <ProductCard
+                      key={`desktop-lending1-${index}`}
+                      title={product.title}
+                      description={product.description}
+                      subtext={product.subtext}
+                      icon={product.icon}
+                      features={product.features}
+                      delay={0.1 * index}
+                    />
+                  ))}
+                </div>
+
+                {/* Lending TeamSections */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {[nanoLoan, macroLoan, readyToGo].map((team, i) => (
+                    <AnimatedComponent
+                      key={`desktop-team1-${i}`}
+                      animation="fadeIn"
+                      delay={0.5}
+                      duration={0.5}
+                      className="w-full"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <TeamSection
+                          title={
+                            i === 0
+                              ? t("nano.business")
+                              : i === 1
+                              ? t("macro.business")
+                              : t("readyToGO")
+                          }
+                          members={team}
+                        />
+                      </motion.div>
+                    </AnimatedComponent>
+                  ))}
+                </div>
+
+                {/* Lending Cards 2 */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
+                  {lendingProducts1.map((product, index) => (
+                    <ProductCard
+                      key={`desktop-lending2-${index}`}
+                      title={product.title}
+                      description={product.description}
+                      subtext={product.subtext}
+                      icon={product.icon}
+                      features={product.features}
+                      delay={0.1 * index}
+                    />
+                  ))}
+                </div>
+
+                {/* Lending TeamSections 2 */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {[Bnpl, agrivalue,advance].map((team, i) => (
+                    <AnimatedComponent
+                      key={`desktop-team2-${i}`}
+                      animation="fadeIn"
+                      delay={0.5}
+                      duration={0.5}
+                      className="w-full"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <TeamSection
+                          title={
+                            i === 0
+                              ? t("BNPL")
+                              : i === 1
+                              ? t("frame.agrivalue")
+                              : t("frame.harvestAdvance")
+                          }
+                          members={team}
+                        />
+                      </motion.div>
+                    </AnimatedComponent>
+                  ))}
+                </div>
+
+                {/* Saving */}
+                <div className="mx-auto w-max text-white rounded-xl bg-[#19af58] border-none px-6 sm:px-8 py-2 sm:py-2.5 sm:mt-4 transition">
+                  <h4 className="text-xl font-medium">{t("platform.tab.saving")}</h4>
+                </div>
+
+                {/* Saving Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                  {savingProducts.map((product, index) => (
+                    <ProductCard
+                      key={index}
+                      title={product.title}
+                      description={product.description}
+                      subtext={product.subtext}
+                      icon={product.icon}
+                      features={product.features}
+                      delay={0.1 * index}
+                    />
+                  ))}
+                </div>
+
+                {/* Saving TeamSections */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
+                  {[savingProductsUniversity, planningForRoof, savingProductsWedding].map((team, i) => (
+                    <AnimatedComponent
+                      key={`desktop-team1-${i}`}
+                      animation="fadeIn"
+                      delay={0.5}
+                      duration={0.5}
+                      className="w-full"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <TeamSection
+                          title={
+                            i === 0
+                              ? t("saving.classic")
+                              : i === 1
+                              ? t("saving.planning")
+                              : t("saving.terms")
+                          }
+                          members={team}
+                        />
+                      </motion.div>
+                    </AnimatedComponent>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedComponent>
+      </div>
+
+    </>
+   );
 }

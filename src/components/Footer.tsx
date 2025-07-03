@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope, faGlobeAsia,faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 import fintech4esgLogo from "@/assets/FINTECH4ESG_Logos.svg"; 
 
 
@@ -12,148 +12,148 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-      <footer className="bg-gray-900 text-white py-10 flex flex-col items-center justify-center text-center p-4">
-        <div className="container mx-auto px-4 ">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 ">
-            <div className='flex flex-row items-center justify-center'>
-              <img
-                src={fintech4esgLogo}// Replace with your logo path
-                alt="FinTech4ESG Logo"
-                className="image mb-4 transform -translate-y-10" 
-              />
-             {/* <h3 className="text-lg font-semibold mb-4">FinTech4ESG Consulting</h3> */}
-             {/*  <img
-                src={footer1}// Replace with your logo path
-                alt="FinTech4ESG Logo"
-                className="h-20 mb-4 transform -translate-y-10"
-                style={{filter: "brightness(0) invert(1)"}}
-              /> */}
-            </div>
+      <footer className="bg-gray-900 text-white py-6 sm:py-10 px-3 sm:px-4 text-center">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 sm:gap-8">
             
+            {/* Logo */}
+            <div className="flex flex-row items-center justify-center">
+              <img
+                src={fintech4esgLogo}
+                alt="FinTech4ESG Logo"
+                className="w-24 sm:w-32 mb-2 sm:mb-4 transform translate-y-2 sm:translate-y-6 md:-translate-y-0"
+              />
+            </div>
+
+            {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">{t("footer.quickLinks")}</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t("footer.quickLinks")}</h3>
+              <ul className="space-y-1 sm:space-y-2 text-sm">
                 <li>
-                  <Link to="/" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/" className="text-gray-300 hover:text-primary hover:font-bold transition-colors">
                     {t("nav.home")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about-us" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/aboutus" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     {t("nav.about")}
                   </Link>
                 </li>
-               {/*  <li>
-                  <Link to="/platform" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
-                    {t("nav.platform")}
-                  </Link>
-                </li> */}
                 <li>
-                  <Link to="/contact" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/contact" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     {t("nav.contact")}
                   </Link>
                 </li>
               </ul>
             </div>
-            
+
+            {/* Products */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">{t("footer.products")}</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t("footer.products")}</h3>
+              <ul className="space-y-1 sm:space-y-2 text-sm">
                 <li>
-                  <Link to="ready-cash" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/readycash" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     {t("footer.education")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ready-score" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/readyscore" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     ReadyScore
                   </Link>
                 </li>
                 <li>
-                  <Link to="/education" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+                  <Link to="/readypay" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     ReadyPay
                   </Link>
                 </li>
-                <li>
-                  <Link to="/" className="text-gray-300 hover:text-white hover:font-bold transition-colors">
+               {/*  <li>
+                  <Link to="/" className="text-gray-300 hover:text-primary  hover:font-bold transition-colors">
                     {t("footer.loanApplication")}
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
-            
+
+            {/* Solutions / Réseaux sociaux */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">{t("footer.solutions")}</h3>
-              <ul className="space-y-9 text-sm">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t("footer.solutions")}</h3>
+              <ul className="space-y-4 text-sm">
                 <li>
-                  <a href="/" style={{ color: '#fff', fontSize: 14 }}>
+                  <div className="flex justify-center gap-4">
+                    <a href="/" style={{ color: '#fff', fontSize: 14 }}>
                       <FontAwesomeIcon icon={faLinkedinIn} />
-                  </a>
-                  <a href="/" className='ms-5' style={{ color: '#fff', fontSize: 14 }}> 
-                    <FontAwesomeIcon icon={faXTwitter} />
-                  </a>
-                   <a href="/" className="ms-5" style={{ color: '#fff', fontSize: 14 }}>
-                     <FontAwesomeIcon icon={faInstagram} />
-                  </a>
+                    </a>
+                    <a href="/" style={{ color: '#fff', fontSize: 14 }}>
+                      <FontAwesomeIcon icon={faXTwitter} />
+                    </a>
+                    <a href="/" style={{ color: '#fff', fontSize: 14 }}>
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </div>
                 </li>
-                 <li>
-                  <Link to="/" style={{ color: '#fff', fontSize: 14 }}>
-                     <span className="text-primary font-bold text-sm mt-10">FinTech4ESG Insights</span>
+                <li>
+                  <Link to="/" className="text-sm font-bold text-primary ">
+                    FinTech4ESG Insights
                   </Link>
                 </li>
               </ul>
             </div>
-            
-            {/* Carlson Capital Denmark */}
+
+            {/* Contact */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact</h3>
+              <ul className="space-y-1 text-sm">
                 <li>
-                  <div style={{ marginBottom: 0, fontSize: 14 }}>
-                      <FontAwesomeIcon icon={faMapMarkerAlt} style={{ marginRight: 10, fontSize: 12 }} /> 
-                      <span className="text-gray-300 hover:font-bold text-sm">Paris, France</span>
+                  <div style={{ fontSize: 13 }}>
+                    <FontAwesomeIcon icon={faGlobeAsia} className="mr-2 text-sm" />
+                    <Link to="/contact"><span className="text-gray-300">{t("contact.Asia")}</span></Link>
                   </div>
                 </li>
                 <li>
-                  <div style={{ marginBottom: 0, fontSize: 14 }}>
-                    <FontAwesomeIcon icon={faPhone} style={{ marginRight: 10, fontSize: 12 }} /> 
-                     <span className="text-gray-300 hover:font-bold text-sm">+33 1 23 45 67 89</span>
+                  <div style={{ fontSize: 13 }}>
+                    <FontAwesomeIcon icon={faGlobeAfrica} className="mr-2 text-sm" />
+                    <Link to="/contact"> <span className="text-gray-300">{t("contact.west")}</span></Link>
                   </div>
                 </li>
                 <li>
-                  <div style={{ fontSize: 14 }}>
-                    <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: 10, fontSize: 12 }} /> 
-                     <span className="text-gray-300 hover:font-bold text-sm">contact@fintech4esg.com</span>
+                  <div style={{ fontSize: 13 }}>
+                    <FontAwesomeIcon icon={faGlobeAfrica} className="mr-2 text-sm" />
+                    <Link to="/contact"> <span className="text-gray-300">{t("contact.central")}</span></Link>
                   </div>
                 </li>
+                {/* <li>
+                  <div style={{ fontSize: 13 }}>
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-sm" />
+                    <span className="text-gray-300">contact@fintech4esg.com</span>
+                  </div>
+                </li> */}
               </ul>
             </div>
           </div>
-          
-          <div className="h-px bg-gray-700 my-8"></div>
-          
+
+          {/* Divider */}
+          <div className="h-px bg-gray-700 my-6 sm:my-8"></div>
+
+          {/* Bottom Info */}
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col">
-              <p className="text-gray-400 text-sm">
-                &copy; {currentYear} FinTech4ESG Consulting
-              </p>
-              <p className="text-gray-400 text-xs mt-1">
-                All rights reserved.
-              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">&copy; {currentYear} FinTech4ESG Consulting</p>
+              <p className="text-gray-400 text-xs mt-1">All rights reserved.</p>
             </div>
-            <div className="mt-4 md:mt-0 flex gap-4">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <div className="mt-3 md:mt-0 flex gap-3 sm:gap-4">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                 {t("footer.privacy")}
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link to="/terms" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                 {t("footer.terms")}
               </Link>
-              <Link to="/security" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link to="/security" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                 {t("footer.security")}
               </Link>
             </div>
           </div>
         </div>
       </footer>
+
   );
 }

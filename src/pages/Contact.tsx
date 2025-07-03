@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -98,8 +100,13 @@ const getCountryOptions = () =>
   });
 
 
-
 import { useFormContext } from "react-hook-form";
+import { AnimatedComponent } from "@/components/ui/animated-component";
+import { Minus, Plus } from "lucide-react";
+import { useKeenSlider } from "keen-slider/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 interface CustomFormFieldProps {
   name: string;
   label: string;
@@ -107,7 +114,7 @@ interface CustomFormFieldProps {
   maxLength?: number;
   component?: React.ComponentType<any>; // Type générique pour les composants React
 }
-const CustomFormField = ({ name, label, rows = 6, maxLength = 200 }:CustomFormFieldProps) => {
+const CustomFormField = ({ name, label, rows = 6, maxLength = 400 }:CustomFormFieldProps) => {
   const { control } = useFormContext(); // Accède au contexte du formulaire
 
   return (
@@ -138,10 +145,73 @@ const CustomFormField = ({ name, label, rows = 6, maxLength = 200 }:CustomFormFi
   );
 };
 
+interface TeamSectionProps {
+  title: string;
+  titleName: string;
+  email: string;
+  tel: string;
+  offices: string;
+  country?:string;
+  countries?:string;
+}
+
+function TeamSection({ title, titleName, email, tel, offices,country,countries }: TeamSectionProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="mt-12">
+      <motion.div
+        className="flex justify-between items-center cursor-pointer bg-white rounded-xl p-2 shadow-sm"
+        onClick={() => setIsExpanded(!isExpanded)}
+        whileHover={{ scale: 1.01, boxShadow: "0 4px 20px rgba(124, 58, 237, 0.1)" }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        <h3 className="font-semibold text-[#19af58] font-heading text-base">{title}</h3>
+        <motion.div
+          className="text-[#19af58]"
+          animate={{ rotate: isExpanded ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {isExpanded ? <Minus size={20} /> : <Plus size={20} />}
+        </motion.div>
+      </motion.div>
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-xl shadow-md p-4 mt-2"
+          >
+            <div className="text-gray-700 whitespace-pre-line font-medium leading-relaxed">
+              <h2 className="text-neutral-900text-lg font-semibold mb-2">{titleName}</h2>
+              <p className="text-sm text-neutral-500 mb-2">Email : {email}</p>
+              <p className="text-sm text-neutral-500 mb-2">
+                  <FontAwesomeIcon icon={faPhone} style={{ color: '#19af58' }}  className="text-sm" /> / <FontAwesomeIcon 
+                    icon={faWhatsapp} 
+                    className="text-sm" 
+                    style={{ color: '#19af58' }} 
+                  /><span> :</span> {tel}
+              </p>
+              <h5 className="text-sm font-bold mt-5">{countries}</h5>
+              <p className="text-sm text-neutral-500 font-semibold mt-1">{offices}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+
 export default function Contact() {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedCountryInfo, setSelectedCountryInfo] = useState(countryData.other);
+  /** CAPTCHA */
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(createFormSchema('other')),
@@ -194,50 +264,100 @@ export default function Contact() {
   } catch (error) {
     return { min: 6, max: 15 };
   }
-};
+  };
 
   
   const onSubmit = async (data: FormValues) => {
+    if (!captchaToken) {
+      form.setError('root.captcha', { message: 'Please verify you are not a robot.' });
+      return;
+    }
     setIsSubmitting(true);
     try {
-      // Validation finale avec libphonenumber-js
-      const phoneNumber = parsePhoneNumberFromString(
-        `${selectedCountryInfo.code}${data.phone}`,
-        selectedCountry as any,
-        metadata
-      );
-      if (!phoneNumber || !phoneNumber.isValid()) {
-        form.setError('phone', { message: 'Invalid phone number for the selected country.' });
-        setIsSubmitting(false);
-        return;
-      }
-
-      await sendContactForm(data);
+      // Envoie aussi le captchaToken au backend pour vérification
+      await sendContactForm(data, captchaToken);
       form.reset();
-      alert('Formulaire envoyé avec succès!');
+      setCaptchaToken(null);
+      alert('Form submitted successfully!');
     } catch (err: any) {
       form.setError('root.serverError', { message: err.message });
     }
     setIsSubmitting(false);
   };
 
+
   return (
-    <div className="min-h-screen bg-white p-6">
+    <div className="min-h-screen bg-white p-6 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8">
           {/* Colonne gauche : infos contact */}
-          <div className="flex flex-col items-start justify-start gap-8 w-full">
-            <div>
-              <h1 className="text-3xl mb-8 ms-8 text-primary uppercase font-bold">{t('title.contact')}</h1>
-            </div>
+          <div className="flex flex-col gap-8 w-full">
+           <div>
+              <h1 className="text-2xl sm:text-3xl text-primary font-semibold tracking-wide uppercase mb-6 text-center sm:text-left transform -translate-y-15 sm:ms-7">
+                {t('title.contact')}
+              </h1>
+
+              <div className="mt-10 sm:mt-20 md:mt-40 ms-8">
+                  <AnimatedComponent animation="fadeIn" delay={0.3} duration={0.4}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}>
+                   
+                    <TeamSection title={t("contact.asia")} titleName="Mr. Karim SEFOUNI" email="ks@fintech4esg.com" tel="+62 878 6192 1160" offices={t("contact.ind")} countries="Countries :" />
+                  </motion.div>
+                  </AnimatedComponent>
+
+                  <AnimatedComponent animation="fadeIn" delay={0.3} duration={0.4}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}>
+                   
+                    <TeamSection title={t("contact.asia1")} titleName="Mr. Loïc GAUTIER" email="lg@fintech4esg.com" tel="+84 90 924 47 88" offices={t("contact.viet")} />
+                  </motion.div>
+                  </AnimatedComponent>
+
+                  <AnimatedComponent animation="fadeIn" delay={0.4} duration={0.4}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="">
+                      <TeamSection title={t("contact.west")} titleName="Mr. Yves KINGNE" email="yk@fintech4esg.com" tel="+224 612 80 47 04" offices={t("contact.westC")} countries="Countries :" />
+                    </motion.div>
+                  </AnimatedComponent>
+
+                   <AnimatedComponent animation="fadeIn" delay={0.4} duration={0.4}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="mt-10">
+                        <TeamSection title={t("contact.central")} titleName="Mr. Christian DIWOUTA" email="cd@fintech4esg.com" tel="+237 699 91 01 24" offices={t("contact.centralC")} countries="Countries :" />
+                    </motion.div>
+                  </AnimatedComponent>
+              </div>
+            
+            </div> 
           </div>
 
           {/* Colonne droite : titre secondaire + formulaire */}
           <div className="flex flex-col gap-6 w-full">
             <div className="rounded-lg p-4 mb-2 text-center">
-              <p className="font-bold uppercase transform -translate-y-3">{t('title.photo_transformation1')}</p>
-              <p className="font-bold transform -translate-y-2">{t('title.partner')}</p>
-              <p>{t('title.photo_transformation3')}</p>
+                <p className="text-sm sm:text-base font-bold uppercase transform -translate-y-3">
+                  {t('title.photo_transformation1')}
+                </p>
+                <p className="text-sm sm:text-base font-bold transform -translate-y-2">
+                  {t('title.partner')}
+                </p>
+                <p className="text-sm sm:text-base">
+                  {t('title.photo_transformation3')}
+                </p>
             </div>
 
             <Form {...form}>
@@ -249,7 +369,7 @@ export default function Contact() {
                     name="gender"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-sm">{t('title.gender')}</FormLabel>
+                       <FormLabel className="text-sm sm:text-sm">{t('title.gender')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -273,7 +393,7 @@ export default function Contact() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-sm">{t('title.lastName')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.lastName')}</FormLabel>
                         <FormControl>
                           <Input
                             {...field}
@@ -294,7 +414,7 @@ export default function Contact() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-sm">{t('title.firstName')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.firstName')}</FormLabel>
                         <FormControl>
                           <Input
                             {...field}
@@ -320,7 +440,7 @@ export default function Contact() {
                     name="jobTitle"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.job')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.job')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -348,7 +468,7 @@ export default function Contact() {
                     name="companyName"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.company')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.company')}</FormLabel>
                         <FormControl>
                           <Input
                             {...field}
@@ -373,7 +493,7 @@ export default function Contact() {
                     name="verticals"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.applies')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.applies')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -381,10 +501,10 @@ export default function Contact() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-gray-300 rounded-xl">
-                            <SelectItem value="Mobile Networks Operators" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Mobile Networks Operators</SelectItem>
-                            <SelectItem value="International Organisations" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">International Organisations</SelectItem>
-                            <SelectItem value="Government Structures" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Government Structures</SelectItem>
-                            <SelectItem value="Financial Institutions" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Financial Institutions</SelectItem>
+                              <SelectItem value="Financial Institutions" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Financial Institutions</SelectItem>
+                              <SelectItem value="Government Structures" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Government Structures</SelectItem>
+                              <SelectItem value="International Organisations" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">International Organisations</SelectItem>
+                              <SelectItem value="Mobile Networks Operators" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Mobile Networks Operators</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -398,7 +518,7 @@ export default function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.email')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.email')}</FormLabel>
                         <FormControl>
                           <Input type="email" {...field} className="rounded-xl" />
                         </FormControl>
@@ -412,7 +532,7 @@ export default function Contact() {
                     name="country"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.country')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.country')}</FormLabel>
                         <FormControl>
                           <ReactSelect
                             options={countryOptions}
@@ -507,7 +627,7 @@ export default function Contact() {
 
                       return (
                         <FormItem className="mt-4">
-                          <FormLabel className="text-sm">{t('title.phone')}</FormLabel>
+                          <FormLabel className="text-sm sm:text-sm">{t('title.phone')}</FormLabel>
                           <FormControl>
                             <div className="flex flex-col gap-1">
                               <div className="flex">
@@ -564,7 +684,7 @@ export default function Contact() {
                     name="products"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.products')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.products')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -572,10 +692,10 @@ export default function Contact() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-gray-300 rounded-xl">
-                            <SelectItem value="ReadyCash Suite" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyCash Suite</SelectItem>
-                            <SelectItem value="ReadyScore" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyCash Score</SelectItem>
-                            <SelectItem value="ReadyPay" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyPay</SelectItem>
-                            <SelectItem value="P2P Power Mgmt" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">P2P Power Mgmt System</SelectItem>
+                              <SelectItem value="ReadyPay" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyPay</SelectItem>
+                              <SelectItem value="ReadyScore" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyScore</SelectItem>
+                              <SelectItem value="ReadyCash Suite" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">ReadyCash Suite</SelectItem>
+                              <SelectItem value="P2P Power Mgmt" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">P2P Power Mgmt System</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -588,7 +708,7 @@ export default function Contact() {
                     name="businessNeed"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.business')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.business')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -596,11 +716,11 @@ export default function Contact() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-gray-300 rounded-xl">
-                            <SelectItem value="Lending Products" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Lending Products</SelectItem>
-                            <SelectItem value="Saving Products" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Saving Products</SelectItem>
-                            <SelectItem value="Energy Providers" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Energy Providers</SelectItem>
-                            <SelectItem value="Merchant and Agent Loans" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Merchant and Agent Loans</SelectItem>
-                            <SelectItem value="Others" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Others</SelectItem>
+                              <SelectItem value="Energy Provider" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Energy Provider</SelectItem>
+                              <SelectItem value="Saving Products" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Saving Products</SelectItem>
+                              <SelectItem value="Lending Products" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Lending Products</SelectItem>
+                              <SelectItem value="Risk Management" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Risk Management</SelectItem>
+                              <SelectItem value="Merchant and Agent Loans" className="hover:bg-primary hover:text-white focus:bg-[#19af58] focus:rounded-xl focus:text-white">Merchant and Agent Loans</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -613,7 +733,7 @@ export default function Contact() {
                     name="type"
                     render={({ field }) => (
                       <FormItem className="mt-4">
-                        <FormLabel className="text-sm">{t('title.type')}</FormLabel>
+                        <FormLabel className="text-sm sm:text-sm">{t('title.type')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger className="rounded-xl">
@@ -636,21 +756,20 @@ export default function Contact() {
                   name="message"
                   label="Message"
                   rows={6}
-                  maxLength={200}
+                  maxLength={400}
                   component={Textarea}
                 />
 
-                {/* reCAPTCHA */}
-                <div className="border border-gray-300 p-2 max-w-xs rounded-xl">
-                  <div className="flex items-center">
-                    <input type="checkbox" className="mr-2 text-[#19af58]" />
-                    <span className="text-sm">{t('title.robot')}</span>
-                  </div>
-                  <div className="flex justify-between items-center mt-2">
-                    <div className="text-xs text-gray-500">reCAPTCHA</div>
-                    <div className="text-xs text-gray-500">Privacy - Terms</div>
-                  </div>
+                 {/* reCAPTCHA */}
+                <div className="flex">
+                  <ReCAPTCHA
+                    sitekey="6LeTjG8rAAAAANvzHzPiXmCz8ytmEbwK1u3yA23z" // ← remplace par ta clé
+                    onChange={setCaptchaToken}
+                  />
                 </div>
+                {form.formState.errors.root?.captcha && (
+                  <div className="text-red-500 text-sm">{form.formState.errors.root.captcha.message}</div>
+                )}
 
                 {/* Bouton de soumission */}
                 <div>

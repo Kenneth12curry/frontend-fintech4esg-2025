@@ -115,11 +115,11 @@ export default function ProductsCash(){
     ];
     
     const clientSegmentation = [
-        { level: 1, color: "bg-red-500", description: t("platform.segment.verygood") },
-        { level: 2, color: "bg-orange-400", description: t("platform.segment.good") },
+        { level: 1, color: "bg-red-500", description: t("platform.segment.verylow") },
+        { level: 2, color: "bg-orange-400", description: t("platform.segment.low") },
         { level: 3, color: "bg-yellow-400", description: t("platform.segment.medium") },
-        { level: 4, color: "bg-green-300", description: t("platform.segment.low") },
-        { level: 5, color: "bg-green-500", description: t("platform.segment.verylow") }
+        { level: 4, color: "bg-green-300", description: t("platform.segment.good") },
+        { level: 5, color: "bg-green-500", description: t("platform.segment.verygood") }
     ];
     
     const lendingProducts = [
@@ -230,10 +230,10 @@ export default function ProductsCash(){
         <>
             <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:text-center">
                 <AnimatedComponent animation="slideUp" delay={0.05} duration={0.3}>
-                    <h2 className="text-3xl text-primary font-semibold flex justify-start tracking-wide uppercase mb-6">{t("readyCash")}</h2>
+                    <h2 className="text-2xl sm:text-3xl text-primary font-semibold flex justify-center sm:justify-start tracking-wide uppercase mb-6 text-center sm:text-left">{t("readyCash")}</h2>
                 </AnimatedComponent>
                 <AnimatedComponent animation="slideUp" delay={0.15} duration={0.3}>
-                    <p className="mt-4 max-w-3xl text-xl text-neutral-500 text-center lg:mx-auto">
+                    <p  className="max-w-3xl text-neutral-500 text-center lg:mx-auto mb-6 translate-y-5 text-base sm:text-lg md:text-xl lg:text-xl">
                         {t("readySuite.description")}
                     </p>
                 </AnimatedComponent>
@@ -249,17 +249,17 @@ export default function ProductsCash(){
                         <h2 className="text-base text-green-300 font-semibold tracking-wide uppercase">{t("platform.heading")}</h2>
                     </AnimatedComponent> */}
                     <AnimatedComponent animation="slideUp" delay={0.3} duration={0.5}>
-                        <p className="mt-2 text-3xl leading-8 font-bold tracking-tight text-white sm:text-4xl font-heading">
-                        {t("platform.title")}
+                        <p className="text-base sm:text-xl md:text-2xl lg:text-3xl leading-6 sm:leading-7 md:leading-8 font-bold tracking-tight text-white font-heading mt-2">
+                            {t("platform.title")}
                         </p>
                     </AnimatedComponent>
                     <AnimatedComponent animation="slideUp" delay={0.5} duration={0.5}>
-                        <p className="mt-4 max-w-3xl text-lg text-purple-100 mx-auto">
-                        {t("platform.description")}
+                        <p className="mt-4 max-w-3xl text-sm sm:text-base md:text-lg text-purple-100 mx-auto">
+                            {t("platform.description")}
                         </p>
                     </AnimatedComponent>
                     <AnimatedComponent animation="slideUp" delay={0.7} duration={0.5}>
-                        <p className="mt-4 max-w-3xl text-lg text-purple-100 mx-auto">
+                        <p className="mt-4 max-w-3xl text-sm sm:text-base md:text-lg text-purple-100 mx-auto">
                         {t("platform.framework")}
                         </p>
                     </AnimatedComponent>
@@ -273,8 +273,12 @@ export default function ProductsCash(){
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                         <div className="md:col-span-8">
                             <AnimatedComponent animation="slideUp" delay={0.6} duration={0.5}>
-                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">{t("platform.partnership.title")}</h3>
-                            <p className="text-purple-100 mb-4">{t("platform.partnership.description")}</p>
+                            <h3 className="text-base sm:text-base md:text-lg lg:text-2xl font-bold text-white mb-4 font-heading">
+                                {t("platform.partnership.title")}
+                            </h3>
+                            <p className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-100 mb-4">
+                                {t("platform.partnership.description")}
+                            </p>
                             </AnimatedComponent>
                             <ul className="space-y-3 mt-6">
                             {[1, 2, 3, 4,5].map((i) => (
@@ -287,18 +291,24 @@ export default function ProductsCash(){
                                 viewport={{ once: true }}
                                 >
                                 <Check className="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                                <span className="text-purple-100">{t(`platform.partnership.benefit${i}`)}</span>
+                                <span className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-100">
+                                    {t(`platform.partnership.benefit${i}`)}
+                                </span>
                                 </motion.li>
                             ))}
                             </ul>
                         </div>
                         <AnimatedComponent animation="fadeIn" delay={0.9} duration={0.7} className="md:col-span-4">
                             <div className="bg-purple-800/30 rounded-lg p-6 shadow-lg border border-purple-500/30">
-                            <h4 className="text-xl text-white font-medium mb-3">{t("platform.partnership.stats.title")}</h4>
+                            <h4 className="text-base sm:text-base md:text-lg lg:text-xl text-white font-medium mb-3">
+                                {t("platform.partnership.stats.title")}
+                            </h4>
                             <div className="space-y-4">
                                 <div>
                                 <div className="flex justify-between">
-                                    <span className="text-purple-200 text-sm">{t("platform.partnership.stats.growth")}</span>
+                                    <span className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-200">
+                                        {t("platform.partnership.stats.growth")}
+                                    </span>
                                     <span className="text-green-400 font-bold">
                                     <CountUp end={35} suffix="%" delay={1.1} duration={1.5} />
                                     </span>
@@ -313,7 +323,7 @@ export default function ProductsCash(){
                                 </div>
                                 <div>
                                 <div className="flex justify-between">
-                                    <span className="text-purple-200 text-sm">{t("platform.partnership.stats.default")}</span>
+                                    <span className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-200">{t("platform.partnership.stats.default")}</span>
                                     <span className="text-green-400 font-bold">
                                     <CountUp end={-22} suffix="%" delay={1.3} duration={1.5} />
                                     </span>
@@ -328,7 +338,7 @@ export default function ProductsCash(){
                                 </div>
                                 <div>
                                 <div className="flex justify-between">
-                                    <span className="text-purple-200 text-sm">{t("platform.partnership.stats.customer")}</span>
+                                    <span className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-200">{t("platform.partnership.stats.customer")}</span>
                                     <span className="text-green-400 font-bold">
                                     <CountUp end={41} suffix="%" delay={1.5} duration={1.5} />
                                     </span>
@@ -348,9 +358,9 @@ export default function ProductsCash(){
                                 >
                                 <a 
                                     href="https://calendly.com/fintech4esg" 
-                                    className="inline-block bg-gradient-to-r from-green-600 to-green-500 text-white font-medium py-2 px-6 rounded-xl hover:from-green-500 hover:to-green-400 transition duration-300 shadow-lg"
+                                    className="inline-block bg-gradient-to-r from-green-600 to-green-500 text-xs sm:text-sm md:text-base text-white font-medium py-2 px-6 rounded-xl hover:from-green-500 hover:to-green-400 transition duration-300 shadow-lg"
                                 >
-                                    {t("platform.partnership.cta")}
+                                {t("platform.partnership.cta")}
                                 </a>
                                 </motion.div>
                             </div>
@@ -376,8 +386,8 @@ export default function ProductsCash(){
                             <feature.icon className="h-10 w-10" />
                             </motion.div>
                             <AnimatedComponent animation="slideUp" delay={0.3 + (index * 0.1)} duration={0.5}>
-                            <h3 className="text-lg font-medium text-white font-heading mb-2">{feature.title}</h3>
-                            <p className="text-purple-100">{feature.description}</p>
+                            <h3 className="text-base sm:text-base md:text-lg lg:text-xl text-white font-medium mb-3">{feature.title}</h3>
+                            <p className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-100 mb-4">{feature.description}</p>
                             </AnimatedComponent>
                         </HoverAnimationCard>
                         ))}
@@ -390,7 +400,7 @@ export default function ProductsCash(){
                         className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
                     >
                         <AnimatedComponent animation="slideUp" delay={0.5} duration={0.5}>
-                        <h3 className="text-xl font-medium text-white mb-2 font-heading">{t("platform.risk.title")}</h3>
+                        <h3 className="text-base sm:text-base md:text-lg lg:text-xl text-white font-medium mb-2 font-heading">{t("platform.risk.title")}</h3>
                         </AnimatedComponent>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <AnimatedComponent animation="fadeIn" delay={0.7} duration={0.8}>
@@ -415,12 +425,12 @@ export default function ProductsCash(){
                                 </RadarChart>
                             </ResponsiveContainer>
                             </motion.div>
-                            <p className="mt-4 text-center text-purple-200">
+                            <p className="text-sm sm:text-sm md:text-base lg:text-lg text-center text-purple-200 mt-4">
                             {t("platform.risk.description")}
                             </p>
                             <div className="flex justify-center">
-                                <Button asChild size="lg" className="bg-[#19af58] hover:bg-primary rounded-xl mt-3">
-                                    <Link to="/ready-score">
+                                <Button asChild size="lg"  className="mt-4 bg-gradient-to-r from-green-600 to-green-500 text-sm sm:text-sm md:text-base text-white font-medium py-2 px-6 rounded-xl hover:from-green-500 hover:to-green-400 transition duration-300 shadow-lg">
+                                    <Link to="/readyscore">
                                         {t("score")}
                                         <svg className="ml-2 -mr-1 h-5 w-5 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -430,7 +440,7 @@ export default function ProductsCash(){
                             </div>
                         </AnimatedComponent>
                         <AnimatedComponent animation="slideUp" delay={0.7} duration={0.7}>
-                            <h4 className="text-lg font-medium text-white mb-2 font-heading">{t("platform.segment.title")}</h4>
+                            <h4 className="text-base sm:text-base md:text-lg lg:text-xl text-white font-medium mb-5 font-heading">{t("platform.segment.title")}</h4>
                             <div className="space-y-4">
                             {clientSegmentation.map((segment, index) => (
                                 <motion.div 
@@ -449,7 +459,9 @@ export default function ProductsCash(){
                                 >
                                     {segment.level}
                                 </motion.div>
-                                <div className="text-purple-100">{segment.description}</div>
+                                <div className="text-sm sm:text-sm md:text-base lg:text-lg text-purple-100">
+                                    {segment.description}
+                                </div>
                                 </motion.div>
                             ))}
                             </div>

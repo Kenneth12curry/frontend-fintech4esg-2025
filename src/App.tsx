@@ -64,7 +64,7 @@ export default App
  */
 
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
@@ -77,12 +77,20 @@ import ReadyCashSuite from "./pages/ReadyCashSuite";
 import ReadyScore from "./pages/ReadyScore";
 import SecurityLayer from "./components/SecuirtyLayer";
 import Readypay from "./pages/ReadyPay";
+import InsightsPage from "./pages/blog/insights";
+import BlogPostPage from "./pages/blog/[slug]";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Ne rien faire si on est sur la page d'accueil
+    if (pathname === "/") {
+      return;
+    }
+
     // Supprimer tout fragment d'URL pour éviter le défilement vers un ID
     if (pathname.includes("#")) {
       navigate(pathname.split("#")[0], { replace: true });
@@ -94,10 +102,11 @@ function ScrollToTop() {
   return null;
 }
 
+
 function App() {
   return (
-    <Router>
-      <SecurityLayer />
+    <BrowserRouter>
+   
       <ScrollToTop />
       <Navbar />
       <div className="min-h-screen bg-gray-100">
@@ -108,15 +117,17 @@ function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="/security" element={<SecurityPolicyPage />} />
-            <Route path="/about-us" element={<AboutUSPage />} />
-            <Route path="/ready-cash" element={<ReadyCashSuite />} />
-            <Route path="/ready-score" element={<ReadyScore />} />
-            <Route path="/ready-pay" element={<Readypay />} />
+            <Route path="/aboutus" element={<AboutUSPage />} />
+            <Route path="/readycash" element={<ReadyCashSuite />} />
+            <Route path="/readyscore" element={<ReadyScore />} />
+            <Route path="/readypay" element={<Readypay />} />
+            <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </main>
       </div>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 }
 

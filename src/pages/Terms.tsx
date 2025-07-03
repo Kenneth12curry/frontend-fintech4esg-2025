@@ -142,7 +142,7 @@ export default function TermsOfServicePage() {
                   We may charge fees for certain aspects of our Services. All fees are stated in your local currency and are exclusive of any applicable taxes unless otherwise stated.
                 </p>
                 <p>
-                  Fee structures for specific services are outlined in our <a href="#" className="text-primary hover:underline">Fee Schedule</a>, which is incorporated into these Terms by reference. We reserve the right to change our fees at any time upon notice to you, which may be provided through our Services, by email, or by posting to our website.
+                  Fee structures for specific services are outlined in our Fee Schedule, which is incorporated into these Terms by reference. We reserve the right to change our fees at any time upon notice to you, which may be provided through our Services, by email, or by posting to our website.
                 </p>
                 <p>
                   For transactions, fees may be deducted from the transaction amount or charged separately to your account. For recurring services, fees may be charged on a regular basis to the payment method associated with your account.
@@ -192,7 +192,7 @@ export default function TermsOfServicePage() {
               </AccordionTrigger>
               <AccordionContent className="space-y-4 pt-2 pb-4">
                 <p>
-                  We take the privacy and security of your information seriously. Our collection and use of your personal information is governed by our <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>, which is incorporated into these Terms by reference.
+                  We take the privacy and security of your information seriously. Our collection and use of your personal information is governed by our <a href="/privacy" className="text-white hover:underline">Privacy Policy</a>, which is incorporated into these Terms by reference.
                 </p>
                 <p>
                   By using our Services, you consent to the collection, use, storage, and disclosure of your information as described in our Privacy Policy. You acknowledge that the Privacy Policy is a legally binding part of these Terms.
@@ -325,7 +325,7 @@ export default function TermsOfServicePage() {
                   Any legal action or proceeding arising out of or related to these Terms or the Services shall be instituted exclusively in the courts located in Paris, France, and you irrevocably submit to the jurisdiction of such courts in any such action or proceeding.
                 </p>
                 <p>
-                  Before initiating any formal legal proceeding, you agree to first try to resolve any dispute informally by contacting us at <a href="mailto:legal@fintech4esg.com" className="text-primary hover:underline">legal@fintech4esg.com</a>. We will try to resolve the dispute by contacting you via email. If the dispute is not resolved within 30 days after contact, you or we may bring a formal proceeding.
+                  Before initiating any formal legal proceeding, you agree to first try to resolve any dispute informally by contacting us at <a href="mailto:legal@fintech4esg.com" className="text-white hover:underline">legal@fintech4esg.com</a>. We will try to resolve the dispute by contacting you via email. If the dispute is not resolved within 30 days after contact, you or we may bring a formal proceeding.
                 </p>
                 <p>
                   Any dispute arising from these Terms or the Services will be resolved on an individual basis. Class actions, collective actions, and other representative actions are not permitted.

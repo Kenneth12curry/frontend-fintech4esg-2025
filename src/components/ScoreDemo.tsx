@@ -6,6 +6,8 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
   Tooltip,
+  BarChart, 
+  Bar,
   Legend,
   AreaChart,
   Area,
@@ -164,7 +166,11 @@ export default function ScoreDemo() {
       },
       icon: Building
     },
-    
+     farmer: { 
+      title: "Farmer", 
+      defaults: Object.fromEntries(metrics.map(m => [m.key, m.default])),
+      icon: Users
+    },
   };
   
   // Define risk thresholds
@@ -176,6 +182,14 @@ export default function ScoreDemo() {
     { min: 80, max: 101, level: t("score.risk.Veryhigh"), color: "bg-green-500", textColor: "text-green-500", icon: CheckCircle, recommendation: "Eligible for all loans with top rates" },
   ];
   
+  // Microfinance loan repayment rates
+  const repaymentRateData = [
+    { name: "Nano Loans (<€100)", rate: 94 },
+    { name: "Micro Loans (€100-500)", rate: 96 },
+    { name: "Small Loans (€500-1000)", rate: 91 },
+    { name: "Medium Loans (€1000-2500)", rate: 88 },
+    { name: "Large Loans (>€2500)", rate: 84 },
+  ];
   
   const [values, setValues] = useState<{[key: string]: number}>(
     clientTypes.individual.defaults
@@ -187,6 +201,8 @@ export default function ScoreDemo() {
       setValues(clientTypes.individual.defaults);
     } else if (selectedClientType === "smallBusiness") {
       setValues(clientTypes.smallBusiness.defaults);
+    } else if (selectedClientType === "farmer") {
+      setValues(clientTypes.farmer.defaults);
     }
   }, [selectedClientType]);
   
@@ -227,6 +243,9 @@ export default function ScoreDemo() {
       setValues(clientTypes.individual.defaults);
     } else if (selectedClientType === "smallBusiness") {
       setValues(clientTypes.smallBusiness.defaults);
+    } 
+    else if (selectedClientType === "farmer") {
+      setValues(clientTypes.farmer.defaults);
     } 
   };
 
@@ -269,51 +288,62 @@ export default function ScoreDemo() {
       }}></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <AnimatedComponent animation="fadeIn" duration={0.7} className="text-center mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-heading mb-3">
+          <h2 className="text-2xl md:text-4xl font-bold text-white font-heading mb-3">
             {t("score.title")}
           </h2>
-          <p className="text-lg text-purple-100 max-w-3xl mx-auto">
-            Try our interactive credit scoring demo to see how our AI-powered algorithm evaluates risk profiles
-            and makes lending decisions based on multiple data points.
+          <p className="text-sm sm:text-base md:text-lg text-purple-100 max-w-3xl mx-auto">
+            {t("score.ai.description")}
           </p>
         </AnimatedComponent>
 
-        <div className="flex grid-cols-1 lg:grid-cols-2 gap-4 mb-4 flex-row justify-center">
+        <div className="overflow-x-auto w-full flex justify-center">
+        <div className="flex gap-3 sm:gap-4 mb-4 px-2 py-2 whitespace-nowrap">
           {Object.entries(clientTypes).map(([key, client], index) => (
             <AnimatedComponent
-              className="bg-primary rounded-xl"
               key={key}
+              className="flex-shrink-0 w-[180px] sm:w-[220px] md:w-[260px] bg-primary rounded-xl"
               animation="slideUp"
               delay={0.1 + index * 0.1}
               duration={0.5}
             >
               <HoverAnimationCard
                 hoverEffect="glow"
-                className={`p-4 sm:p-6 rounded-xl cursor-pointer transition-all duration-300 ${
-                  selectedClientType === key
-                    ? "bg-white bg-opacity-10 border-green-400 border-2"
-                    : "bg-purple-800 bg-opacity-50 hover:bg-opacity-70"
-                }`}
+                className={`
+                  p-2 sm:p-3 md:p-4 
+                  rounded-xl cursor-pointer transition-all duration-300 
+                  ${
+                    selectedClientType === key
+                      ? "bg-white bg-opacity-10 border-green-400 border-2"
+                      : "bg-purple-800 bg-opacity-50 hover:bg-opacity-70"
+                  }`}
                 onClick={() => setSelectedClientType(key)}
               >
                 <div className="flex items-center">
                   <div
-                    className={`rounded-full p-2 sm:p-3 mr-3 sm:mr-4 ${
-                      selectedClientType === key
-                        ? "bg-green-500 text-white"
-                        : "bg-purple-700 text-purple-200"
-                    }`}
+                    className={`
+                      rounded-full 
+                      p-2 sm:p-2.5 md:p-3 
+                      mr-2 sm:mr-3 md:mr-4 
+                      ${
+                        selectedClientType === key
+                          ? "bg-green-500 text-white"
+                          : "bg-purple-700 text-purple-200"
+                      }`}
                   >
-                    <client.icon className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <client.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-white">{client.title}</h3>
-                    <p className="text-xs sm:text-sm text-purple-200">
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white">
+                      {client.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm md:text-base text-purple-200">
                       {key === "individual"
-                        ? "Personal financial profile"
+                        ? "Personal financial "
                         : key === "smallBusiness"
-                        ? "Business financial profile"
-                        : "Agricultural financial profile"}
+                        ? "Business financial "
+                        : key === "farmer"
+                        ? "Agricultural financial "
+                        : ""}
                     </p>
                   </div>
                 </div>
@@ -321,43 +351,45 @@ export default function ScoreDemo() {
             </AnimatedComponent>
           ))}
         </div>
-
+      </div>
 
         <Tabs defaultValue="metrics" className="mb-4">
-          <TabsList className="bg-purple-800 bg-opacity-40 mb-4 w-full justify-start">
-            <TabsTrigger 
-              value="metrics" 
-              className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-purple-100 rounded-xl"
-              onClick={() => setActiveTab("metrics")}
+       
+
+        <TabsList
+              className="bg-purple-800 bg-opacity-40 mb-4 w-full flex-nowrap overflow-x-auto whitespace-nowrap no-scrollbar justify-start rounded-xl px-2 scroll-smooth min-h-[64px]"
+              style={{ scrollSnapType: 'x mandatory' }}
             >
-              Client Metrics
-            </TabsTrigger>
-            <TabsTrigger 
-              value="analysis" 
-              className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-purple-100 rounded-xl"
-              onClick={() => setActiveTab("analysis")}
-            >
-              Risk Analysis
-            </TabsTrigger>
-            <TabsTrigger 
-              value="trends" 
-              className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-purple-100 rounded-xl"
-              onClick={() => setActiveTab("trends")}
-            >
-              Market Trends
-            </TabsTrigger>
-          </TabsList>
+              {[
+                { value: "metrics", label: "Client Metrics" },
+                { value: "analysis", label: "Risk Analysis" },
+                { value: "repayment", label: "Repayment Rates" },
+                { value: "trends", label: "Market Trends" },
+              ].map(({ value, label }) => (
+                <TabsTrigger
+                  key={value}
+                  value={value}
+                  className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-purple-100 rounded-xl px-4 py-2 shrink-0 scroll-snap-align-start"
+                  onClick={() => setActiveTab(value)}
+                >
+                  {label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
           
+
           <TabsContent value="metrics" className="m-0">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-xl font-bold text-white">Client Scoring Metrics</h3>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={resetValues} 
-                className="flex items-center gap-1 text-purple-100 border-purple-300 rounded-xl bg-primary hover:bg-[#19af58]"
-              >
-                <RefreshCw className="h-4 w-4 mr-1" /> {t("score.reset")}
+              <h3 className="text-base sm:text-xl font-bold text-white">
+                  Client Scoring Metrics
+              </h3>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={resetValues}
+                className="flex items-center gap-1 text-xs sm:text-sm text-purple-100 border-purple-300 rounded-xl bg-primary hover:bg-[#19af58] px-3 py-1 sm:px-4 sm:py-2">
+                <RefreshCw className="h-3 w-3 sm:h-4 sm:w-4 mr-1" /> {t("score.reset")}
               </Button>
             </div>
             
@@ -469,22 +501,22 @@ export default function ScoreDemo() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <AnimatedComponent animation="slideUp" delay={0.1} duration={0.5} className="lg:col-span-3">
                 <Card className="bg-white/20 backdrop-blur-lg border-purple-500/30 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-white mb-4">Loan Eligibility Assessment</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{t("risk.assessment")}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-purple-800 bg-opacity-40 p-4 flex flex-col items-center justify-center rounded-xl">
                       <DollarSign className="h-7 w-7 text-green-400 mb-2" />
-                      <p className="text-sm text-purple-200 mb-1">Potential Loan Amount</p>
+                      <p className="text-sm text-purple-200 mb-1">{t("risk.potential")}</p>
                       <p className="text-3xl font-bold text-white">${loanAmount}</p>
                     </div>
                     <div className="bg-purple-800 bg-opacity-40 p-4 flex flex-col items-center justify-center rounded-xl">
                       <TrendingUp className="h-7 w-7 text-green-400 mb-2" />
-                      <p className="text-sm text-purple-200 mb-1">Est. Interest Rate</p>
+                      <p className="text-sm text-purple-200 mb-1">{t("risk.rate")}</p>
                       <p className="text-3xl font-bold text-white">{interestRate}%</p>
                     </div>
                     <div className="bg-purple-800 bg-opacity-40  p-4 flex flex-col items-center justify-center rounded-xl">
                       <Clock className="h-7 w-7 text-green-400 mb-2" />
-                      <p className="text-sm text-purple-200 mb-1">Repayment Period</p>
-                      <p className="text-3xl font-bold text-white">{repaymentPeriod} <span className="text-sm text-purple-200">months</span></p>
+                      <p className="text-sm text-purple-200 mb-1">{t("risk.repayment")}</p>
+                      <p className="text-3xl font-bold text-white">{repaymentPeriod} <span className="text-sm text-purple-200">{t("risk.months")}</span></p>
                     </div>
                   </div>
                   <div className="mt-4 p-4 rounded-xl border border-dashed border-purple-400">
@@ -501,7 +533,7 @@ export default function ScoreDemo() {
               
               <AnimatedComponent animation="slideLeft" delay={0.2} duration={0.5} className="lg:col-span-2">
                 <Card className="bg-white bg-opacity-10 backdrop-blur-lg border-purple-500/30 p-6 h-full">
-                  <h3 className="text-lg font-bold text-white mb-4">Loan Approval History</h3>
+                  <h3 className="text-lg font-bold text-white mb-4">{t("risk.loan")}</h3>
                   <div className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                       <AreaChart
@@ -539,7 +571,7 @@ export default function ScoreDemo() {
               
               <AnimatedComponent animation="slideRight" delay={0.3} duration={0.5}>
                 <Card className="bg-white bg-opacity-10 backdrop-blur-lg border-purple-500/30 p-6 h-full">
-                  <h3 className="text-lg font-bold text-white mb-4">Current Risk Performance</h3>
+                  <h3 className="text-lg font-bold text-white mb-4">{t("risk.performance")}</h3>
                   <div className="grid grid-cols-1 gap-2">
                     {riskDistributionData.map((item) => (
                       <div key={item.name} className="flex items-center">
@@ -555,11 +587,11 @@ export default function ScoreDemo() {
                   <div className="mt-4 pt-4 border-t border-purple-700">
                     <div className="flex justify-between items-center">
                       <div>
-                        <p className="text-sm text-purple-200">Platform Accuracy</p>
+                        <p className="text-sm text-purple-200">{t("risk.accuracy")}</p>
                         <p className="text-2xl font-bold text-white">93.5%</p>
                       </div>
                       <div>
-                        <p className="text-sm text-purple-200">Default Reduction</p>
+                        <p className="text-sm text-purple-200">{t("risk.default")}</p>
                         <p className="text-2xl font-bold text-white">-22%</p>
                       </div>
                     </div>
@@ -569,34 +601,66 @@ export default function ScoreDemo() {
             </div>
           </TabsContent>
           
+          <TabsContent value="repayment" className="mt-0">
+            <div className="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-lg font-medium text-purple-900 mb-4 font-heading">{t("opportunities.charts.repayment")}</h3>
+              <div className="h-96">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={repaymentRateData}
+                    margin={{ top: 10, right: 30, left: 20, bottom: 80 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis 
+                      dataKey="name" 
+                      angle={-35} 
+                      textAnchor="end" 
+                      interval={0} 
+                      height={80} 
+                      tick={{ fontSize: 12 }}
+                    />
+                    <YAxis domain={[70, 100]} unit="%" />
+                    <Tooltip formatter={(value) => `${value}%`} />
+                    <Bar
+                      dataKey="rate"
+                      fill="#10B981"
+                      name={t("opportunities.charts.repaymentRate")}
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+              <p className="mt-2 text-xs text-neutral-600 text-center max-w-2xl mx-auto">{t("opportunities.charts.repayment.desc")}</p>
+            </div>
+          </TabsContent>
+          
           <TabsContent value="trends" className="m-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <AnimatedComponent animation="fadeIn" delay={0.1} duration={0.5} className="col-span-full">
                 <Card className="bg-white/20 rounded-xl backdrop-blur-lg border-purple-500/30 p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">ReadyCash AI Scoring Performance</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{t("markettrends.title")}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                     <div className="bg-purple-800 bg-opacity-40 rounded-xl p-3 text-center">
-                      <p className="text-sm text-purple-200">Client Profiles Processed</p>
+                      <p className="text-sm text-purple-200">{t("markettrends.client")}</p>
                       <CountUp
                         start={0}
-                        end={2856428}
+                        end={285642812}
                         duration={2.5}
                         suffix=""
                         className="text-2xl font-bold text-white"
                       />
                     </div>
                     <div className="bg-purple-800 bg-opacity-40 rounded-xl p-3 text-center">
-                      <p className="text-sm text-purple-200">Loans Approved</p>
+                      <p className="text-sm text-purple-200">{t("markettrends.loans")}</p>
                       <CountUp
                         start={0}
-                        end={1264050}
+                        end={72684050}
                         duration={2.5}
                         suffix=""
                         className="text-2xl font-bold text-white"
                       />
                     </div>
                     <div className="bg-purple-800 bg-opacity-40 rounded-xl p-3 text-center">
-                      <p className="text-sm text-purple-200">Default Rate</p>
+                      <p className="text-sm text-purple-200">{t("markettrends.rate")}</p>
                       <CountUp
                         start={0}
                         end={3.2}
@@ -607,7 +671,7 @@ export default function ScoreDemo() {
                       />
                     </div>
                     <div className="bg-purple-800 bg-opacity-40 rounded-xl p-3 text-center">
-                      <p className="text-sm text-purple-200">Average Decision Time</p>
+                      <p className="text-sm text-purple-200">{t("markettrends.time")}</p>
                       <CountUp
                         start={0}
                         end={2.5}
@@ -619,9 +683,7 @@ export default function ScoreDemo() {
                     </div>
                   </div>
                   <p className="text-purple-100 text-sm">
-                    Our AI scoring system has processed over 2,856 428 applications across multiple markets, 
-                    consistently outperforming traditional credit scoring methods by reducing default rates by up to 22% 
-                    while increasing approval rates for qualified borrowers.
+                    {t("markettrends.description")}
                   </p>
                 </Card>
               </AnimatedComponent>

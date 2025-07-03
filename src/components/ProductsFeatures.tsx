@@ -10,7 +10,8 @@ export default function ProductFeatures() {
     t("productfeatures.products.item2"),
     t("productfeatures.products.item3"),
     t("productfeatures.products.item4"),
-    t("productfeatures.products.item5")
+    t("productfeatures.products.item5"),
+    t("productfeatures.products.item6")
   ];
 
   const kycScoring = [
@@ -32,49 +33,63 @@ export default function ProductFeatures() {
   return (
     <section id="features" className="pt-4 pb-16 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center mb-12">
-          <h2 className="text-base text-secondary-600 font-semibold tracking-wide uppercase">{t("productfeatures.heading")}</h2>
-          <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-neutral-900 sm:text-4xl font-heading">
-            {t("productfeatures.title")}
+        <div className="lg:text-center">
+          <h2 className="text-base text-secondary-600 font-semibold tracking-wide uppercase">
+              {t("productfeatures.heading")}
+          </h2>
+          <p className="mt-2 text-xl sm:text-3xl md:text-4xl leading-7 sm:leading-8 font-semibold tracking-tight text-neutral-900 font-heading">
+              {t("productfeatures.title")}
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-neutral-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-sm text-center sm:text-left sm:text-base md:text-lg lg:text-xl text-neutral-500 lg:mx-auto">
             {t("productfeatures.description")}
           </p>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#19af58]">
-              <h3 className="text-lg font-medium text-neutral-900 mb-4 font-heading">{t("productfeatures.products.title")}</h3>
+            <h3 className="text-base sm:text-base md:text-lg font-medium text-neutral-900 mb-4 font-heading">
+                {t("productfeatures.products.title")}
+            </h3>
               <ul className="space-y-3">
                 {products.map((product, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span className="text-neutral-600">{product}</span>
+                    <span className="text-sm sm:text-sm md:text-base text-neutral-600">
+                        {product}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#19af58]">
-              <h3 className="text-lg font-medium text-neutral-900 mb-4 font-heading">{t("productfeatures.kyc.title")}</h3>
+              <h3 className="text-base sm:text-base md:text-lg font-medium text-neutral-900 mb-4 font-heading">
+                  {t("productfeatures.kyc.title")}
+              </h3>
               <ul className="space-y-3">
                 {kycScoring.map((item, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span className="text-neutral-600">{item}</span>
+                     <span className="text-sm sm:text-sm md:text-base text-neutral-600">
+                        {item}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#19af58]">
-              <h3 className="text-lg font-medium text-neutral-900 mb-4 font-heading">{t("productfeatures.dashboard.title")}</h3>
+              <h3 className="text-base sm:text-base md:text-lg font-medium text-neutral-900 mb-4 font-heading">
+                  {t("productfeatures.dashboard.title")}
+              </h3>
               <ul className="space-y-3">
                 {dashboard.map((item, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span className="text-neutral-600">{item}</span>
+                     <span className="text-sm sm:text-sm md:text-base text-neutral-600">
+                        {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -83,7 +98,7 @@ export default function ProductFeatures() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="bg-[#19af58] hover:bg-primary rounded-xl">
+          <Button asChild size="lg" className="mt-4 bg-gradient-to-r from-green-600 to-green-500 text-sm sm:text-sm md:text-base text-white font-medium py-2 px-6 rounded-xl hover:from-green-500 hover:to-green-400 transition duration-300 shadow-lg">
             <a href="https://calendly.com/fintech4esg">
               {t("productfeatures.cta")}
               <svg className="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

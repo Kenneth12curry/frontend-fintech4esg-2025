@@ -13,10 +13,10 @@ type CurrencyConfig = {
 // Currency configurations for each supported language
 const currencies: Record<SupportedLanguage, CurrencyConfig> = {
   en: {
-    code: "GHS",
-    symbol: "₵",
-    name: "Ghana Cedis",
-    format: (amount: number) => `₵${amount.toFixed(2)}`,
+    code: "USD",
+    symbol: "$",
+    name: "Dollar",
+    format: (amount: number) => `$${amount.toFixed(2)}`,
     exchangeRate: 13.47,
   },
   ha: {

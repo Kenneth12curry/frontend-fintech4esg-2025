@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
         </AnimatedComponent>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
-          <TabsList className="grid grid-cols-1 md:grid-cols-4 mb-8 md:w-[600px] mx-auto bg-purple-400 text-white">
+          <TabsList className="grid grid-cols-1 md:grid-cols-4 mb-8 md:w-[600px] mx-auto bg-purple-400 text-white rounded-xl">
             <TabsTrigger value="overview" className="font-bold">Overview</TabsTrigger>
             <TabsTrigger value="collection" className="font-bold">Data Collection</TabsTrigger>
             <TabsTrigger value="usage" className="font-bold">Data Usage</TabsTrigger>

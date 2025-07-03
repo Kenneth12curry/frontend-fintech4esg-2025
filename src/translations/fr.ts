@@ -255,23 +255,24 @@ const translations = {
   "productfeatures.title": "ReadyCash & Fonctionnalités",
   "productfeatures.description": "Notre gamme complète de produits conçus pour promouvoir l'inclusion financière et autonomiser les entreprises et les particuliers.",
   "productfeatures.products.title": "Produits",
-  "productfeatures.products.item1": "Prêt Nano",
-  "productfeatures.products.item2": "Prêt Macro",
-  "productfeatures.products.item3": "Prêt à partir",
-  "productfeatures.products.item4": "BNPL",
-   "productfeatures.products.item5": "Épargne (dépôt classique et à terme)",
-  "productfeatures.kyc.title": "KYC & Notation",
-  "productfeatures.kyc.item1": "KYC vérifié en temps réel",
-  "productfeatures.kyc.item2": "Notation et gestion des risques",
-  "productfeatures.kyc.item3": "Point de données alternatif",
-  "productfeatures.kyc.item4": "Analyse des modèles comportementaux",
-  "productfeatures.kyc.item5": "Modèle stochastique basé sur l'IA",
-  "productfeatures.dashboard.title": "Tableau de Bord & Extensions",
-  "productfeatures.dashboard.item1": "Outils d'analyse",
-  "productfeatures.dashboard.item2": "Statut du compte",
-  "productfeatures.dashboard.item3": "Outils de marketing",
+  "productfeatures.products.item1": "Prêt Nano & Prêt Macro",
+  "productfeatures.products.item2": "Prêt Prêt-à-Partir",
+  "productfeatures.products.item3": "Achetez maintenant, payez plus tard (BNPL)",
+  "productfeatures.products.item4": "Épargne Classique & Dépôt à Terme",
+  "productfeatures.products.item5": "ReadyScore - Gestion des Risques",
+  "productfeatures.products.item6": "ReadyPay - Paiement par portefeuille électronique",  
+ "productfeatures.kyc.title": "KYC & Évaluation",
+  "productfeatures.kyc.item1": "Vérification KYC en temps réel",
+  "productfeatures.kyc.item2": "Évaluation & Gestion des Risques",
+  "productfeatures.kyc.item3": "Données alternatives",
+  "productfeatures.kyc.item4": "Modèle stochastique & IA",
+  "productfeatures.kyc.item5": "Reconnaissance des schémas comportementaux",
+ "productfeatures.dashboard.title": "Tableau de bord & Plugins",
+  "productfeatures.dashboard.item1": "Statut du compte",
+  "productfeatures.dashboard.item2": "Outils d’analyse",
+  "productfeatures.dashboard.item3": "Suivi quotidien des risques",
   "productfeatures.dashboard.item4": "Messagerie Kafka",
-  "productfeatures.dashboard.item5": "API Rest",
+  "productfeatures.dashboard.item5": "API REST",
   "productfeatures.cta": "Demander une Démo",
   
   
@@ -292,26 +293,26 @@ const translations = {
   // About Section
   "about.title": "À Propos de Nous",
   "about.mission": "Transformation Numérique – Inclusion Financière",
-  "about.mission.description": "Nous sommes ravis d'apporter notre expertise et nos plateformes innovantes en Afrique, ouvrant de nouvelles opportunités de croissance et de développement dans l'industrie de l'inclusion financière grâce à des solutions de transformation numérique.",
+  "about.mission.description": "FinTech4ESG propose des solutions numériques innovantes pour institutions financières : microfinance, portefeuilles digitaux et gestion énergétique. Sa suite Finance Inclusive offre épargne et prêt. Avec des data scientists primés, elle optimise scoring, gestion des risques et croissance par analyses avancées.",
   "about.background": "Notre Historique",
   "about.background.description": "Avec une vaste expérience en technologie financière en Asie, aux États-Unis et en Europe, notre équipe apporte plus de 50 ans d'expertise combinée au marché africain. Nous avons implémenté avec succès des solutions financières numériques qui ont transformé des entreprises et autonomisé des communautés dans le monde entier.",
   "about.team": "Équipe de Direction",
   "about.board": "Conseil Consultatif",
   "about.values": "Nos Valeurs",
   "about.value.innovation.title": "Innovation",
-  "about.value.innovation.description": "Nous repoussons continuellement les limites du possible dans la fintech, développant des solutions de pointe qui répondent aux défis réels de l'inclusion financière.",
+  "about.value.innovation.description": "Créer constamment de nouvelles solutions pour répondre aux besoins financiers en évolution.",
   "about.value.inclusion.title": "Inclusion",
-  "about.value.inclusion.description": "Nous créons des solutions qui servent tous les segments de la société, en particulier les populations sous-bancarisées, garantissant que les services financiers sont accessibles à tous indépendamment de leur origine ou de leur localisation.",
+  "about.value.inclusion.description": "Garantir l'accès aux services financiers pour tous, quel que soit le parcours.",
   "about.value.integrity.title": "Intégrité",
-  "about.value.integrity.description": "Nous maintenons les normes éthiques les plus élevées dans toutes nos opérations, établissant la confiance avec nos clients, partenaires et les communautés que nous servons grâce à la transparence et la responsabilité.",
+  "about.value.integrity.description": "Agir avec transparence, honnêteté et selon les normes éthiques les plus élevées.",
   "about.value.impact.title": "Impact",
-  "about.value.impact.description": "Nous mesurons notre succès par le changement positif que nous créons dans les communautés, en nous concentrant sur des solutions durables qui stimulent la croissance économique et améliorent la qualité de vie des individus et des entreprises.",
-  "about.role.ceo": "JJ BWANGA",
-  "about.role.cfo":"Christian de BERAIL",
-  "about.role.coo": "Yensin Fai BIME",
-  "about.role.cto": "Patrick MADENG",
+  "about.value.impact.description": "Se concentrer sur un changement positif mesurable dans les communautés que nous servons.",
+  "about.role.ceo": "C00",
+  "about.role.cfo":"CFO",
+  //"about.role.coo": "C00",
+  "about.role.cto": "CTO",
   "about.role.research": "U. G.",
-  "about.role.business": "Uffe CARLSON",
+  "about.role.business": "Head Of Business",
   "about.role.advisor": "Conseiller",
   "about.role.financial": "Expert Financier",
   "about.role.specialist": "Spécialiste de l'Industrie",
@@ -377,12 +378,14 @@ const translations = {
   
   // Platform Segmentation
   "platform.segment.title": "Segmentation des Clients",
-  "platform.segment.verygood": "Très bonne propension du client à rembourser le prêt",
-  "platform.segment.good": "Bonne propension du client à rembourser le prêt",
-  "platform.segment.medium": "Propension moyenne du client à rembourser le prêt",
-  "platform.segment.low": "Faible propension du client à rembourser le prêt",
   "platform.segment.verylow": "Très faible propension du client à rembourser le prêt",
-  
+  "platform.segment.low": "Faible propension du client à rembourser le prêt",
+  "platform.segment.medium": "Propension moyenne du client à rembourser le prêt",
+  "platform.segment.good": "Bonne propension du client à rembourser le prêt",
+  "platform.segment.verygood": "Très bonne propension du client à rembourser le prêt",
+ 
+ 
+
   // Platform Partnership
   "platform.partnership.title": "Opportunités de partenariat",
   "platform.partnership.description": "Rejoignez notre écosystème de partenaires d'inclusion financière.",
@@ -448,26 +451,31 @@ const translations = {
   // Platform eWallet Payment System
   "platform.tab.ewallet": "Système de Paiement eWallet",
   "platform.ewallet.agent.title": "RÉSEAU D'AGENTS",
-  "platform.ewallet.agent.description": "Pour IMF et Banques Locales",
-  "platform.ewallet.agent.subtext": "Un réseau virtuel reliant les Institutions de Microfinance, les Petites Banques Locales et les clients pour permettre des services financiers numériques.",
-  "platform.ewallet.agent.feature1": "Enregistrement d'activation de compte via la plateforme ReadyCash et l'Application",
-  "platform.ewallet.agent.feature2": "Approvisionnement du compte via Mobile Money ou des IMF/Banques partenaires",
-  "platform.ewallet.agent.feature3": "Dépôts sur des comptes Mobile Money ou bancaires tiers directement depuis le Portefeuille",
-  "platform.ewallet.agent.feature4": "Code QR unique attribué pour les encaissements et retraits d'espèces des clients",
-  "platform.ewallet.agent.feature5": "Caisse enregistreuse comptable dans le Back Office avec enregistrement Crédit/Débit/Solde",
-  "platform.ewallet.agent.feature6": "Service de retrait d'espèces pour les clients du portefeuille au sein du réseau",
-  "platform.ewallet.agent.feature7": "Différents niveaux de contrôle des espèces pour les limites de décaissement ou de remboursement",
-  "platform.ewallet.agent.feature8": "Fonction \"Arrondi\" pour les transferts d'épargne automatiques",
+  "platform.ewallet.agent.description": "Réseau d'agents agréés offrant des services",
+  "platform.ewallet.agent.subtext": "Apporter les services financiers à chaque communauté",
+  "platform.ewallet.agent.feature1": "Dépôts et retraits d'espèces",
+  "platform.ewallet.agent.feature2": "Ouverture de compte",
+  "platform.ewallet.agent.feature3": "Assistance à la demande de prêt",
+  "platform.ewallet.agent.feature4": "Éducation financière",
+  "platform.ewallet.agent.feature5": "Services d’argent mobile",
+  "platform.ewallet.agent.feature6": "Service client",
+  "platform.ewallet.agent.feature7": "Paiements par QR Code et NFC",
+  "platform.ewallet.agent.feature8": "Fonctionnalités de prêt et d’épargne",
+  "platform.ewallet.agent.feature9": "Transferts P2P",
+  "platform.ewallet.agent.feature10": "Paiement de factures",
+
 
   "platform.ewallet.client.title": "PORTEFEUILLE CLIENT",
-  "platform.ewallet.client.description": "Ouvert à tous les abonnés",
-  "platform.ewallet.client.subtext": "Permettre l'inclusion financière grâce à des transactions numériques sécurisées, des transferts d'argent et des services d'épargne.",
-  "platform.ewallet.client.feature1": "Activation du compte via la plateforme ReadyCash (pour les clients partenaires) ou via l'Application",
-  "platform.ewallet.client.feature2": "Approvisionnement du compte via Mobile Money ou depuis des IMF/Banques partenaires",
-  "platform.ewallet.client.feature3": "Code QR unique pour les paiements et retraits chez les marchands partenaires",
-  "platform.ewallet.client.feature4": "Dépôts directs sur des comptes Mobile Money tiers ou des comptes bancaires",
-  "platform.ewallet.client.feature5": "Envoi d'argent aux membres ReadyPay directement depuis le Portefeuille",
-  "platform.ewallet.client.feature6": "Fonction \"Arrondi\" pour les transferts automatiques vers les comptes d'épargne",
+  "platform.ewallet.client.description": "Portefeuille mobile pour les besoins financiers du quotidien",
+  "platform.ewallet.client.subtext": "Votre banque dans la poche",
+  "platform.ewallet.client.feature1": "Argent mobile",
+  "platform.ewallet.client.feature2": "Paiements par QR Code et NFC",
+  "platform.ewallet.client.feature3": "Dépôts et retraits d'espèces",
+  "platform.ewallet.client.feature4": "Paiements commerçants",
+  "platform.ewallet.client.feature5": "Transferts P2P",
+  "platform.ewallet.client.feature6": "Fonctionnalités de prêt et d’épargne",
+  "platform.ewallet.client.feature7": "Fonctionnalités d’arrondi",
+
   
   // Market Opportunity Section
   "opportunities.title": "Opportunité de Marché",
@@ -577,10 +585,10 @@ const translations = {
   "title.P2P": "Système de gestion de solaire",
   "description.P2P": "Notre système de gestion d’énergie P2P révolutionne l’énergie solaire. Il optimise la distribution, réduit les coûts et offre aux utilisateurs des données en temps réel. Adoptez une technologie durable, performante et innovante pour transformer votre stratégie solaire.",
 
-  "title.takeAways": "Á emporter",
-  "title.african": "POPULATION AFRICAINE",
-  "title.years": "< DE 25 ANS",
-  "title.living": "VIVRE AVEC 1 $ PAR JOUR",
+  "title.takeAways": "Poins Clés",
+  "title.african": "POPULATION MONDIALE",
+  "title.years": "< DE 21 ANS",
+  "title.living": "VIVRE AVEC $2 PAR JOUR",
   "title.active": "ARGENT MOBILE ACTIF WW",
   "title.unbanked": "PERSONNES NON BANCAIRES",
   "title.off": "HORS RÉSEAU ÉLECTRIQUE",
@@ -630,11 +638,12 @@ const translations = {
   "about.goals":"Nos Objectifs",
   "about.HowWeAre":"Qui Sommes-Nous ?",
 
-  "about.role.fp":"Qualified Investor",
+  "about.role.fp":"CEO",
   "about.role.ib":"Managing Director @ 888 Global Board Member",
   "about.role.se":"Founder & Managing Director @ Glencoe Advisory",
   "about.role.gs":"Multi Cloud & Cyber Security Expert",
   "about.role.hb":"Founder & Managing Director @ BlockWealth",
+  "about.role.ak":"Serial Entrepreneur @ Oil & Gaz Industry",
 
 
   // section ReadyCashSuite 
@@ -668,13 +677,164 @@ const translations = {
   "Linear":"Linear Function",
 
   "score":"ReadyScore Product",
+  "score.ai.description":"Essayez notre démo interactive d’évaluation de crédit pour voir comment notre algorithme alimenté par l’IA analyse les profils de risque et prend des décisions de prêt basées sur plusieurs points de données.",
 
-  "productewallets.heading":"Interactive Financial Tools",
-  "productewallets.title":"ReadyCash eWallet Payment System",
-  "productewallets.description":"Interactive Financial Tools",
+  // readypay-ewallets
+  "productewallets.heading":"Outils financiers interactifs",
+  "productewallets.title":"Système de paiement ReadyCash eWallet",
+  "productewallets.description":"Outils financiers interactifs",
 
-  "how.description":"Avec plus de 75 ans d’expertise mondiale, nous accompagnons la transformation numérique des services financiers — en renforçant l’efficacité, en développant les institutions et en favorisant une croissance inclusive grâce à des solutions FinTech innovantes.",
+  "how.description":"Avec plus de 75 années d’expertise combinée en FinTech et en banque à l’échelle mondiale, nous proposons des produits numériques inclusifs qui amplifient l’impact, renforcent les économies informelles, les populations non bancarisées et les marchés.",
   
+  "ewallet.description":"Découvrez notre plateforme de paiement mobile grâce à ce simulateur interactif. Voyez comment ReadyCash propose des transactions numériques sécurisées, des transferts d'argent, le paiement de factures et des services d'épargne sur l'ensemble des marchés émergents. ",
+  
+   "readyPay":"ReadyPay",
+
+  "ussd":"USSD",
+  "nfc":"NFC",
+  "qrc":"QR CODE",
+
+  //risk
+  "risk.assessment" : "Évaluation de l’éligibilité au prêt",
+  "risk.potential" : "Montant potentiel du prêt",
+  "risk.rate" : "Taux d’intérêt estimé",
+  "risk.repayment" : "Période de remboursement",
+  "risk.months" : "mois",
+  "risk.loan" : "Historique d’approbation de prêt",
+  "risk.performance" : "Performance de risque actuelle",
+  "risk.accuracy" : "Précision de la plateforme",
+  "risk.default" : "Réduction du défaut de paiement",
+
+
+  //tendances du marché
+  "markettrends.title": "Performance du scoring IA de ReadyCash",
+  "markettrends.description": "Notre système de scoring basé sur l’IA a traité plus de 285 642 812 demandes sur plusieurs marchés, surpassant systématiquement les méthodes traditionnelles d’évaluation du crédit en réduisant les taux de défaut jusqu’à 22 %, tout en augmentant les taux d’approbation pour les emprunteurs qualifiés.",
+  "markettrends.client": "Profils clients traités",
+  "markettrends.loans": "Prêts approuvés",
+  "markettrends.rate": "Taux de défaut",
+  "markettrends.time": "Temps moyen de décision",
+
+  //types de clients
+  "clientsTypes.individual": "Particulier",
+  "clientsTypes.business": "Petite entreprise",
+
+  //Simulateur
+  "simulator.agent": "Activation de compte via plusieurs canaux : USSD, application mobile et ReadyCash Suite",
+  "simulator.agent1": "Fonctionnalité QR code et NFC pour les transactions client",
+  "simulator.agent2": "Caisse comptable avec enregistrement détaillé des transactions",
+  "simulator.agent3": "Contrôle sécurisé des espèces avec limites personnalisables",
+
+  "simulator.client": "Activation facile du compte via plusieurs canaux",
+  "simulator.client1": "Multiples options de financement, y compris l’argent mobile",
+  "simulator.client2": "QR code et NFC pour paiements et retraits chez les commerçants partenaires",
+  "simulator.client3": "Fonction d’arrondi pour les transferts d’épargne automatiques",
+
+  "simulator.title1": "Fonctionnalités du réseau d'agents",
+  "simulator.subtitle": "Pour les institutions de microfinance (IMF) et les banques locales",
+
+  "client.title": "Fonctionnalités du portefeuille client",
+  "client.subtitle": "Ouvert à tous les abonnés pour favoriser l'inclusion financière",
+
+  "contact.asia": "Indonésie",
+  "contact.asia1":"Viêtnam",
+  "contact.west": "Afrique de l’Ouest",
+  "contact.central": "Afrique centrale",
+  "contact.ind":"Indonésie - Singapour",
+  "contact.viet":"Viêtnam",
+  "contact.westC":"Guinée C. – Burkina F. – Côte I.",
+  "contact.centralC":"Cameroun – Gabon – Tchad",
+  "contact.Asia":"Asie",
+
+
+
+
+  "ussd.title": "Simulateur de Banque USSD",
+  "ussd.subtitle": "Découvrez la banque mobile sans internet",
+  "ussd.description": "Essayez notre solution bancaire USSD conçue pour les téléphones basiques. Aucun smartphone ni connexion internet requis.",
+  "ussd.instructions": "Composez *123# pour démarrer la session USSD",
+
+  // Simulateur de Banque USSD
+  "ussd.howToTitle": "Comment utiliser la banque USSD",
+  "ussd.step1": "Composez *321# sur votre téléphone",
+  "ussd.step2": "Sélectionnez une option dans le menu",
+  "ussd.step3": "Effectuer les transactions",
+  "ussd.step4": "Confirmation de la transaction",
+  "ussd.codePrompt": "Entrez le code USSD",
+  "ussd.dialHint": "Essayez *321#",
+  "ussd.sessionHistory": "Historique des sessions",
+  "ussd.noHistory": "Aucun historique",
+  "ussd.benefitsTitle": "Avantages de la banque USSD",
+  "ussd.benefit1": "Pas besoin d'internet - fonctionne sur 2G",
+  "ussd.benefit2": "Transactions rapides et sécurisées à tout moment",
+
+
+  // readyPay
+  "ewallet.simulator.roundup.title":"Round Up Savings",
+  "ewallet.simulator.roundup.description":"Automatically save your spare change on every transaction.",
+  "ewallet.simulator.roundup.active":"Active",
+  "ewallet.simulator.roundup.status":"Status",
+  "ewallet.simulator.roundup.saved":"Total Saved",
+  "ewallet.simulator.roundup.transactions":"Transactions Rounded",
+  "ewallet.simulator.roundup.configure":"Configure",
+  "ewallet.simulator.roundup.refresh":"Refresh",
+  "ewallet.simulator.roundup.how_title":"How it works",
+  "ewallet.simulator.roundup.how_description_1":"Each time you spend, we round up your payment to the nearest dollar and save the difference.",
+  "ewallet.simulator.roundup.how_description_2":"It's a simple and automatic way to grow your savings.",
+
+
+  "ewallet.simulator.settings.account":"Account",
+  "ewallet.simulator.settings.preferences":"Preferences",
+  "ewallet.simulator.settings.support":"Support",
+  "ewallet.simulator.settings.logout":"Log out",
+
+
+  "ewallet.simulator.qrcode.scan": "Scan QR Code",
+  "ewallet.simulator.qrcode.description":"QR Code description",
+  "ewallet.simulator.qrcode.instruction":"Scan this QR code to receive payments or share your wallet details.",
+  "ewallet.simulator.qrcode.done":"Done",
+
+  "ewallet.simulator.topup.current":"Current Balance",
+  "ewallet.simulator.topup.method":"Top-Up Method",
+  "ewallet.simulator.topup.amount":"Amount",
+  "ewallet.simulator.topup.confirm":"Confirm Top-Up",
+  "ewallet.simulator.topup.mobile_money":"Mobile Money",
+  "ewallet.simulator.topup.bank":"Bank Transfer",
+  "ewallet.simulator.topup.card":"Card Payment",
+
+  "ewallet.simulator.transfer.available":"Available Balance",
+  "ewallet.simulator.transfer.recipient":"Recipient",
+  "ewallet.simulator.transfer.recipient_placeholder":"Enter recipient name",
+  "ewallet.simulator.transfer.amount":"Amount",
+  "ewallet.simulator.transfer.note":"Note",
+  "ewallet.simulator.transfer.note_placeholder":"e.g. For groceries",
+  "ewallet.simulator.transfer.note_example":"Groceries",
+  "ewallet.simulator.transfer.send":"Send",
+
+
+  "AgriValue": "AgriValue",
+  "platform.lending.agrivalue.description": "Financement agricole intégré avec accès aux intrants et au marché",
+  "platform.lending.agrivalue.subtext": "Avantages clés :",
+  "platform.lending.agrivalue.feature1": "Comprend des semences, des engrais et des équipements agricoles",
+  "platform.lending.agrivalue.feature2": "Liens commerciaux avec des acheteurs premium",
+  "platform.lending.agrivalue.feature3": "Conseils techniques agricoles inclus",
+  "platform.lending.agrivalue.feature4": "Paiement partiel en intrants, pas en espèces",
+
+  "advance": "Avance sur récolte",
+  "platform.lending.advance.description": "Financement saisonnier pour les agriculteurs, aligné sur les cycles de récolte",
+  "platform.lending.advance.subtext": "Avantages clés :",
+  "platform.lending.advance.feature1": "Remboursement flexible aligné sur les cycles de récolte",
+  "platform.lending.advance.feature2": "Conseils techniques agricoles inclus",
+  "platform.lending.advance.feature3": "Options d'assurance contre les aléas climatiques",
+  "platform.lending.advance.feature4": "Prêt de groupe disponible pour les coopératives agricoles",
+
+
+
+
+  "platform.lending.macro.description": "Prêts à moyen et court terme pour les besoins immédiats",
+  "platform.lending.macro.subtext": "Aide financière rapide",
+
+  "frame.agrivalue":"AgriValue",
+  "frame.harvestAdvance":"Harvest Advance"
 
 };
 

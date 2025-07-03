@@ -3,30 +3,37 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { AnimatedComponent } from "@/components/ui/animated-component";
 
-import smilling from "@/assets/images/hero/smilling-fintech4esg.png";
-import banana from "@/assets/images/hero/banana.png";
-import fruits from "@/assets/images/hero/fruits.png";
-import diplome from "@/assets/images/hero/diplome.png";
-import tel from "@/assets/images/hero/tel.png";
-import home_banner from "@/assets/images/hero/Home_Banner_1-1_Farmer.jpg";
-import home_banner1 from "@/assets/images/hero/Home_Banner_1-2_Africa.jpg";
+
+import home_banner0 from "@/assets/images/hero/Home_Banner_1-0.png";
+import home_banner1 from "@/assets/images/hero/Home_Banner_1-1.jpg";
+import home_banner2 from "@/assets/images/hero/Home_Banner_1-2.jpg";
+import home_banner3 from "@/assets/images/hero/Home_Banner_1-3.jpg";
+import home_banner4 from "@/assets/images/hero/Home_Banner_1-4.jpg";
+//import home_banner5 from "@/assets/images/hero/Home_Banner_1-5.jpg";
+import home_banner6 from "@/assets/images/hero/Home_Banner_1-6.jpg";
+import home_banner7 from "@/assets/images/hero/Home_Banner_1-7.jpg";
+import home_banner8 from "@/assets/images/hero/Home_Banner_1-9.jpg";
+import home_banner9 from "@/assets/images/hero/Home_Banner_1-10.png";
+import home_banner10 from "@/assets/images/hero/Home_Banner_1-11.png";
+import home_banner11 from "@/assets/images/hero/Home_Banner_1-12.png";
 //import home_banner2 from "@/assets/images/hero/Home_Banner_1-3_Vietnam.jpg";
-import home_banner3 from "@/assets/images/hero/Home_Banner_1-4.jpg";
-import home_banner5 from "@/assets/images/hero/Home_Banner_1-5.jpg";
+
 
 import { useEffect, useRef, useState } from "react";
 
 /** Partie images caroussel */
 const images = [
-  smilling,
-  banana,
-  fruits,
-  diplome,
-  tel,
-  home_banner,
+  home_banner0,
   home_banner1,
+  home_banner2,
   home_banner3,
-  home_banner5,
+  home_banner4,
+  home_banner6,
+  home_banner7,
+  home_banner8,
+  home_banner9,
+  home_banner10,
+  home_banner11,
 ];
 
 export default function Hero() {
@@ -75,7 +82,7 @@ export default function Hero() {
           <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left mt-10">
+                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left mt-10 sm:transform -translate-y-10">
                   <AnimatedComponent animation="fadeIn" duration={0.7}>
                     <h1 className="text-4xl tracking-tight font-bold text-neutral-900 sm:text-5xl md:text-6xl font-heading">
                       <AnimatedComponent
@@ -115,14 +122,20 @@ export default function Hero() {
                     <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                       <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <motion.div
-                          className="rounded-md shadow"
+                          className="rounded-md"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           transition={{ type: "spring", stiffness: 400, damping: 15 }}
                         >
-                          <Button asChild size="lg" className="w-full  bg-[#19af58] rounded-xl hover:bg-primary hover:text-white">
-                            <a href="https://calendly.com/fintech4esg">{t("title.demo")}</a>
-                          </Button>
+                          <a
+                              href="https://calendly.com/fintech4esg"
+                              className="inline-block text-sm sm:text-base text-white rounded-xl border bg-[#19af58] px-6 sm:px-8 py-2 sm:py-2.5 mt-2 sm:mt-4 transition hover:bg-primary hover:text-white"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ letterSpacing: "0.3px" }}
+                            >
+                          {t("title.demo")}
+                        </a>
                         </motion.div>
                         {/* <motion.div 
                           className="mt-3 sm:mt-0 sm:ml-3"
