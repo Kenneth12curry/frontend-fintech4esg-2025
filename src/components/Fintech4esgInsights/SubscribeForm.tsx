@@ -6,11 +6,11 @@ export default function SubscribeForm() {
       <input
         type="email"
         placeholder="Enter Your Email"
-        className="border-none px-4 py-4 w-64 rounded-xl bg-gray-100"
+        className="border-none px-4 py-2 w-64 rounded-xl bg-gray-100"
       />
       <button
         type="submit"
-        className="bg-gradient-to-r bg-purple-500 text-white font-bold px-6 py-4 rounded-xl"
+        className=" text-white bg-[#19af58] hover:bg-primary font-bold px-6 py-2 rounded-xl"
       >
         Subscribe
       </button>

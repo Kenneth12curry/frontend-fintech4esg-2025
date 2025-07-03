@@ -83,7 +83,7 @@ export default function Navbar() {
             {isInsightsPage ? (
               <div className="flex justify-end items-center p-4 gap-2">
                 <button className="bg-purple-300 px-4 py-1 rounded text-white font-bold">Dashboards</button>
-                <button className="bg-green-400 px-4 py-1 rounded text-white font-bold">Faker ID</button>
+                <button className="bg-[#19af58] px-4 py-1 rounded text-white font-bold">Faker ID</button>
                {/*  <div className="ml-4 text-xs border border-dashed border-green-400 px-2 py-1 rounded">
                   Donne access à tous les platforms<br />de notre galaxies
                 </div> */}
@@ -182,7 +182,7 @@ export default function Navbar() {
               {isInsightsPage ? (
                 <div className="mt-6 flex flex-col items-end gap-2">
                   <button className="bg-purple-300 px-4 py-1 rounded text-white font-bold w-fit">Dashboards</button>
-                  <button className="bg-green-400 px-4 py-1 rounded text-white font-bold w-fit">Faker ID</button>
+                  <button className="bg-[#19af58] px-4 py-1 rounded text-white font-bold w-fit">Faker ID</button>
                   {/* <div className="text-xs border border-dashed border-green-400 px-2 py-1 rounded text-right">
                         Donne access à tous les platforms<br />de notre galaxies
                     </div> */}

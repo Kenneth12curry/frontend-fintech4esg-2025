@@ -9,3 +9,6 @@ React : bibliothèque JavaScript open source utilisée pour concevoir des interf
 TypeScript : langage de programmation typé, basé sur JavaScript, qui améliore la robustesse et la maintenabilité du code.
 
 Vite : serveur de développement local ultra-rapide, facilitant le build et le hot-reload pendant le développement.
+
+
+Chargement des posts dans le fichier Archive
