@@ -1010,9 +1010,17 @@ const translations = {
   "platform.lending.macro.subtext": "Quick financial relief",
 
   "frame.agrivalue":"AgriValue",
-  "frame.harvestAdvance":"Harvest Advance"
+  "frame.harvestAdvance":"Harvest Advance",
+
+  /** fintech4esg Insights */
+  "header.insights.title": "FinTech4ESG Insights",
+  "header.insights":"Stay ahead with curated insights on Financial Inclusion, trends and innovation",
+  "header.insights1":"that shape scoring & risk system for unbanked population.",
+  "header.visit":"Visit",
+  "header.visit1":"for more information.",
 
 };
+
 
 
 export default translations;

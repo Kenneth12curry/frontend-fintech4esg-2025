@@ -12,3 +12,6 @@ Vite : serveur de développement local ultra-rapide, facilitant le build et le h
 
 
 Chargement des posts dans le fichier Archive
+directory : src/components/Fintech4esgInsights/Archive.tsx
+
+Le fichier PublicationCard.tsx doit être utilisé comme carte des blogs.

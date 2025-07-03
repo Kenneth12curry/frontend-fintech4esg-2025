@@ -5,7 +5,7 @@ import React from "react";
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-3 md:gap-4 mt-2 ">
+    <div className="flex gap-3 md:gap-4 mt-2 me-5">
         <a
             href="#"
             aria-label="X"

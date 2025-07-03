@@ -91,11 +91,13 @@ export default function Footer() {
                     </a>
                   </div>
                 </li>
-                <li>
-                  <Link to="/" className="text-sm font-bold text-primary ">
+               <li>
+                  <Link
+                    to="/insights"
+                    className="text-sm font-bold text-primary">
                     FinTech4ESG Insights
                   </Link>
-                </li>
+              </li>
               </ul>
             </div>
 

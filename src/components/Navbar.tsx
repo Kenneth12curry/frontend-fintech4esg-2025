@@ -81,9 +81,9 @@ export default function Navbar() {
           {/* Right section (Desktop) */}
           <div className="hidden lg:flex flex-1 justify-end items-center">
             {isInsightsPage ? (
-              <div className="flex justify-end items-center p-4 gap-2">
+              <div className="flex justify-end p-4 gap-2">
                 <button className="bg-purple-300 px-4 py-1 rounded text-white font-bold">Dashboards</button>
-                <button className="bg-[#19af58] px-4 py-1 rounded text-white font-bold">Faker ID</button>
+                <button className="bg-[#19af58]  px-4 py-1 rounded text-white font-bold">Faker ID</button>
                {/*  <div className="ml-4 text-xs border border-dashed border-green-400 px-2 py-1 rounded">
                   Donne access à tous les platforms<br />de notre galaxies
                 </div> */}
@@ -144,7 +144,7 @@ export default function Navbar() {
 
                 {/* CTA */}
                 <Link
-                  to="/"
+                  to="/insights"
                   className="text-white text-sm lg:text-base px-4 py-2 rounded-xl transition bg-[#19af58] hover:bg-primary hover:text-white"
                 >
                   {t("title.partners")}
@@ -182,7 +182,7 @@ export default function Navbar() {
               {isInsightsPage ? (
                 <div className="mt-6 flex flex-col items-end gap-2">
                   <button className="bg-purple-300 px-4 py-1 rounded text-white font-bold w-fit">Dashboards</button>
-                  <button className="bg-[#19af58] px-4 py-1 rounded text-white font-bold w-fit">Faker ID</button>
+                  <button className="bg-[#19af58] px-4 py-1 rounded text-white font-bold w-32">Faker ID</button>
                   {/* <div className="text-xs border border-dashed border-green-400 px-2 py-1 rounded text-right">
                         Donne access à tous les platforms<br />de notre galaxies
                     </div> */}
@@ -247,7 +247,7 @@ export default function Navbar() {
                   </select>
 
                   <Link
-                    to="/"
+                    to="/insights"
                     className="block text-center mt-4 bg-[#19af58] text-white py-2 rounded hover:bg-primary text-base p-4"
                     onClick={() => {
                       setIsMenuOpen(false);

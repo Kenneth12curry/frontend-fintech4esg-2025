@@ -834,7 +834,15 @@ const translations = {
   "platform.lending.macro.subtext": "Aide financière rapide",
 
   "frame.agrivalue":"AgriValue",
-  "frame.harvestAdvance":"Harvest Advance"
+  "frame.harvestAdvance":"Harvest Advance",
+
+
+  /** fintech4esg Insights */
+ /*  "header.insights.title": "Perspectives FinTech4ESG",
+  "header.insights": "Restez informé avec des analyses sélectionnées sur l'inclusion financière, les tendances et l'innovation",
+  "header.insights1": "qui façonnent les systèmes de scoring et de gestion des risques pour les populations non bancarisées.",
+  "header.visit": "Pour visiter",
+  "header.visit1": "pour en savoir plus" */
 
 };
 
