@@ -58,11 +58,11 @@ import advance4 from "@/assets/images/products/HarvestAdvance/illustration-artic
 
 
 /** sections savingProducts */
-import university from "@/assets/images/savingProducts/University/2-1_Saving_Education_TL.png";
-import university1 from "@/assets/images/savingProducts/University/2-2_Saving_Education_TL.png";
-import university2 from "@/assets/images/savingProducts/University/2-3_Saving_Education_TL.png";
-import universit3 from "@/assets/images/savingProducts/University/2-4_Saving_Education_TL.png";
-import university4 from "@/assets/images/savingProducts/University/5-2_Saving_Education_Term Loan.png";
+import university from "@/assets/images/savingProducts/university/2-1_Saving_Education_TL.png";
+import university1 from "@/assets/images/savingProducts/university/2-2_Saving_Education_TL.png";
+import university2 from "@/assets/images/savingProducts/university/2-3_Saving_Education_TL.png";
+import universit3 from "@/assets/images/savingProducts/university/2-4_Saving_Education_TL.png";
+import university4 from "@/assets/images/savingProducts/university/5-2_Saving_Education_Term Loan.png";
 
 import planning from "@/assets/images/savingProducts/planning/3-1_Saving_Roof_CL.jpg";
 import planning1 from "@/assets/images/savingProducts/planning/3-2_Saving_Roof_CL.jpg";
