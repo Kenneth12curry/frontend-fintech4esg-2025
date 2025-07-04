@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Importe toutes les images du dossier blog
+const images = import.meta.glob('/src/components/blog/*.jpg', {
+  eager: true,
+  import: 'default',
+});
+
 interface PublicationCardProps {
   post: {
     frontmatter: {
@@ -10,7 +16,7 @@ interface PublicationCardProps {
       author: string;
       category: string;
       slug: string;
-      image: string;
+      image: string; // Exemple: "img1.jpg"
       tags: string[];
     };
   };
@@ -32,11 +38,11 @@ export default function PublicationCard({ post }: PublicationCardProps) {
     <div className="bg-[#f5f8ff] rounded-2xl shadow-md max-w-md mx-auto overflow-hidden">
       <div className="relative">
         <img
-          src={image}
+          src={`${image}`}
           alt={title}
           className="w-full h-48 object-cover"
         />
-        <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+        <span className="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-xl">
           {category}
         </span>
       </div>
@@ -58,7 +64,7 @@ export default function PublicationCard({ post }: PublicationCardProps) {
         </div>
         <Link
           to={`/blog/${slug}`}
-          className="text-blue-600 font-semibold hover:underline flex items-center"
+          className="text-[#19af58] font-semibold hover:underline flex items-center"
         >
           Lire l&apos;article <span className="ml-1">→</span>
         </Link>

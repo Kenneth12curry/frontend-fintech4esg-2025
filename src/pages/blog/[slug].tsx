@@ -1,24 +1,23 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import posts from "@/components/Fintech4esgInsights/posts";
+import posts from "../../posts.json";
 
 function estimateReadingTime(text: string) {
   const words = text.split(/\s+/).length;
-  return Math.max(1, Math.round(words / 200)); // 200 mots/minute
+  return Math.max(1, Math.round(words / 200));
 }
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   if (!slug) return <div>Slug manquant</div>;
 
-  // Trouve le post correspondant au slug
-  const post = posts.find((p) => p.frontmatter.slug === slug);
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return <div>Article non trouvé.</div>;
   }
 
-  const { title, description, pubDate, author, category, image} = post.frontmatter;
+  const { title, description, pubDate, author, category, image, content } = post;
 
   const formattedDate = new Date(pubDate).toLocaleDateString("fr-FR", {
     year: "numeric",
@@ -27,7 +26,7 @@ const BlogPostPage: React.FC = () => {
   });
 
   const categorySlug = category.toLowerCase().replace(/\s+/g, "-");
-  const readingTime = estimateReadingTime(description);
+  const readingTime = estimateReadingTime(description || "");
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
@@ -55,7 +54,7 @@ const BlogPostPage: React.FC = () => {
         <div className="mb-6">
           <Link
             to={`/blog/category/${categorySlug}`}
-            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
+            className="inline-block bg-primary text-white px-4 py-2 rounded-xl text-sm font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
           >
             {category}
           </Link>
@@ -65,15 +64,23 @@ const BlogPostPage: React.FC = () => {
         <p className="text-xl text-gray-600 mb-8 leading-relaxed">{description}</p>
 
         <div className="flex flex-wrap items-center gap-6 mb-8 text-gray-600">
-            <div>{author}</div>
-            <div>{pubDate}</div>
-            <div>{readingTime} min de lecture</div>
+          <div>{author}</div>
+          <div>{formattedDate}</div>
+          <div>{readingTime} min de lecture</div>
         </div>
 
         {image && (
           <figure className="mb-12 rounded-xl overflow-hidden shadow-lg">
             <img src={image} alt={title} className="w-full object-cover max-h-[450px]" />
           </figure>
+        )}
+
+        {/* Affichage du contenu HTML */}
+        {content && (
+          <div
+            className="prose max-w-none" // pour un meilleur style, tu peux installer tailwindcss/typography
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         )}
       </article>
     </main>
