@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # déclenchement manuel via l'UI GitHub
+  workflow_dispatch:  # déclenchement manuel via GitHub
 
 jobs:
   deploy:
@@ -21,8 +21,8 @@ jobs:
 
       - name: 📦 Installation des dépendances & Build Vite
         run: |
-          npm ci  # plus rapide et plus fiable que 'npm install' si tu as un package-lock.json
-          npm run build  # doit générer un dossier ./dist
+          npm ci
+          npm run build
 
       - name: 🚀 Déploiement via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
@@ -30,5 +30,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_REMOTE_PATH || '/' }}  # ex: '/htdocs/' si besoin
-          local-dir: ./dist/
+          server-dir: ./                # ✅ déploie directement dans la racine FTP visible (souvent httpdocs)
+          local-dir: ./dist/           # ✅ dossier généré par Vite
+          dangerous-clean-slate: true  # 🔥 optionnel : supprime les anciens fichiers sur le serveur
