@@ -4,32 +4,31 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'components/fintech4esgInsights/articles/**'
-  workflow_dispatch:
+  workflow_dispatch:  # déclenchement manuel via l'UI GitHub
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout du dépôt
+      - name: 🧾 Checkout du dépôt
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Installation & Build Vite
+      - name: 📦 Installation des dépendances & Build Vite
         run: |
-          npm install
-          npm run build
+          npm ci  # plus rapide et plus fiable que 'npm install' si tu as un package-lock.json
+          npm run build  # doit générer un dossier ./dist
 
-      - name: Déploiement FTP
+      - name: 🚀 Déploiement via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_REMOTE_PATH || '/' }}  # ex: '/htdocs/' si besoin
           local-dir: ./dist/

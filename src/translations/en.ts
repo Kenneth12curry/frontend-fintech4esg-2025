@@ -555,7 +555,7 @@ const translations = {
   "footer.security": "Security",
   
   // Hero Section
-  "hero.title": "Driving Globa",
+  "hero.title": "Driving Global",
   "hero.subtitle": "Innovation and Sustainability",
   "hero.description": "With 75+ combined years of global FinTech and banking expertise, we deliver inclusive digital products that scales impact, strengthens informal economies, unbanked populations and markets.",
   "hero.cta": "Learn More",
