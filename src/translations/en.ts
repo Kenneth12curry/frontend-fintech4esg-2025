@@ -555,7 +555,7 @@ const translations = {
   "footer.security": "Security",
   
   // Hero Section
-  "hero.title": "Driving Global",
+  "hero.title": "Driving Globa",
   "hero.subtitle": "Innovation and Sustainability",
   "hero.description": "With 75+ combined years of global FinTech and banking expertise, we deliver inclusive digital products that scales impact, strengthens informal economies, unbanked populations and markets.",
   "hero.cta": "Learn More",
@@ -943,8 +943,6 @@ const translations = {
   "contact.westC":"Guinea C. – Burkina F. – Ivory C.",
   "contact.centralC":"Cameroon – Gabon – Tchad",
   "contact.Asia":"Asia",
-
- 
 
 
   "ewallet.simulator.roundup.title":"Round Up Savings",
