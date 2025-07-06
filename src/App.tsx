@@ -106,7 +106,7 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-   
+    <SecurityLayer />
       <ScrollToTop />
       <Navbar />
       <div className="min-h-screen bg-gray-100">

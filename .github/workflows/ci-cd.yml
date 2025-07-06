@@ -30,6 +30,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ./                # ✅ déploie directement dans la racine FTP visible (souvent httpdocs)
-          local-dir: ./dist/           # ✅ dossier généré par Vite
-          dangerous-clean-slate: true  # 🔥 optionnel : supprime les anciens fichiers sur le serveur
+          local-dir: ./dist/    
+          server-dir: /fintech4esg.com/httpdocs/   # ✅ chemin exact du domaine
+                            # ✅ dossier de sortie Vite
