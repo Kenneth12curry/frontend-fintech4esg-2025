@@ -33,7 +33,7 @@ jobs:
           test -f src/posts.json || (echo "❌ posts.json non généré !" && exit 1)
 
       - name: ⚙️ Build Vite
-        run: vite build
+        run: npm run build
 
       - name: 🚀 Déploiement via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
