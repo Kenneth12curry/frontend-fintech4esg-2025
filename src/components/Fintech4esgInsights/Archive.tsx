@@ -1,42 +1,45 @@
 import React, { useState } from "react";
 import PublicationCard from "./PublicationCard";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import posts from "../../posts.json";
 
 const POSTS_PER_PAGE = 6;
+
+// ✅ Chargement conditionnel de posts.json
+let posts: any[] = [];
+try {
+  // @ts-ignore : éviter erreur TS sur require de JSON
+  posts = require("../../posts.json");
+} catch (err) {
+  console.warn("posts.json introuvable ou invalide :", err);
+}
 
 export default function Archive() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lang, setLang] = useState<"fr" | "en" | "all">("all");
 
-  // 🔍 Supprimer les doublons (par slug)
   const uniquePosts = Array.from(
     new Map(posts.map((post) => [post.slug, post])).values()
   );
 
-  // 🔍 Filtrer selon la langue
-  const filteredPosts = lang === "all"
-    ? uniquePosts
-    : uniquePosts.filter((post) => post.langue === lang); 
+  const filteredPosts =
+    lang === "all" ? uniquePosts : uniquePosts.filter((post) => post.langue === lang);
 
-  // Pagination
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
   const paginatedPosts = filteredPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );
 
-  // ⚠️ Remise à la première page si langue changée
   const handleLanguageChange = (newLang: "fr" | "en" | "all") => {
     setLang(newLang);
-    setCurrentPage(1); // Revenir à la page 1 après changement de langue
+    setCurrentPage(1);
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Publications</h1>
 
-      {/* Boutons de filtre de langue */}
+      {/* Filtres par langue */}
       <div className="flex gap-2 mb-5">
         <button
           className={`border px-3 py-1 rounded-xl ${lang === "fr" ? "bg-gray-300" : "bg-gray-100"}`}
@@ -61,7 +64,7 @@ export default function Archive() {
         </button>
       </div>
 
-      {/* Cartes des publications */}
+      {/* Cartes de publication */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedPosts.map((post) => (
           <PublicationCard

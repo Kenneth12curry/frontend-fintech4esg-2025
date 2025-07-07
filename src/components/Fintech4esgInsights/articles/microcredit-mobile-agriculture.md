@@ -2,7 +2,7 @@
 title: "Microcrédit 2.0 Financement Mobile Révolutionnaire"
 description: "Explorez le microcrédit 2.0 et la fintech agricole avec FINTECH4ESG. Financement mobile innovant pour booster rendements et inclusion rurale."
 slug: "microcredit-mobile-agriculture"
-Langue: "fr"
+langue: "fr"
 pubDate: "2025-07-07"
 updatedDate: "2025-07-07"
 author: "FinTech4ESG"
