@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /fintech4esg.com/httpdocs/
-          dangerous-clean-slate: false
+        
