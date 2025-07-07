@@ -52,9 +52,8 @@ jobs:
       - name: 🚀 Déploiement via FTP
         uses: SamKirkland/FTP-Deploy-Action@v3.1.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /fintech4esg.com/httpdocs/
-          
+          git-ftp-args: --remote-root /fintech4esg.com/httpdocs/
