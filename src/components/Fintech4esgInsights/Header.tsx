@@ -18,16 +18,15 @@ export default function Header() {
                 <p className="mt-2 mb-2 text-sm md:text-base transform -translate-y-3 md:-translate-y-5">
                 {t("header.insights")}<br />
                 {t("header.insights1")}<br />
-                <span>{t("header.visit")} </span>
-                <a
-                    href="https://fintech4esg.com"
-                    className="underline-none text-[#19af58] hover:text-primary font-semibold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    www.fintech4esg.com 
-                </a>
-                <span>  {t("header.visit1")}</span>
+                {/*  <span>{t("header.visit")} </span>
+                    <a
+                        href="https://fintech4esg.com"
+                        className="underline-none text-[#19af58] hover:text-primary font-semibold"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        www.fintech4esg.com 
+                    </a>
+                    <span>  {t("header.visit1")}</span> */}
                 </p>
             </div>
         </header>

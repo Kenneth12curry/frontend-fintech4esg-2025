@@ -1,4 +1,4 @@
-import { faLinkedinIn, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faXTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -11,21 +11,19 @@ export default function SocialLinks() {
             aria-label="X"
             className="bg-black text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center"
         >
-            <FontAwesomeIcon icon={faXTwitter} />
-        </a>
-        <a
-            href="#"
-            aria-label="LinkedIn"
-            className="bg-black text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center"
-        >
             <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
         <a
             href="#"
+            aria-label="LinkedIn"
+            className="bg-black text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center">
+            <FontAwesomeIcon icon={faXTwitter} />
+        </a>
+        <a
+            href="#"
             aria-label="YouTube"
-            className="bg-black text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center"
-        >
-            <FontAwesomeIcon icon={faYoutube} />
+            className="bg-black text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center" >
+            <FontAwesomeIcon icon={faInstagram} />
         </a>
     </div>
 

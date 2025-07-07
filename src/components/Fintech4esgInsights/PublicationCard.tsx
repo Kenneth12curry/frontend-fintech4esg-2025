@@ -64,7 +64,7 @@ export default function PublicationCard({ post }: PublicationCardProps) {
         </div>
         <Link
           to={`/blog/${slug}`}
-          className="text-[#19af58] font-semibold hover:underline flex items-center"
+          className="text-[#19af58] font-semibold hover:underline flex items-center hover:underline-offset-8"
         >
           Lire l&apos;article <span className="ml-1">→</span>
         </Link>

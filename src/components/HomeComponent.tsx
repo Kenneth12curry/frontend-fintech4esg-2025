@@ -220,7 +220,7 @@ function ProductCard({ icon, title, text, to }: { icon: string; title: string; t
       <p className="text-sm sm:text-base text-gray-600 mb-5">{text}</p>
       <div className="flex justify-end">
         <Link to={to} className="text-primary font-semibold hover:underline hover:underline-offset-8">
-          {t("title.learnMore")}
+          {t("title.learnMore")}<span className="ml-1">→</span>
         </Link>
       </div>
   </div>
