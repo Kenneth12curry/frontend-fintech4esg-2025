@@ -1,0 +1,35 @@
+name: Déploiement React + Vite → FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # déclenchement manuel via GitHub
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Installation des dépendances & Build Vite
+        run: |
+          npm ci
+          npm run build
+
+      - name: 🚀 Déploiement via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/    
+          server-dir: /fintech4esg.com/httpdocs/   # ✅ chemin exact du domaine
+                            # ✅ dossier de sortie Vite
