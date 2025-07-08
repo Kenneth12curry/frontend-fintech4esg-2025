@@ -42,12 +42,12 @@ jobs:
         run: npm run build
 
       - name: 🚀 Déploiement via FTP
-        uses: w9jds/ftp-action@v1.1.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-            server: ${{ secrets.FTP_HOST }}
-            username: ${{ secrets.FTP_USERNAME }}
-            password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: ./dist
-            remote-dir: /fintech4esg.com/httpdocs
-
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: /fintech4esg.com/httpdocs/
         
