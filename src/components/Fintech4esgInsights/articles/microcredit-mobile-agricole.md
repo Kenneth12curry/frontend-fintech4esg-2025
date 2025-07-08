@@ -7,7 +7,7 @@ pubDate: "2025-07-08"
 updatedDate: "2025-07-08"
 author: "FinTech4ESG"
 category: "Micro-finance"
-image: "/public/images/blog/microcredit-mobile-agricole.jpg"
+image: "/images/blog/microcredit-mobile-agricole.jpg"
 readingTime: 1
 featured: false
 tags:
@@ -34,7 +34,7 @@ seo:
 
 &nbsp;
 
-![microcredit-mobile-agricole](/images/blog/microcredit-mobile-agricole.jpg)
+![microcredit-mobile-agricole]/images/blog/microcredit-mobile-agricole.jpg
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B; padding-bottom: .2rem; margin-top: 2rem; margin-bottom: .2rem;">
   Microcrédit 2.0 : pourquoi le téléphone portable change la donne
@@ -72,7 +72,7 @@ seo:
 
 &nbsp;
 
-![Découvrez la puissante révolution du microcrédit mobile](/images/blog/microcredit-mobile-agricole-fintech4esg.jpg)
+![Découvrez la puissante révolution du microcrédit mobile]/images/blog/microcredit-mobile-agricole-fintech4esg.jpg
 
 <h3 style="color: #19af58; border-bottom: 3px solid #00924B; padding-bottom: .1rem; margin-top: 1.6rem; margin-bottom: .2rem;">
   Impacts économiques et sociaux déjà mesurables
@@ -133,7 +133,7 @@ seo:
 </h2>
 
 &nbsp;
-<p>Lorsque l’on rapproche les indicateurs, le tableau se précise. Le taux d’adultes disposant d’un compte mobile en Afrique subsaharienne (10 %) peut sembler modeste, mais il double presque tous les cinq ans. S’il suit la trajectoire kenyane, il atteindra 25 % d’ici 2030, élargissant d’autant la clientèle potentielle. La <strong>microfinance digitale</strong> a déjà prouvé qu’elle pouvait tripler la vitesse de traitement des dossiers, diminuer de moitié les coûts opérationnels et, surtout, aligner le calendrier de remboursement sur la saisonnalité agricole. En injectant des capitaux au bon moment, elle réduit l’exode rural et stabilise les revenus des familles. Pour les acteurs de la chaîne de valeur – fournisseurs d’intrants, transformateurs, distributeurs – c’est aussi la promesse d’un approvisionnement plus régulier et mieux documenté.</p>
+<p>Lorsque l’on rapproche les indicateurs, le tableau se précise. Le taux d’adultes disposant d’un compte mobile en Afrique subsaharienne 10 % peut sembler modeste, mais il double presque tous les cinq ans. S’il suit la trajectoire kenyane, il atteindra 25 % d’ici 2030, élargissant d’autant la clientèle potentielle. La <strong>microfinance digitale</strong> a déjà prouvé qu’elle pouvait tripler la vitesse de traitement des dossiers, diminuer de moitié les coûts opérationnels et, surtout, aligner le calendrier de remboursement sur la saisonnalité agricole. En injectant des capitaux au bon moment, elle réduit l’exode rural et stabilise les revenus des familles. Pour les acteurs de la chaîne de valeur – fournisseurs d’intrants, transformateurs, distributeurs – c’est aussi la promesse d’un approvisionnement plus régulier et mieux documenté.</p>
 
 &nbsp;
 
@@ -143,7 +143,7 @@ seo:
 
 &nbsp;
 
-![illustration-de-microcredit-mobile-agricole](/images/blog/microcredit-mobile-agricole-2025.jpg)
+![illustration-de-microcredit-mobile-agricole]/images/blog/microcredit-mobile-agricole-2025.jpg
 
 <p>Le microcrédit 2.0 démontre qu’une innovation technologique peut avoir un impact systémique dès lors qu’elle s’appuie sur des usages déjà adoptés – ici, le téléphone mobile. Les statistiques parlent d’elles-mêmes : 30 % de bénéficiaires supplémentaires chez Musoni, plus de 93 % de croissance d’activité au Burundi, 60 % d’utilisateurs en zone kenyane. Derrière ces pourcentages, des milliers de petits producteurs consolident leurs exploitations, diversifient leurs revenus et gagnent un statut social renforcé. Pour les investisseurs d’impact, les gouvernements et les fintechs, la priorité consiste désormais à sécuriser les données, renforcer les capacités numériques et étendre la couverture réseau. À ces conditions, le microcrédit digitalisé continuera de transformer de simples parcelles familiales en piliers d’une agriculture africaine plus résiliente, inclusive et connectée aux marchés mondiaux.</p>
 
