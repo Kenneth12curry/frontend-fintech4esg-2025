@@ -7,7 +7,7 @@ pubDate: "2025-07-08"
 updatedDate: "2025-07-08"
 author: "FinTech4ESG"
 category: "Scoring"
-image: "/public/images/blog/scoring-ia-risque-historique.jpg.jpg"
+image: "/images/blog/scoring-ia-risque-historique.jpg.jpg"
 readingTime: 1
 featured: false
 seo:

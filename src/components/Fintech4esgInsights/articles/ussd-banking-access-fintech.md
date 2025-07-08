@@ -7,7 +7,7 @@ pubDate: "2025-07-08"
 updatedDate: "2025-07-08"
 author: "FinTech4ESG"
 category: "Micro-finance"
-image: "/public/images/blog/ussd-banking-access-fintech.jpg"
+image: "/images/blog/ussd-banking-access-fintech.jpg"
 readingTime: 1
 featured: false
 seo:
