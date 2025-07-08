@@ -3,15 +3,15 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import PrivacyPage from "./pages/privacyPage";
 import TermsOfServicePage from "./pages/Terms";
 import SecurityPolicyPage from "./pages/Security";
 import AboutUSPage from "./pages/About-us";
 import ReadyCashSuite from "./pages/ReadyCashSuite";
 import ReadyScore from "./pages/ReadyScore";
-import SecurityLayer from "./components/SecuirtyLayer";
+import SecurityLayer from "@/components/SecuirtyLayer";
 import Readypay from "./pages/ReadyPay";
 import InsightsPage from "./pages/blog/insights";
 import BlogPostPage from "./pages/blog/[slug]";
@@ -44,6 +44,7 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
+   
       <ScrollToTop />
       <Navbar />
       <ToastContainer

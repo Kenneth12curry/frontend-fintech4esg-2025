@@ -87,15 +87,15 @@ export default function Archive() {
         <button
           onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
           disabled={currentPage === 1}
-          className="px-4 py-2 rounded-xl bg-[#19af58] hover:bg-primary disabled:opacity-70 text-white"
+          className="px-2 py-1 rounded-xl bg-[#19af58] hover:bg-primary disabled:opacity-70 text-white"
         >
           <FaArrowLeft />
         </button>
-        <span className="px-4 py-2">{currentPage} / {totalPages}</span>
+        <span className="px-2 py-2">{currentPage} / {totalPages}</span>
         <button
           onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 rounded-xl bg-[#19af58] hover:bg-primary disabled:opacity-70 text-white"
+          className="px-2 py-1 rounded-xl bg-[#19af58] hover:bg-primary disabled:opacity-70 text-white"
         >
           <FaArrowRight />
         </button>
