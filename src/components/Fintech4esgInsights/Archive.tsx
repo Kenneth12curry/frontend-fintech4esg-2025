@@ -34,29 +34,28 @@ export default function Archive() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Publications</h1>
+      <h1 className="text-3xl font-bold mb-6">NewsLetters</h1>
 
       {/* Boutons de filtre de langue */}
-      <div className="flex gap-2 mb-5">
+      <div className="flex mb-5">
         <button
-          className={`border px-3 py-1 rounded-xl ${lang === "fr" ? "bg-gray-300" : "bg-gray-100"}`}
+          className={`px-3 py-1 rounded-xl ${lang === "fr" ? "bg-gray-200" : "bg-gray-100"}`}
           onClick={() => handleLanguageChange("fr")}
           type="button"
         >
-          French
+          <span className="text-3xl">🇫🇷</span>
         </button>
         <button
-          className={`border px-3 py-1 rounded-xl ${lang === "en" ? "bg-gray-300" : "bg-gray-100"}`}
+          className={`px-3 py-1 rounded-xl ${lang === "en" ? "bg-gray-200" : "bg-gray-100"}`}
           onClick={() => handleLanguageChange("en")}
           type="button"
         >
-          English
+          <span className="text-3xl">🇬🇧</span>
         </button>
         <button
-          className={`border px-3 py-1 rounded-xl ${lang === "all" ? "bg-gray-300" : "bg-gray-100"}`}
+          className={`text-sm px-3 py-1 rounded-xl ${lang === "all" ? "bg-gray-200" : "bg-gray-100"}`}
           onClick={() => handleLanguageChange("all")}
-          type="button"
-        >
+          type="button">
           All
         </button>
       </div>

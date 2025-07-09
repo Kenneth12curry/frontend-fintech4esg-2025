@@ -13,8 +13,6 @@ export default function Header() {
             </h1>
             
             <div className="text-center px-4">
-                <p className="text-lg md:text-2xl font-semibold transform -translate-y-3 md:-translate-y-5">NewsLetters</p>
-                
                 <p className="mt-2 mb-2 text-sm md:text-base transform -translate-y-3 md:-translate-y-5">
                 {t("header.insights")}<br />
                 {t("header.insights1")}<br />

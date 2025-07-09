@@ -133,4 +133,16 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+/* par défaut (desktop) */
+/* global.css */
+.Toastify__toast-container--top-center {
+  margin-top: 180px !important;
+}
+
+@media (max-width: 640px) {
+  .Toastify__toast-container--top-center {
+    margin-top: 180px !important;
+  }
+}
+
 /* global.css ou dans Tailwind via @layer */

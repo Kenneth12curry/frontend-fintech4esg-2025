@@ -593,7 +593,9 @@ const translations = {
   "title.unbanked": "PERSONNES NON BANCAIRES",
   "title.off": "HORS RÉSEAU ÉLECTRIQUE",
 
-  "title.need": "Besoin d'aide ou de compléments des informations sur notre solution ?",
+  "title.need": "Besoin d’aide ou",
+  "title.need1": "d’informations supplémentaires sur notre solution ?",
+
   "title.demo": "RÉSERVER UNE DÉMO",
 
   "title.learnMore": "Apprendre encore plus",

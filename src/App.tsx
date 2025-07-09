@@ -48,16 +48,16 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <ToastContainer
-        position="top-center"       // Positionne les toasts en haut au centre
-        autoClose={4000}            // Durée d'affichage (4 secondes)
-        hideProgressBar={false}     // Barre de progression visible
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        style={{ zIndex: 9999 }}    // Assure que c'est au-dessus
+        style={{ zIndex: 9999, marginTop: "140px" }} // décalage vers le bas
       />
       <div className="min-h-screen bg-gray-100">
         <main>
