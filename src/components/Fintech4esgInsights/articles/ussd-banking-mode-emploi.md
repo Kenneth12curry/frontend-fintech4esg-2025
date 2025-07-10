@@ -28,11 +28,11 @@ seo:
 
 &nbsp;
 
-<p>Offrir des services financiers à celles et ceux qui ne disposent pas d’un smartphone ou d’une connexion haut débit reste un chantier majeur de l’inclusion économique. Dans de nombreux pays francophones d’Afrique, mais aussi en Asie ou en Amérique latine, la majorité des habitants possèdent un téléphone basique. C’est là que le USSD banking entre en scène. Simple code à composer, pas d’application à installer : le canal USSD (Unstructured Supplementary Service Data) permet déjà de toucher jusqu’à 94 % du parc mobile dans certains marchés émergents. Découvrons comment cette technologie, discrète mais efficace, étend le champ de la bancarisation.</p>
+<p>Offrir des services financiers à celles et ceux qui ne disposent pas d’un smartphone ou d’une connexion haut débit reste un chantier majeur de l’inclusion économique. Dans de nombreux pays francophones d’Afrique, mais aussi en Asie ou en Amérique latine, la majorité des habitants possèdent un téléphone basique. C’est là que le USSD banking entre en scène. Simple code à composer, pas d’application à installer : le canal USSD Unstructured Supplementary Service Data permet déjà de toucher jusqu’à 94 % du parc mobile dans certains marchés émergents. Découvrons comment cette technologie, discrète mais efficace, étend le champ de la bancarisation.</p>
 
 &nbsp;
 
-![Guide ultime USSD Banking pour booster inclusion mobile](/images/blog/ussd-banking-mode-emploi-fintech4esg.jpg)
+![Guide ultime USSD Banking pour booster inclusion mobile]/images/blog/ussd-banking-mode-emploi-fintech4esg.jpg
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B; padding-bottom: .2rem; margin-top: 0.5rem; margin-bottom: .2rem;">
   Qu’est-ce que le USSD banking ?
@@ -63,7 +63,7 @@ seo:
   <li>À l’échelle mondiale, le volume des transactions réalisées depuis un téléphone – toutes technologies confondues – pourrait atteindre 8 940 milliards USD en 2027, avec une croissance moyenne annuelle supérieure à 20 %. Le USSD représente une part non négligeable de cette dynamique dans les économies à faible couverture Internet.</li>
 </ul>
 
-![illustration-de-ussd-banking-mode-emploi](/images/blog/ussd-banking-mode-emploi-2025.jpg)
+![illustration-de-ussd-banking-mode-emploi]/images/blog/ussd-banking-mode-emploi-2025.jpg
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B; padding-bottom: .2rem; margin-top: 0.5rem; margin-bottom: .2rem;">
   Comment fonctionne concrètement une session USSD ?
@@ -72,15 +72,15 @@ seo:
 &nbsp;
 
 <ul style="list-style-type: decimal; margin-left: 2rem;">
-  <li>Composition du code (ex. *123#).</li>
-  <li>Affichage d’un menu numéroté : 1) Consulter le solde, 2) Envoyer de l’argent, 3) Payer une facture, etc.</li>
+  <li>Composition du code ex. *123#.</li>
+  <li>Affichage d’un menu numéroté : 1 Consulter le solde, 2 Envoyer de l’argent, 3 Payer une facture, etc.</li>
   <li>Sélection de l’option par la touche numérique correspondante.</li>
   <li>Saisie éventuelle d’un montant ou du numéro de bénéficiaire.</li>
   <li>Validation par un code PIN.</li>
   <li>Réception d’un message de confirmation.</li>
 </ul>
 
-<p>Chaque étape dure quelques secondes ; la session se termine automatiquement après un court délai d’inactivité, limitant les risques d’erreur. Le protocole, conçu au départ pour des requêtes réseau (recharge, consultation de crédit), s’est donc naturellement imposé comme support au mobile banking.</p>
+<p>Chaque étape dure quelques secondes ; la session se termine automatiquement après un court délai d’inactivité, limitant les risques d’erreur. Le protocole, conçu au départ pour des requêtes réseau recharge, consultation de crédit, s’est donc naturellement imposé comme support au mobile banking.</p>
 
 &nbsp;
 
@@ -104,7 +104,7 @@ seo:
 
 &nbsp;
 
-<p>Dans l’Hexagone, 88 % des adultes possèdent un smartphone et 72 % utilisent déjà les services de banque en ligne via une application. Les néobanques (BoursoBank, Nickel, Revolut) captent les nouveaux clients grâce à des interfaces riches et au paiement sans contact. Dans ce contexte très connecté, les opérateurs télécom ne promeuvent pas les codes USSD et les banques n’en ressentent pas le besoin.</p>
+<p>Dans l’Hexagone, 88 % des adultes possèdent un smartphone et 72 % utilisent déjà les services de banque en ligne via une application. Les néobanques BoursoBank, Nickel, Revolut captent les nouveaux clients grâce à des interfaces riches et au paiement sans contact. Dans ce contexte très connecté, les opérateurs télécom ne promeuvent pas les codes USSD et les banques n’en ressentent pas le besoin.</p>
 
 &nbsp;
 <p>Pour autant, des banques françaises actives à l’international, tout comme les fintechs orientées coopération, intègrent le USSD dans leurs offres destinées aux diasporas et aux transferts transfrontaliers. Le canal devient alors un pont entre proches : l’expéditeur se sert d’une application, le bénéficiaire d’un simple code USSD.</p>
@@ -119,9 +119,9 @@ seo:
 
 <ul style="list-style-type: decimal; margin-left: 2rem;">
   <li><strong>Expérience utilisateur.</strong> Un menu trop long décourage. Les experts conseillent de limiter la navigation à quatre écrans maximum, avec un langage dépourvu de jargon financier.</li>
-  <li><strong>Interopérabilité.</strong> Le service doit fonctionner avec tous les opérateurs nationaux. Négocier un code USSD unique (*123#) plutôt qu’un code par réseau simplifie la communication marketing.</li>
+  <li><strong>Interopérabilité.</strong> Le service doit fonctionner avec tous les opérateurs nationaux. Négocier un code USSD unique *123# plutôt qu’un code par réseau simplifie la communication marketing.</li>
   <li><strong>Sécurité renforcée.</strong> Cryptage bout-en-bout, PIN dynamique, limites de montant : autant de garde-fous pour protéger les clients, en particulier lors de transferts d’argent.</li>
-  <li><strong>Conformité réglementaire.</strong> Les autorités de régulation imposent souvent des procédures KYC simplifiées (know your customer) et la déclaration des volumes pour lutter contre le blanchiment.</li>
+  <li><strong>Conformité réglementaire.</strong> Les autorités de régulation imposent souvent des procédures KYC simplifiées know your customer et la déclaration des volumes pour lutter contre le blanchiment.</li>
   <li><strong>Suivi en temps réel.</strong> Des tableaux de bord analytiques – nombre de sessions, taux d’abandon, valeur moyenne – permettent d’optimiser le parcours et d’ajuster les messages.</li>
 </ul>
 
@@ -149,7 +149,7 @@ seo:
 
 &nbsp;
 
-![ussd-banking-mode-emploi](/images/blog/ussd-banking-mode-emploi.jpg)
+![ussd-banking-mode-emploi]/images/blog/ussd-banking-mode-emploi.jpg
 
 <h3 style="color: #19af58; border-bottom: 3px solid #00924B; padding-bottom: .1rem; margin-top: 0.6rem; margin-bottom: .2rem;">
   Au Burkina Faso

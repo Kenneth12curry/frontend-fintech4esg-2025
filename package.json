@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build-posts": "node scripts/build-posts.js",
-    "dev": "node scripts/remove-public-from-image-paths.js && npm run build-posts && vite",
+    "dev": "npm run build-posts && vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
