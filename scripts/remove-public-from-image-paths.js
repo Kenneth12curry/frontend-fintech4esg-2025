@@ -22,7 +22,7 @@ fs.readdir(articlesPath, (err, files) => {
           return;
         }
 
-        const updatedContent = data.replace(/\/public\/images\/blog\//, '/images/blog/').replace(/\(|\)/g, '');
+                const updatedContent = data.replace('/public/images/blog/', '/images/blog/').replace(/\(|\)/g, '');
 
         fs.writeFile(filePath, updatedContent, 'utf8', (err) => {
           if (err) {
