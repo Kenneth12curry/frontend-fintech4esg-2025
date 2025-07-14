@@ -10,7 +10,7 @@ import SecurityPolicyPage from "./pages/Security";
 import AboutUSPage from "./pages/About-us";
 import ReadyCashSuite from "./pages/ReadyCashSuite";
 import ReadyScore from "./pages/ReadyScore";
-import SecurityLayer from "@/components/SecuirtyLayer";
+import SecurityLayer from "@/components/SecurityLayer";
 import Readypay from "./pages/ReadyPay";
 import InsightsPage from "./pages/blog/insights";
 import BlogPostPage from "./pages/blog/[slug]";
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <BrowserRouter>
-   
+      <SecurityLayer />
       <ScrollToTop />
       <Navbar />
       <ToastContainer
