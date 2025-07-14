@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
@@ -17,8 +16,9 @@ import InsightsPage from "./pages/blog/insights";
 import BlogPostPage from "./pages/blog/[slug]";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useCookie from './hooks/useCookie'; // <-- Import du nouveau hook
 
-
+// Composant ScrollToTop - Revert à la version originale et fonctionnelle
 function ScrollToTop() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -42,6 +42,24 @@ function ScrollToTop() {
 
 
 function App() {
+  // Utilisation du hook useCookie pour gérer une préférence non sensible
+  // Par exemple, la dernière date de visite de l'utilisateur
+  const [lastVisit, setLastVisit] = useCookie('lastVisitDate');
+
+  useEffect(() => {
+    // Au chargement de l'application, loguer la dernière date de visite
+    if (lastVisit) {
+      console.log('Bienvenue de nouveau ! Votre dernière visite était le :', lastVisit);
+    } else {
+      console.log("C'est votre première visite ou le cookie a expiré.");
+    }
+
+    // Mettre à jour le cookie avec la date et l'heure actuelles
+    // Le cookie expirera dans 30 jours
+    setLastVisit(new Date().toLocaleString(), { expires: 30, path: '/' });
+
+  }, [setLastVisit, lastVisit]); // Dépendances pour s'assurer que l'effet s'exécute correctement
+
   return (
     <BrowserRouter>
    

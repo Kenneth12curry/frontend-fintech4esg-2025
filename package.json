@@ -49,6 +49,7 @@
     "framer-motion": "^12.11.0",
     "gray-matter": "^4.0.3",
     "helmet": "^8.1.0",
+    "js-cookie": "^3.0.5",
     "keen-slider": "^6.8.6",
     "libphonenumber-js": "^1.12.8",
     "lucide-react": "^0.509.0",
