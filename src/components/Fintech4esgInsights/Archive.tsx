@@ -14,10 +14,15 @@ export default function Archive() {
     new Map(posts.map((post) => [post.slug, post])).values()
   );
 
+  // ✨ Trier les articles par date de publication (du plus récent au plus ancien)
+  const sortedPosts = uniquePosts.sort((a, b) => {
+    return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime();
+  });
+
   // 🔍 Filtrer selon la langue
   const filteredPosts = lang === "all"
-    ? uniquePosts
-    : uniquePosts.filter((post) => post.langue === lang); 
+    ? sortedPosts
+    : sortedPosts.filter((post) => post.langue === lang); 
 
   // Pagination
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);

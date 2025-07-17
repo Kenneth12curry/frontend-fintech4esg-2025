@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: 🧾 Checkout du dépôt
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
@@ -49,4 +51,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /fintech4esg.com/httpdocs/
-        
+
+      
