@@ -57,8 +57,8 @@ jobs:
         run: |
           ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD)
           for file in $ADDED_FILES; do
-            if [[ "$file" == client/src/components/Fintech4esgInsights/articles/*.tsx ]]; then
-              SLUG=$(basename "$file" .tsx)
+            if [[ "$file" == src/components/Fintech4esgInsights/articles/*.md ]]; then
+              SLUG=$(basename "$file" .md)
               echo "Nouvel article détecté : $SLUG"
               curl -X POST ${{ secrets.API_URL }}/send-newsletter \
                 -H "Content-Type: application/json" \
