@@ -55,15 +55,34 @@ jobs:
       - name: 📣 Notifier les nouveaux articles
         if: github.event_name == 'push'
         run: |
+          # Installer jq pour parser le JSON
+          sudo apt-get install -y jq
+
           ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD)
           for file in $ADDED_FILES; do
             if [[ "$file" == src/components/Fintech4esgInsights/articles/*.md ]]; then
               SLUG=$(basename "$file" .md)
               echo "Nouvel article détecté : $SLUG"
+              
+              # Extraire les informations de l'article depuis posts.json
+              ARTICLE_JSON=$(jq --arg slug "$SLUG" '.[] | select(.slug == $slug)' src/posts.json)
+              
+              if [ -z "$ARTICLE_JSON" ]; then
+                echo "::warning::Article avec le slug '$SLUG' non trouvé dans posts.json. Notification ignorée."
+                continue
+              fi
+              TITLE=$(echo "$ARTICLE_JSON" | jq -r '.title')
+              IMAGE=$(echo "$ARTICLE_JSON" | jq -r '.image')
+              
+              # Construire le payload JSON
+              JSON_PAYLOAD=$(printf '{"slug":"%s","title":"%s","image":"%s"}' "$SLUG" "$TITLE" "$IMAGE")
+              
+              echo "Envoi de la notification avec le payload : $JSON_PAYLOAD"
+              
               curl -X POST ${{ secrets.API_URL }}/send-newsletter \
                 -H "Content-Type: application/json" \
                 -H "x-api-key: ${{ secrets.API_KEY }}" \
-                -d "{\"slug\":\"$SLUG\"}"
+                -d "$JSON_PAYLOAD"
             fi
           done
         
