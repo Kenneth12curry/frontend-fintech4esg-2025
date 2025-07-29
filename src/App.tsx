@@ -62,7 +62,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <SecurityLayer />
+  
       <ScrollToTop />
       <Navbar />
       <ToastContainer
