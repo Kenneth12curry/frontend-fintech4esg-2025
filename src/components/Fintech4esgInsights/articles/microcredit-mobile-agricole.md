@@ -31,6 +31,7 @@ seo:
 
 &nbsp;
 <p>Le microcrédit 2.0, c’est-à-dire l’utilisation du téléphone mobile et des plateformes numériques pour octroyer de petits prêts, bouleverse la manière de financer les exploitations agricoles familiales. Dans de nombreuses régions rurales, notamment en Afrique de l’Ouest, la banque traditionnelle est distante et coûteuse. Or, 80 % des actifs y vivent de l’agriculture. Grâce aux applications de mobile money, aux portefeuilles électroniques et aux outils de scoring alternatifs, les producteurs accèdent désormais à des capitaux autrefois inatteignables. Le modèle séduit, car il simplifie le décaissement, abaisse les frais de transaction et favorise l’inclusion financière.</p>
+
 ![Microcrédit mobile révolutionnaire booste l’agriculture](/images/blog/microcredit-mobile-agricole-fintech4esg.jpg)
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B;
