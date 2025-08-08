@@ -31,7 +31,9 @@ seo:
 
 &nbsp;
 <p>Longtemps cantonné au simple rôle de porte-monnaie électronique, le portefeuille numérique a changé de dimension en Afrique subsaharienne. Il agrége désormais épargne, crédit, assurance et transferts internationaux, devenant l’un des leviers les plus puissants d’inclusion financière du continent. Cette évolution, portée par la généralisation du mobile et l’essor de l’économie numérique, dessine un nouvel écosystème où le téléphone tient lieu de guichet bancaire et de point d’accès à une multitude de services essentiels.</p>
-<p>&nbsp;![Découvrez e-wallet - hub innovant pour inclusion financière](/images/blog/e-wallet-hub-afrique-fintech4esg.jpg)&nbsp;</p>
+
+![Découvrez e-wallet - hub innovant pour inclusion financière](/images/blog/e-wallet-hub-afrique-fintech4esg.jpg)
+
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B; padding-bottom: .2rem; margin-top: 0.5rem; margin-bottom: .2rem;">
   E-wallet : au-delà du paiement, un hub de services intégré
