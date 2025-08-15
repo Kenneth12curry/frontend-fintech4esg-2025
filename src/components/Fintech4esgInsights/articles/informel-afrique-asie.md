@@ -23,6 +23,7 @@ seo:
 
 &nbsp;
 <p>Dans les rues d’Abidjan comme dans les ruelles de Jakarta, l’activité commerciale bourdonne sans factures officielles, sans contrats formalisés, sans file d’attente à la banque. L’économie informelle, omniprésente, représente bien plus qu’une simple zone grise ; elle incarne à la fois une terre d’opportunités vitales pour des millions de personnes et un océan de risques pour la croissance à long terme. En Afrique subsaharienne, plus de la moitié du produit intérieur brut provient d’activités non déclarées, tandis qu’en Asie du Sud et du Sud-Est, près de deux tiers des emplois non agricoles restent hors du radar fiscal. Faut-il s’en réjouir ou s’en alarmer ? Cet article explore les deux faces de cette réalité, chiffres à l’appui, pour éclairer les décideurs, investisseurs et acteurs de la société civile.</p>
+
 &nbsp;![Informel en Afrique et Asie boostez vos profits](/images/blog/informel-afrique-asie-fintech4esg.jpg)&nbsp;
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B;
