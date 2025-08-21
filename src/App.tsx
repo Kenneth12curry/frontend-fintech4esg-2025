@@ -62,7 +62,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <SecurityLayer /> {/* Ajout de la couche de sécurité pour les routes sensibles */}
+     
       <ScrollToTop />
       <Navbar />
       <ToastContainer
