@@ -30,8 +30,11 @@ seo:
 
 Ces dix dernières années, la <strong>microfinance</strong> a franchi un cap décisif : elle est passée au numérique. Le mouvement, né de la convergence entre téléphonie mobile, identification digitale et volonté politique, promet une inclusion financière « sans frontière ». Des campagnes reculées d’Afrique de l’Ouest aux mégapoles d’Asie du Sud-Est, les personnes historiquement exclues des services bancaires accèdent désormais à l’épargne, au crédit ou à l’assurance par un simple téléphone.  
 
-&nbsp;  
+<!-- &nbsp;  
 ![Révolution fulgurante de la microfinance numérique](/images/blog/microfinance-numerique-inclusion-fintech4esg.jpg)  
+&nbsp;  --> 
+&nbsp;  
+![illustration-de-microfinance-numerique-inclusion](/images/blog/microfinance-numerique-inclusion-2025.jpg)  
 &nbsp;  
 
 <h2 style="color: #19af58; border-bottom: 4px solid #00924B;
