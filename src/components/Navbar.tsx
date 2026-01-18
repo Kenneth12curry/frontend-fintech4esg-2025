@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "@/lib/i18n";
-import fintech4esg from "@/assets/Header_FTE_MOTO.png";
+import finzuuLogoHeader from "@/assets/FinZuu_Logo-V2/finzuu-brand-name.svg";
 
 type NavigationLink = {
   name: string;
@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block absolute top-4 left-4 sm:static sm:transform-none">
-              <img src={fintech4esg} alt="Fintech4esg" className="h-8 sm:h-10 w-auto" />
+              <img src={finzuuLogoHeader} alt="Finzuu" className="w-24 sm:w-32 h-auto" />
             </Link>
           </div>
 
@@ -84,7 +84,7 @@ export default function Navbar() {
               <div className="flex justify-end p-4 gap-2">
                 <button className="bg-purple-300 px-4 py-1 rounded text-white font-bold">Dashboards</button>
                 <button className="bg-[#19af58]  px-4 py-1 rounded text-white font-bold">Faker ID</button>
-               {/*  <div className="ml-4 text-xs border border-dashed border-green-400 px-2 py-1 rounded">
+                {/*  <div className="ml-4 text-xs border border-dashed border-green-400 px-2 py-1 rounded">
                   Donne access à tous les platforms<br />de notre galaxies
                 </div> */}
               </div>
@@ -122,9 +122,8 @@ export default function Navbar() {
                     <Link
                       key={link.name}
                       to={link.to || "/"}
-                      className={`text-neutral-700 text-sm lg:text-base font-medium px-2 py-1 hover:text-primary ${
-                        location.pathname === link.to ? "text-primary" : ""
-                      }`}
+                      className={`text-neutral-700 text-sm lg:text-base font-medium px-2 py-1 hover:text-primary ${location.pathname === link.to ? "text-primary" : ""
+                        }`}
                       onMouseEnter={() => setActiveDropdown(null)}
                     >
                       {link.name}
@@ -136,7 +135,7 @@ export default function Navbar() {
                 <select
                   className="px-2 py-1 rounded border border-primary text-sm focus:outline-none appearance-none pr-8 relative m-5"
                   onChange={(e) => i18n.changeLanguage(e.target.value)}
-                  value={i18n.language} 
+                  value={i18n.language}
                 >
                   <option value="en">🇬🇧 English</option>
                   <option value="fr">🇫🇷 Français</option>

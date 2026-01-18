@@ -271,8 +271,10 @@ export default function AboutUs() {
   { name: "Franck PELTIER", role: t("about.role.fp"), linkedin: "https://www.linkedin.com/in/franck-peltier-772ba528/", image: franck },
   { name: "Christian de BERAIL", role: t("about.role.cfo"), linkedin: "https://www.linkedin.com/in/cdeberail/", image: christian},
   { name: "JJ BWANGA", role: t("about.role.ceo"), linkedin: "https://www.linkedin.com/in/jjbwanga/",image: jjbwanga},
-  { name: "Patrick MADENG", role: t("about.role.cto"), linkedin: "https://linkedin.com/in/patrick-madeng", image: "" },
-  { name: "Uffe CARLSON", role: t("about.role.business"), linkedin: "https://linkedin.com/in/uffe-carlson", image: uffe_carlson },
+  { name: "Daniel Awanda", role: t("about.role.head"), linkedin: "https://www.linkedin.com/in/cdeberail/", image: christian},
+  { name: "Kamel Zemouri", role: t("about.role.cto"), linkedin: "https://www.linkedin.com/in/kamel-zemouri-cv/",image: ""},
+/*   { name: "Patrick MADENG", role: t("about.role.cto"), linkedin: "https://linkedin.com/in/patrick-madeng", image: "" }, */
+  // { name: "Uffe CARLSON", role: t("about.role.business"), linkedin: "https://linkedin.com/in/uffe-carlson", image: uffe_carlson },
 ];
 
 
@@ -281,7 +283,7 @@ export default function AboutUs() {
     { name: "Anthony KUME", role: t("about.role.ak"), linkedin: "https://www.linkedin.com/in/ak/", image: "" },
     { name: "Serge ESSO", role: t("about.role.se"),  linkedin: "https://www.linkedin.com/in/serge-esso-69856ab/", image: serge },
     { name: "Gabriel SALLAH", role: t("about.role.gs"),  linkedin: "https://www.linkedin.com/in/gabrielsallah/", image: gabriel },
-    { name: "Hichem BOUCHOUAREB", role: t("about.role.hb"),  linkedin: "https://www.linkedin.com/in/bouchouareb/", image: hicham },
+    // { name: "Hichem BOUCHOUAREB", role: t("about.role.hb"),  linkedin: "https://www.linkedin.com/in/bouchouareb/", image: hicham },
   ];
 
   return (

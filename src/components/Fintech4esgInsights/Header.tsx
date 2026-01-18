@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@/assets/FINTECH4ESG Logo form_icon.svg";
+import logo from "@/assets/FinZuu_Logo-V2/finzuu-name-catchword.svg";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {

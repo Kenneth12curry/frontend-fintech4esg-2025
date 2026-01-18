@@ -1,0 +1,11 @@
+<svg viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand Name -->
+  <text x="300" y="80" font-family="Arial, sans-serif" font-size="68" font-weight="bold" text-anchor="middle" fill="#c68cff">
+    Fin<tspan fill="#19af58">Zuu</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="300" y="115" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#999" letter-spacing="3">
+    CONNECTING COMMUNITIES TO CAPITAL
+  </text>
+</svg>

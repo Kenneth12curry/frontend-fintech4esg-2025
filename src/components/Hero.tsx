@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left mt-10 sm:transform -translate-y-10">
+                <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left md:mx-auto mt-10 sm:transform -translate-y-10">
                   <AnimatedComponent animation="fadeIn" duration={0.7}>
                     <h1 className="text-4xl tracking-tight font-bold text-neutral-900 sm:text-5xl md:text-6xl font-heading">
                       <AnimatedComponent
@@ -128,14 +128,14 @@ export default function Hero() {
                           transition={{ type: "spring", stiffness: 400, damping: 15 }}
                         >
                           <a
-                              href="https://calendly.com/fintech4esg"
-                              className="inline-block text-sm sm:text-base text-white rounded-xl border bg-[#19af58] px-6 sm:px-8 py-2 sm:py-2.5 mt-2 sm:mt-4 transition hover:bg-primary hover:text-white"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ letterSpacing: "0.3px" }}
-                            >
-                          {t("title.demo")}
-                        </a>
+                            href="https://calendly.com/fintech4esg"
+                            className="inline-block text-sm sm:text-base text-white rounded-xl border bg-[#19af58] px-6 sm:px-8 py-2 sm:py-2.5 mt-2 sm:mt-4 transition hover:bg-primary hover:text-white"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ letterSpacing: "0.3px" }}
+                          >
+                            {t("title.demo")}
+                          </a>
                         </motion.div>
                         {/* <motion.div 
                           className="mt-3 sm:mt-0 sm:ml-3"
@@ -198,11 +198,11 @@ export default function Hero() {
               ease: "easeInOut",
             }}
           />
-         
+
           {/* Indicateurs et flèches */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-4 z-10">
             {/* Flèche gauche */}
-          {/*   <button
+            {/*   <button
               onClick={handlePrevImage}
               className="text-primary hover:text-primary/80 text-4xl font-medium transition-colors"
               aria-label="Image précédente"

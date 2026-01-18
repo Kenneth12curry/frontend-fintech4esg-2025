@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
             </div>
             <h1 className="text-4xl font-bold mb-3">Terms of Service</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              The legal agreement governing your use of ReadyCash and FinTech4ESG's services
+              The legal agreement governing your use of ReadyCash and FinZuu services
             </p>
             <p className="text-sm text-muted-foreground mt-2">Last updated: April 5, 2025</p>
           </div>
@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              These Terms of Service ("Terms") govern your access to and use of the ReadyCash platform and related services (collectively, the "Services") provided by FinTech4ESG Consulting ("we," "us," or "our").
+              These Terms of Service ("Terms") govern your access to and use of the ReadyCash platform and related services (collectively, the "Services") provided by FinZuu Consulting ("we," "us," or "our").
             </p>
             <p>
               By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our Services.
@@ -41,7 +41,7 @@ export default function TermsOfServicePage() {
               <div className="flex items-start">
                 <AlertTriangle className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-amber-800">
-                  These Terms constitute a legally binding agreement between you and FinTech4ESG Consulting. If you are using our Services on behalf of a business or other entity, you represent that you have the authority to bind that entity to these Terms.
+                  These Terms constitute a legally binding agreement between you and FinZuu Consulting. If you are using our Services on behalf of a business or other entity, you represent that you have the authority to bind that entity to these Terms.
                 </p>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function TermsOfServicePage() {
               </AccordionTrigger>
               <AccordionContent className="space-y-4 pt-2 pb-4">
                 <p>
-                  All content included in or made available through our Services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, is the property of FinTech4ESG Consulting or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws.
+                  All content included in or made available through our Services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, is the property of FinZuu Consulting or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws.
                 </p>
                 <p>
                   We grant you a limited, non-exclusive, non-transferable, and revocable license to access and use our Services for their intended purposes, subject to your compliance with these Terms. This license does not include:
@@ -212,7 +212,7 @@ export default function TermsOfServicePage() {
               </AccordionTrigger>
               <AccordionContent className="space-y-4 pt-2 pb-4">
                 <p>
-                  To the maximum extent permitted by applicable law, FinTech4ESG Consulting and its affiliates, officers, employees, agents, partners, and licensors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation damages for loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+                  To the maximum extent permitted by applicable law, FinZuu Consulting and its affiliates, officers, employees, agents, partners, and licensors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation damages for loss of profits, data, use, goodwill, or other intangible losses, resulting from:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Your access to or use of or inability to access or use the Services</li>
@@ -269,7 +269,7 @@ export default function TermsOfServicePage() {
               </AccordionTrigger>
               <AccordionContent className="space-y-4 pt-2 pb-4">
                 <p>
-                  You agree to indemnify, defend, and hold harmless FinTech4ESG Consulting and its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
+                  You agree to indemnify, defend, and hold harmless FinZuu Consulting and its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Your violation of these Terms</li>
@@ -325,7 +325,7 @@ export default function TermsOfServicePage() {
                   Any legal action or proceeding arising out of or related to these Terms or the Services shall be instituted exclusively in the courts located in Paris, France, and you irrevocably submit to the jurisdiction of such courts in any such action or proceeding.
                 </p>
                 <p>
-                  Before initiating any formal legal proceeding, you agree to first try to resolve any dispute informally by contacting us at <a href="mailto:legal@fintech4esg.com" className="text-white hover:underline">legal@fintech4esg.com</a>. We will try to resolve the dispute by contacting you via email. If the dispute is not resolved within 30 days after contact, you or we may bring a formal proceeding.
+                  Before initiating any formal legal proceeding, you agree to first try to resolve any dispute informally by contacting us at <a href="mailto:legal@finzuu.com" className="text-white hover:underline">legal@finzuu.com</a>. We will try to resolve the dispute by contacting you via email. If the dispute is not resolved within 30 days after contact, you or we may bring a formal proceeding.
                 </p>
                 <p>
                   Any dispute arising from these Terms or the Services will be resolved on an individual basis. Class actions, collective actions, and other representative actions are not permitted.
@@ -413,13 +413,13 @@ export default function TermsOfServicePage() {
             <div className="flex flex-col items-center space-y-2">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-white" />
-                <a href="mailto:legal@fintech4esg.com" className="text-white hover:underline">
-                  legal@fintech4esg.com
+                <a href="mailto:legal@finzuu.com" className="text-white hover:underline">
+                  legal@finzuu.com
                 </a>
               </div>
               <div className="flex items-center">
                 <GavelIcon className="h-4 w-4 mr-2 text-green-600" />
-                <span>FinTech4ESG Consulting, 41 rue du Fgb St Denis, 75010 Paris – France</span>
+                <span>FinZuu Consulting, 41 rue du Fgb St Denis, 75010 Paris – France</span>
               </div>
             </div>
           </div>

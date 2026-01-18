@@ -207,7 +207,7 @@ const translations = {
   "case_studies.map.description": "Impact de ReadyCash à travers les régions africaines",
   "case_studies.map.placeholder": "Carte interactive des histoires de succès montrant l'impact de ReadyCash.",
   // Competitive Analysis
-  "competitive.heading": "CONCURRENTS VS FINTECH4ESG",
+  "competitive.heading": "CONCURRENTS VS FINZUU",
   "competitive.insights": "Points Clés de Rentabilité",
   "competitive.comparison": "Comparaison des Principaux Concurrents",
   "competitive.market_size": "Taille du Marché Fintech Africain (TAM)",
@@ -218,7 +218,7 @@ const translations = {
   "competitive.conclusion_title": "Perspectives de Rentabilité et de Croissance",
   // Contact Section
   "contact.heading": "Contactez-nous",
-  "contact.title": "Partenariat avec FinTech4ESG",
+  "contact.title": "Partenariat avec FinZuu",
   "contact.description": "Rejoignez-nous dans notre mission de révolutionner les services financiers et de créer un avenir durable. Travaillons ensemble pour construire un monde plus équitable et respectueux de l'environnement.",
   "contact.form.name.label": "Nom complet",
   "contact.form.name.placeholder": "Votre nom",
@@ -293,7 +293,7 @@ const translations = {
   // About Section
   "about.title": "À Propos de Nous",
   "about.mission": "Transformation Numérique – Inclusion Financière",
-  "about.mission.description": "FinTech4ESG propose des solutions numériques innovantes pour institutions financières : microfinance, portefeuilles digitaux et gestion énergétique. Sa suite Finance Inclusive offre épargne et prêt. Avec des data scientists primés, elle optimise scoring, gestion des risques et croissance par analyses avancées.",
+  "about.mission.description": "FinZuu propose des solutions numériques innovantes pour institutions financières : microfinance, portefeuilles digitaux et gestion énergétique. Sa suite Finance Inclusive offre épargne et prêt. Avec des data scientists primés, elle optimise scoring, gestion des risques et croissance par analyses avancées.",
   "about.background": "Notre Historique",
   "about.background.description": "Avec une vaste expérience en technologie financière en Asie, aux États-Unis et en Europe, notre équipe apporte plus de 50 ans d'expertise combinée au marché africain. Nous avons implémenté avec succès des solutions financières numériques qui ont transformé des entreprises et autonomisé des communautés dans le monde entier.",
   "about.team": "Équipe de Direction",
@@ -307,10 +307,11 @@ const translations = {
   "about.value.integrity.description": "Agir avec transparence, honnêteté et selon les normes éthiques les plus élevées.",
   "about.value.impact.title": "Impact",
   "about.value.impact.description": "Se concentrer sur un changement positif mesurable dans les communautés que nous servons.",
-  "about.role.ceo": "C00",
+  //"about.role.ceo": "C00",
   "about.role.cfo":"CFO",
   //"about.role.coo": "C00",
   "about.role.cto": "CTO",
+  "about.role.head":"Head Of Strategy",
   "about.role.research": "U. G.",
   "about.role.business": "Head Of Business",
   "about.role.advisor": "Conseiller",
@@ -551,7 +552,7 @@ const translations = {
   "footer.resources": "Ressources",
   "footer.legal": "Mentions Légales",
   "footer.rights": "Tous droits réservés",
-  "footer.copyright": "© 2025 FinTech4ESG Consulting. Tous droits réservés.",
+  "footer.copyright": "© 2025 FinZuu Consulting. Tous droits réservés.",
 
 
   // Home Component
@@ -568,7 +569,7 @@ const translations = {
   "title.sustain": "Durabilité",
   "description.sustain": "Nous utilisons l’innovation digitale pour stimuler la croissance durable, la Finance Inclusive et l’efficacité énergétique, créant un avenir plus vert et résilient.",
 
-  "title.partner": "Partenaire FinTech4ESG",
+  "title.partner": "Partenaire FinZuu",
   "description.partner": "Nous donnons à chaque individu et PME des solutions Finance Inclusives, pour stimuler croissance durable, innovation et créer des opportunités financières.",
 
 
@@ -609,7 +610,7 @@ const translations = {
   "title.office": "Bureau(x)",
   "title.photo_transformation": "PHOTO ! TRANSFORMATION NUMÉRIQUE",
   "title.photo_transformation1": "ENTRER EN CONTACT",
-  "title.photo_transformation2": "Devenez partenaire de FinTech4ESG",
+  "title.photo_transformation2": "Devenez partenaire de FinZuu",
   "title.photo_transformation3": "Rejoignez-nous dans notre mission : révolutionner l'inclusion financière et créer un avenir durable. Travaillons ensemble pour bâtir un monde plus équitable et respectueux de l'environnement.",
 
   "title.gender":"Titre *",
@@ -634,7 +635,7 @@ const translations = {
   "title.about":"À propos de nous",
   "title.productsNav":"Produits",
   "title.contactNav":"Contactez-nous",
-  "title.partners":"Perspectives FinTech4ESG",
+  "title.partners":"Perspectives",
 
 
   "about.goals":"Nos Objectifs",
@@ -645,7 +646,7 @@ const translations = {
   "about.role.se":"Founder & Managing Director @ Glencoe Advisory",
   "about.role.gs":"Multi Cloud & Cyber Security Expert",
   "about.role.hb":"Founder & Managing Director @ BlockWealth",
-  "about.role.ak":"Serial Entrepreneur @ Oil & Gaz Industry",
+  "about.role.ak":"Serial Entrepreneur",
 
 
   // section ReadyCashSuite 
