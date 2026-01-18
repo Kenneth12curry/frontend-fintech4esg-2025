@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faPhone, faEnvelope, faGlobeAsia, faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
-import fintecht4esgLogoFooter from "@/assets/Fintech4ESG_Logos.svg";
+import fintecht4esgLogoFooter from "@/assets/FINTECH4ESG_Logos.svg";
 
 
 export default function Footer() {
