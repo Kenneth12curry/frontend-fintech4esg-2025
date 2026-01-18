@@ -24,7 +24,7 @@ const staticRoutes = [
 export default defineConfig({
   plugins: [
     react(),
-    {
+    /* {
       ...sitemap({
         hostname: 'https://fintech4esg.com',
         dynamicRoutes: [...staticRoutes, ...blogPostRoutes],
@@ -32,7 +32,7 @@ export default defineConfig({
         // outDir: 'dist', // Par défaut, le sitemap est généré dans le dossier de build
       }),
       enforce: 'post'
-    },
+    }, */
   ],
   resolve: {
     alias: {
