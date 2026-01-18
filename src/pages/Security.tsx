@@ -36,7 +36,7 @@ export default function SecurityPolicyPage() {
             </div>
             <h1 className="text-4xl font-bold mb-3">Security Policy</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              How FinZuu protects your data and financial transactions
+              How FinTech4esg protects your data and financial transactions
             </p>
             <p className="text-sm text-muted-foreground mt-2">Last updated: April 5, 2025</p>
           </div>
@@ -61,7 +61,7 @@ export default function SecurityPolicyPage() {
                 </CardHeader>
                 <CardContent className="px-0 space-y-6">
                   <p>
-                    At FinZuu Consulting, the security of your information and financial transactions is our top priority. This Security Policy outlines the measures we take to protect your data, ensure secure transactions, and maintain the integrity of our ReadyCash platform.
+                    At FinTech4esg Consulting, the security of your information and financial transactions is our top priority. This Security Policy outlines the measures we take to protect your data, ensure secure transactions, and maintain the integrity of our ReadyCash platform.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -171,7 +171,7 @@ export default function SecurityPolicyPage() {
                       <div>
                         <h3 className="font-medium mb-1">Security Incident Reporting</h3>
                         <p className="text-sm">
-                          If you suspect a security vulnerability or incident related to our services, please report it immediately to <a href="mailto:security@finzuu.com" className="text-primary hover:underline">security@finzuu.com</a>. We take all security reports seriously and will investigate promptly.
+                          If you suspect a security vulnerability or incident related to our services, please report it immediately to <a href="mailto:security@fintech4esg.com" className="text-primary hover:underline">security@fintech4esg.com</a>. We take all security reports seriously and will investigate promptly.
                         </p>
                       </div>
                     </div>
@@ -574,7 +574,7 @@ export default function SecurityPolicyPage() {
                           <div>
                             <span className="font-medium">Verify website authenticity</span>
                             <p className="text-sm text-muted-foreground mt-1">
-                              Always ensure you're on our official website by checking the URL (https://www.finzuu.com) and looking for the padlock icon in your browser.
+                              Always ensure you're on our official website by checking the URL (https://www.fintech4esg.com) and looking for the padlock icon in your browser.
                             </p>
                           </div>
                         </li>
@@ -646,7 +646,7 @@ export default function SecurityPolicyPage() {
                           <div>
                             <span className="font-medium">Report suspicious activity</span>
                             <p className="text-sm text-muted-foreground mt-1">
-                              If you notice anything suspicious related to your account, report it to us immediately at <a href="mailto:security@finzuu.com" className="text-primary hover:underline">security@finzuu.com</a>.
+                              If you notice anything suspicious related to your account, report it to us immediately at <a href="mailto:security@fintech4esg.com" className="text-primary hover:underline">security@fintech4esg.com</a>.
                             </p>
                           </div>
                         </li>
@@ -732,8 +732,8 @@ export default function SecurityPolicyPage() {
             <div className="flex flex-col items-center space-y-2">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-white" />
-                <a href="mailto:security@finzuu.com" className="text-white hover:underline">
-                  security@finzuu.com
+                <a href="mailto:security@fintech4esg.com" className="text-white hover:underline">
+                  security@fintech4esg.com
                 </a>
               </div>
               <p className="text-xs text-muted-foreground mt-2">

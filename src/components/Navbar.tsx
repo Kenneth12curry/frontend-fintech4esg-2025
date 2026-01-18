@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "@/lib/i18n";
-import finzuuLogoHeader from "@/assets/FinZuu_Logo-V2/finzuu-brand-name.svg";
+import fintech4esgLogoHeader from "@/assets/Header_FTE_MOTO.png";
 
 type NavigationLink = {
   name: string;
@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block absolute top-4 left-4 sm:static sm:transform-none">
-              <img src={finzuuLogoHeader} alt="Finzuu" className="w-24 sm:w-32 h-auto" />
+              <img src={fintech4esgLogoHeader} alt="FinTech4ESG" className="w-28 sm:w-40 h-auto" />
             </Link>
           </div>
 

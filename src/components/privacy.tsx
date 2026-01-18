@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
             </div>
             <h1 className="text-4xl font-bold mb-3">Privacy Policy</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              How FinZuu Consulting protects and manages your personal information
+              How FinTech4ESG Consulting protects and manages your personal information
             </p>
             <p className="text-sm text-muted-foreground mt-2">Last updated: April 5, 2025</p>
           </div>
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
                 </CardHeader>
                 <CardContent className="px-0 space-y-6">
                   <p>
-                    This Privacy Policy describes how FinZuu Consulting ("we", "us", or "our") collects, uses, and shares your personal information
+                    This Privacy Policy describes how FinTech4ESG Consulting ("we", "us", or "our") collects, uses, and shares your personal information
                     when you use our ReadyCash platform and related services (the "Services").
                   </p>
 
@@ -119,8 +119,8 @@ export default function PrivacyPolicyPage() {
                     </p>
                     <div className="flex items-center mt-2">
                       <Mail className="h-4 w-4 mr-2 text-primary" />
-                      <a href="mailto:privacy@finzuu.com" className="text-primary hover:underline">
-                        privacy@finzuu.com
+                      <a href="mailto:privacy@fintech4esg.com" className="text-primary hover:underline">
+                        privacy@fintech4esg.com
                       </a>
                     </div>
                   </div>
@@ -423,7 +423,7 @@ export default function PrivacyPolicyPage() {
                       </li>
                       <li className="flex items-start">
                         <ShieldCheck className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Contact our Data Protection Officer at <a href="mailto:privacy@finzuu.com" className="text-primary hover:underline">privacy@finzuu.com</a></span>
+                        <span>Contact our Data Protection Officer at <a href="mailto:privacy@fintech4esg.com" className="text-primary hover:underline">privacy@fintech4esg.com</a></span>
                       </li>
                       <li className="flex items-start">
                         <ShieldCheck className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
@@ -448,7 +448,7 @@ export default function PrivacyPolicyPage() {
                   <div className="mt-6">
                     <h3 className="font-medium mb-3">Children's Privacy</h3>
                     <p className="text-sm">
-                      Our Services are not intended for children under the age of 18. We do not knowingly collect or solicit personal information from children under 18. If you are under 18, please do not attempt to register for our Services or send any personal information about yourself to us. If we learn that we have collected personal information from a child under 18, we will delete that information as quickly as possible. If you believe that a child under 18 may have provided us with personal information, please contact us at <a href="mailto:privacy@finzuu.com" className="text-primary hover:underline">privacy@finzuu.com</a>.
+                      Our Services are not intended for children under the age of 18. We do not knowingly collect or solicit personal information from children under 18. If you are under 18, please do not attempt to register for our Services or send any personal information about yourself to us. If we learn that we have collected personal information from a child under 18, we will delete that information as quickly as possible. If you believe that a child under 18 may have provided us with personal information, please contact us at <a href="mailto:privacy@fintech4esg.com" className="text-primary hover:underline">privacy@fintech4esg.com</a>.
                     </p>
                   </div>
                 </CardContent>

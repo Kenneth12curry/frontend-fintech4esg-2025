@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faPhone, faEnvelope, faGlobeAsia, faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
-import finzuuLogoFeater from "@/assets/FinZuu_Logo-V2/finzuu-name-catchword.svg";
+import fintecht4esgLogoFooter from "@/assets/Fintech4ESG_Logos.svg";
 
 
 export default function Footer() {
@@ -19,9 +19,9 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex flex-row items-center justify-center">
             <img
-              src={finzuuLogoFeater}
+              src={fintecht4esgLogoFooter}
               alt="FinTech4ESG Logo"
-              className="w-56 sm:w-48 mb-6 transform -translate-y-6"
+              className="w-20 sm:w-20 mb-6 transform -translate-y-2"
             />
           </div>
 
@@ -95,7 +95,7 @@ export default function Footer() {
                 <Link
                   to="/insights"
                   className="text-sm font-bold text-primary">
-                  FinZuu Insights
+                  FinTech4ESG Insights
                 </Link>
               </li>
             </ul>
@@ -139,7 +139,7 @@ export default function Footer() {
         {/* Bottom Info */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col">
-            <p className="text-gray-400 text-xs sm:text-sm">&copy; {currentYear} FinZuu</p>
+            <p className="text-gray-400 text-xs sm:text-sm">&copy; {currentYear} FinTech4ESG</p>
             <p className="text-gray-400 text-xs mt-1">All rights reserved.</p>
           </div>
           <div className="mt-3 md:mt-0 flex gap-3 sm:gap-4">

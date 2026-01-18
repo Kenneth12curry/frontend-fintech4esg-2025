@@ -256,7 +256,7 @@ const translations = {
   // Footer Additional Items
   "footer.company": "Company",
   "footer.resources": "Resources",
-  "footer.copyright": "© 2025 FinZuu Consulting. All rights reserved.",
+  "footer.copyright": "© 2025 FinTech4ESG Consulting. All rights reserved.",
   // Loan Application
   "readyForFinancialFreedom": "Ready for Financial Freedom?",
   "loanApplicationPrompt": "Start your journey to financial freedom with our easy loan application process",
@@ -466,7 +466,7 @@ const translations = {
   "case_studies.cta.button": "Apply for Financing",
   
   // Competitive Analysis
-  "competitive.heading": "COMPETITORS VS FINZUU",
+  "competitive.heading": "COMPETITORS VS FINTECH4ESG",
   "competitive.insights": "Key Profitability Insights",
   "competitive.comparison": "Major Competitors Comparison",
   "competitive.market_size": "African Fintech Market Size (TAM)",
@@ -478,7 +478,7 @@ const translations = {
   
   // Contact Section
   "contact.heading": "Get In Touch",
-  "contact.title": "Partner with FinZuu Consulting",
+  "contact.title": "Partner with FinTech4ESG Consulting",
   "contact.description": "Join us on our mission to revolutionize financial services and create a sustainable future. Let's work together to build a more equitable and environmentally conscious world.",
   "contact.form.name.label": "Full Name",
   "contact.form.name.placeholder": "Your name",
@@ -563,7 +563,7 @@ const translations = {
   // About Section
   "about.title": "About Us",
   "about.mission": "Digital Transformation – Financial Inclusion",
-  "about.mission.description": "FinZuu delivers innovative digital solutions for financial institutions, including microfinance, digital wallets, and power management. Its Finance Inclusive Suite offers savings and lending. Backed by award-winning data scientists, it enhances scoring decision-making, risk management, and growth through advanced analytics. Partner with FinZuu to stay ahead.",
+  "about.mission.description": "FinTech4ESG delivers innovative digital solutions for financial institutions, including microfinance, digital wallets, and power management. Its Finance Inclusive Suite offers savings and lending. Backed by award-winning data scientists, it enhances scoring decision-making, risk management, and growth through advanced analytics. Partner with FinTech4ESG to stay ahead.",
   
   "about.values": "Our Values",
   "about.value.innovation.title": "Innovation",
@@ -770,7 +770,7 @@ const translations = {
   "title.sustain": "Sustainability",
   "description.sustain": "We harness digital innovation to drive sustainable growth, inclusive finance, and energy efficiency—delivering impactful ESG outcomes and building a greener, more resilient future.",
 
-  "title.partner": "Partner with FinZuu",
+  "title.partner": "Partner with FinTech4ESG",
   "description.partner": "Empowering individuals and SMEs with inclusive FinTech solutions to unlock sustainable growth, drive innovation, and create global opportunities for lasting financial prosperity.",
 
 
@@ -811,7 +811,7 @@ const translations = {
   "title.office": "Office(s)",
   "title.photo_transformation": "PHOTO ! DIGITAL TRANSFORMATION",
   "title.photo_transformation1": "GET IN TOUCH",
-  "title.photo_transformation2": "Partner with FinZuu",
+  "title.photo_transformation2": "Partner with FinTech4ESG",
   "title.photo_transformation3": "Join us on our mission to revolutionize Financial Inclusion and create a sustainable future. Let's work together to build a more equitable and environmentally conscious world.",
 
   "title.gender":"Title *",
@@ -836,7 +836,7 @@ const translations = {
   "title.about":"About-us",
   "title.productsNav":"Products",
   "title.contactNav":"Contact-us",
-  "title.partners":"Insights",
+  "title.partners":"FinTech4ESG Insights",
 
   "about.goals":"Our Goals",
   "about.HowWeAre":"Who Are We ?",
@@ -1012,7 +1012,7 @@ const translations = {
   "frame.harvestAdvance":"Harvest Advance",
 
   /** fintech4esg Insights */
-  "header.insights.title": "FinZuu Insights",
+  "header.insights.title": "FinTech4ESG Insights",
   "header.insights":"Stay ahead with curated insights on Financial Inclusion, trends and innovation",
   "header.insights1":"that shape scoring & risk system for unbanked population.",
   "header.visit":"Visit",
