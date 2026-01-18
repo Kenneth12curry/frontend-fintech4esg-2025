@@ -28,6 +28,7 @@ export default defineConfig({
       ...sitemap({
         hostname: 'https://fintech4esg.com',
         dynamicRoutes: [...staticRoutes, ...blogPostRoutes],
+        robots: [],
         // outDir: 'dist', // Par défaut, le sitemap est généré dans le dossier de build
       }),
       enforce: 'post'
