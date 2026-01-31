@@ -47,6 +47,13 @@ function App() {
   const [lastVisit, setLastVisit] = useCookie('lastVisitDate');
 
   useEffect(() => {
+    // Redirection de l'ancien domaine vers le nouveau
+    if (window.location.hostname === 'fintech4esg.com' || window.location.hostname === 'www.fintech4esg.com') {
+      window.location.replace(`https://finzuu.com${window.location.pathname}${window.location.search}`);
+    }
+  }, []);
+
+  useEffect(() => {
     // Au chargement de l'application, loguer la dernière date de visite
     if (lastVisit) {
       console.log('Bienvenue de nouveau ! Votre dernière visite était le :', lastVisit);
@@ -62,7 +69,7 @@ function App() {
 
   return (
     <BrowserRouter>
-     
+
       <ScrollToTop />
       <Navbar />
       <ToastContainer

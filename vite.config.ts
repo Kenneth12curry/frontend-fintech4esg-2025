@@ -26,7 +26,7 @@ export default defineConfig({
     react(),
     {
       ...sitemap({
-        hostname: 'https://fintech4esg.com',
+        hostname: 'https://finzuu.com',
         dynamicRoutes: [...staticRoutes, ...blogPostRoutes],
         robots: [],
         // outDir: 'dist', // Par défaut, le sitemap est généré dans le dossier de build
